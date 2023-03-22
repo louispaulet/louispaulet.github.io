@@ -1,0 +1,86 @@
+I"ó<h2 id="introduction">Introduction</h2>
+
+<p>Welcome to the personal GitHub page of Louis Paulet, a talented data scientist with a passion for artificial intelligence and machine learning. Specializing in AI-generated art, Louis is on the lookout for new opportunities to grow and apply his skills in the field of data science. Explore his exceptional projects, ranging from AI-generated art to advanced machine learning applications, and discover why Louis is the perfect candidate for your data science team.</p>
+
+<h2 id="projects">Projects</h2>
+
+<style>
+  .project {
+    display: flex;
+    align-items: center;
+  }
+
+  .project-content {
+    margin-left: 20px;
+  }
+</style>
+
+<div class="project">
+  <img src="/assets/images/image (1).jpg" alt="AI-Generated Art" width="100" />
+  <div class="project-content">
+    <h3>AI-Generated Art</h3>
+    <p>Using advanced techniques such as Stable Diffusion and Latent Diffusion, Louis has created mesmerizing AI-generated art pieces. Check out the project at <a href="https://the_french_artist.artstation.com/" target="_blank">https://the_french_artist.artstation.com/</a>.</p>
+  </div>
+</div>
+
+<style>
+  .project {
+    display: flex;
+    align-items: center;
+  }
+
+  .project-content {
+    margin-left: 20px;
+  }
+</style>
+
+<div class="project">
+  <img src="/assets/images/image (2).jpg" alt="ETL and NLP Experiments" width="100" />
+  <div class="project-content">
+    <h3>ETL and NLP Experiments</h3>
+    <p>This repository contains a collection of Jupyter notebooks that demonstrate various natural language processing (NLP) techniques and an ETL (Extract, Transform, Load) process on a dataset of French painters. Check out the project at <a href="https://github.com/louispaulet/ETL_tests" target="_blank">https://github.com/louispaulet/ETL_tests</a>.</p>
+  </div>
+</div>
+
+<style>
+  .project {
+    display: flex;
+    align-items: center;
+  }
+
+  .project-content {
+    margin-left: 20px;
+  }
+</style>
+
+<div class="project">
+  <img src="/assets/images/image (3).jpg" alt="OpenAI CLIP Image Text Similarity" width="100" />
+  <div class="project-content">
+    <h3>OpenAI CLIP Image Text Similarity</h3>
+    <p>This repository contains a Flask and React-based web application for finding the best matching text description for a set of images using OpenAI's CLIP model. Check out the project at <a href="https://github.com/louispaulet/OpenAI_CLIP-REACT-FLASK" target="_blank">https://github.com/louispaulet/OpenAI_CLIP-REACT-FLASK</a>.</p>
+  </div>
+</div>
+
+<style>
+  .project {
+    display: flex;
+    align-items: center;
+  }
+
+  .project-content {
+    margin-left: 20px;
+  }
+</style>
+
+<div class="project">
+  <img src="/assets/images/image (4).jpg" alt="MNIST-KERAS-FLASK-JS" width="100" />
+  <div class="project-content">
+    <h3>MNIST-KERAS-FLASK-JS</h3>
+    <p>This repository contains a simple web application that uses Keras and Flask to create an MNIST digit recognition model. Check out the project at <a href="https://github.com/louispaulet/MNIST-KERAS-FLASK-JS" target="_blank">https://github.com/louispaulet/MNIST-KERAS-FLASK-JS</a>.</p>
+  </div>
+</div>
+
+<h2 id="contact">Contact</h2>
+
+<p>Connect with Louis on: <a href="https://github.com/louispaulet" target="_blank">GitHub</a> and <a href="https://www.linkedin.com/in/louispaulet" target="_blank">LinkedIn</a></p>
+:ET
