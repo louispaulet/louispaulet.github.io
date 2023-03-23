@@ -6,64 +6,14 @@
   
   
   
-  
     
-  
-  <url>
-    <loc>https://update-me.com/posts/firstpost/</loc>
-    <lastmod>2023-03-22T23:13:36.000Z</lastmod>
-  </url>
-  
-  
-  
-  
-  
   
   
     
   
   <url>
-    <loc>https://update-me.com/posts/secondpost/</loc>
-    <lastmod>2023-03-22T23:13:36.000Z</lastmod>
-  </url>
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  <url>
-    <loc>https://update-me.com/posts/sixthpostdraft/</loc>
-    <lastmod>2023-03-22T23:13:36.000Z</lastmod>
-  </url>
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  <url>
-    <loc>https://update-me.com/posts/thirdpost/</loc>
-    <lastmod>2023-03-22T23:13:36.000Z</lastmod>
-  </url>
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  <url>
-    <loc>https://update-me.com/posts/fourthpost/</loc>
-    <lastmod>2023-03-22T23:13:36.000Z</lastmod>
+    <loc>https://louispaulet.github.io/AAA-archive/first_website/</loc>
+    <lastmod>2023-03-23T00:14:46.000Z</lastmod>
   </url>
   
   
@@ -77,8 +27,8 @@
     
   
   <url>
-    <loc>https://update-me.com/posts/fifthpost/</loc>
-    <lastmod>2023-03-22T23:13:36.000Z</lastmod>
+    <loc>https://louispaulet.github.io/about/</loc>
+    <lastmod>2023-03-23T00:14:46.000Z</lastmod>
   </url>
   
   
@@ -90,20 +40,7 @@
   
   
   <url>
-    <loc>https://update-me.com/about/</loc>
-    <lastmod>2023-03-22T23:14:05.835Z</lastmod>
-  </url>
-  
-  
-  
-  
-  
-  
-    
-  
-  
-  <url>
-    <loc>https://update-me.com/posts/</loc>
+    <loc>https://louispaulet.github.io/posts/</loc>
     <lastmod>2023-03-22T23:14:05.836Z</lastmod>
   </url>
   
@@ -116,20 +53,7 @@
   
   
   <url>
-    <loc>https://update-me.com/</loc>
-    <lastmod>2023-03-22T23:14:05.883Z</lastmod>
-  </url>
-  
-  
-  
-  
-  
-  
-    
-  
-  
-  <url>
-    <loc>https://update-me.com/page-list/</loc>
+    <loc>https://louispaulet.github.io/page-list/</loc>
     <lastmod>2023-03-22T23:14:05.888Z</lastmod>
   </url>
   
@@ -142,7 +66,7 @@
   
   
   <url>
-    <loc>https://update-me.com/tags/</loc>
+    <loc>https://louispaulet.github.io/tags/</loc>
     <lastmod>2023-03-22T23:14:05.894Z</lastmod>
   </url>
   
@@ -155,7 +79,7 @@
   
   
   <url>
-    <loc>https://update-me.com/tags/another-tag/</loc>
+    <loc>https://louispaulet.github.io/tags/mnist/</loc>
     <lastmod>2023-03-22T23:14:05.895Z</lastmod>
   </url>
   
@@ -168,7 +92,7 @@
   
   
   <url>
-    <loc>https://update-me.com/tags/number-2/</loc>
+    <loc>https://louispaulet.github.io/tags/classifier/</loc>
     <lastmod>2023-03-22T23:14:05.895Z</lastmod>
   </url>
   
@@ -181,7 +105,63 @@
   
   
   <url>
-    <loc>https://update-me.com/tags/second-tag/</loc>
+    <loc>https://louispaulet.github.io/tags/image/</loc>
     <lastmod>2023-03-22T23:14:05.895Z</lastmod>
+  </url>
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <url>
+    <loc>https://louispaulet.github.io/tags/docker/</loc>
+    <lastmod>2023-03-22T23:14:05.895Z</lastmod>
+  </url>
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  <url>
+    <loc>https://louispaulet.github.io/posts/firstpost/</loc>
+    <lastmod>2023-03-23T03:32:28.000Z</lastmod>
+  </url>
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  <url>
+    <loc>https://louispaulet.github.io/posts/secondpost/</loc>
+    <lastmod>2023-03-23T03:32:28.000Z</lastmod>
+  </url>
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <url>
+    <loc>https://louispaulet.github.io/</loc>
+    <lastmod>2023-03-23T05:03:44.261Z</lastmod>
   </url>
 </urlset>
