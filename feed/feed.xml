@@ -18,8 +18,7 @@
 		<updated>2023-03-23T01:00:00+01:00</updated>
 		<id>https://louispaulet.github.io/posts/firstpost/</id>
 		<content type="html">
-		  &lt;h1 id=&quot;mnist-keras-flask-js&quot;&gt;MNIST-KERAS-FLASK-JS &lt;a class=&quot;direct-link&quot; href=&quot;#mnist-keras-flask-js&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWViNjg1ZmIwMWZhOGZlZmY4ZTBmN2I4YmFkNTZhYTUzZGJjODQ1MiZjdD1n/wIYiDdDAMqsM0J9yhM/giphy.gif&quot; alt=&quot;a gif&quot;&gt;&lt;/p&gt;
+		  &lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWViNjg1ZmIwMWZhOGZlZmY4ZTBmN2I4YmFkNTZhYTUzZGJjODQ1MiZjdD1n/wIYiDdDAMqsM0J9yhM/giphy.gif&quot; alt=&quot;a gif&quot; width=&quot;800px&quot;&gt;&lt;/p&gt;
 &lt;p&gt;This repository contains a simple web application that uses Keras and Flask to create an MNIST digit recognition model. The application allows users to upload an image or draw on an HTML canvas to get digit predictions.&lt;/p&gt;
 &lt;h2 id=&quot;features&quot;&gt;Features &lt;a class=&quot;direct-link&quot; href=&quot;#features&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -64,7 +63,7 @@
 		<updated>2023-03-23T01:00:00+01:00</updated>
 		<id>https://louispaulet.github.io/posts/secondpost/</id>
 		<content type="html">
-		  &lt;p&gt;&lt;img src=&quot;https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzZmZDhhZTU1YWMzYTJkMmQ0Njc4YTZiYTZhYjJkYWU1NTljZDFkMSZjdD1n/cLjcwWMnrju7pLBsqV/giphy.gif&quot; alt=&quot;a gif&quot;&gt;&lt;/p&gt;
+		  &lt;p&gt;&lt;img src=&quot;https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzZmZDhhZTU1YWMzYTJkMmQ0Njc4YTZiYTZhYjJkYWU1NTljZDFkMSZjdD1n/cLjcwWMnrju7pLBsqV/giphy.gif&quot; alt=&quot;a gif&quot; width=&quot;800px&quot;&gt;&lt;/p&gt;
 &lt;p&gt;This repository contains a Flask and React-based web application for finding the best matching text description for a set of images using OpenAI&#39;s CLIP model. The application provides a user-friendly interface for uploading images, inputting text descriptions, and displaying the best matching text for each image.&lt;/p&gt;
 &lt;h2 id=&quot;features&quot;&gt;Features &lt;a class=&quot;direct-link&quot; href=&quot;#features&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
