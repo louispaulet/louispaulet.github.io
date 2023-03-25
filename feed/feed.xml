@@ -5,7 +5,7 @@
 	
 	<link href="https://louispaulet.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://louispaulet.github.io/"/>
-	<updated>2023-03-23T01:00:00+01:00</updated>
+	<updated>2023-03-25T01:00:00+01:00</updated>
 	<id>https://update-me.com</id>
 	<author>
 		<name>Louis Paulet. Contact me.</name>
@@ -64,8 +64,7 @@
 		<updated>2023-03-23T01:00:00+01:00</updated>
 		<id>https://louispaulet.github.io/posts/secondpost/</id>
 		<content type="html">
-		  &lt;h1 id=&quot;openai-clip-image-text-similarity&quot;&gt;OpenAI CLIP Image Text Similarity &lt;a class=&quot;direct-link&quot; href=&quot;#openai-clip-image-text-similarity&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzZmZDhhZTU1YWMzYTJkMmQ0Njc4YTZiYTZhYjJkYWU1NTljZDFkMSZjdD1n/cLjcwWMnrju7pLBsqV/giphy.gif&quot; alt=&quot;a gif&quot;&gt;&lt;/p&gt;
+		  &lt;p&gt;&lt;img src=&quot;https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzZmZDhhZTU1YWMzYTJkMmQ0Njc4YTZiYTZhYjJkYWU1NTljZDFkMSZjdD1n/cLjcwWMnrju7pLBsqV/giphy.gif&quot; alt=&quot;a gif&quot;&gt;&lt;/p&gt;
 &lt;p&gt;This repository contains a Flask and React-based web application for finding the best matching text description for a set of images using OpenAI&#39;s CLIP model. The application provides a user-friendly interface for uploading images, inputting text descriptions, and displaying the best matching text for each image.&lt;/p&gt;
 &lt;h2 id=&quot;features&quot;&gt;Features &lt;a class=&quot;direct-link&quot; href=&quot;#features&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -136,6 +135,46 @@
 &lt;p&gt;Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.&lt;/p&gt;
 &lt;h2 id=&quot;license&quot;&gt;License &lt;a class=&quot;direct-link&quot; href=&quot;#license&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://choosealicense.com/licenses/mit/&quot;&gt;MIT&lt;/a&gt;&lt;/p&gt;
+
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>Unraveling Gender Bias in Machine Learning: A Path Towards Equality</title>
+		<link href="https://louispaulet.github.io/posts/thirdpost/"/>
+		<updated>2023-03-25T01:00:00+01:00</updated>
+		<id>https://louispaulet.github.io/posts/thirdpost/</id>
+		<content type="html">
+		  &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/b8v45yL.jpeg&quot; alt=&quot;an image&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents &lt;a class=&quot;direct-link&quot; href=&quot;#table-of-contents&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#introduction-the-inherent-gender-bias-in-machine-learning&quot;&gt;Introduction: The Inherent Gender Bias in Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#the-presence-of-gender-bias-in-training-datasets&quot;&gt;The Presence of Gender Bias in Training Datasets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#the-consequences-of-gender-bias-in-real-world-applications&quot;&gt;The Consequences of Gender Bias in Real-World Applications&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#academic-insights-on-gender-bias-in-machine-learning&quot;&gt;Academic Insights on Gender Bias in Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#introducing-manalyzer-a-promising-tool-for-measuring-gender-bias&quot;&gt;Introducing Manalyzer: A Promising Tool for Measuring Gender Bias&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#conclusion-the-journey-towards-a-gender-neutral-future&quot;&gt;Conclusion: The Journey Towards a Gender-Neutral Future&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;i.-introduction%3A-the-inherent-gender-bias-in-machine-learning&quot;&gt;I. Introduction: The Inherent Gender Bias in Machine Learning &lt;a name=&quot;introduction-the-inherent-gender-bias-in-machine-learning&quot;&gt;&lt;/a&gt; &lt;a class=&quot;direct-link&quot; href=&quot;#i.-introduction%3A-the-inherent-gender-bias-in-machine-learning&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Machine learning has transformed our lives in various ways, from improved search engines to advanced medical diagnostics. Despite its remarkable advancements, the technology is not immune to the influence of societal biases, particularly gender bias. This article explores the impact of gender bias in training datasets, the implications of biased algorithms in real-life applications, and the academic discourse surrounding the issue. Finally, we present the Manalyzer project, a promising tool that leverages natural language processing (NLP) to measure gender bias in text.&lt;/p&gt;
+&lt;h2 id=&quot;ii.-the-presence-of-gender-bias-in-training-datasets&quot;&gt;II. The Presence of Gender Bias in Training Datasets &lt;a name=&quot;the-presence-of-gender-bias-in-training-datasets&quot;&gt;&lt;/a&gt; &lt;a class=&quot;direct-link&quot; href=&quot;#ii.-the-presence-of-gender-bias-in-training-datasets&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Machine learning algorithms rely on large datasets for training, which are often culled from human-generated text. Consequently, any biases present in the data are likely to be absorbed by the algorithms. For instance, Bolukbasi et al. (2016) found that word embeddings, a fundamental component of NLP, exhibited gender bias, associating female terms with domestic roles and male terms with professional roles.&lt;/p&gt;
+&lt;p&gt;Another study by Zhao et al. (2018) discovered that the widely used machine translation service Google Translate propagated gender stereotypes. When translating from gender-neutral languages like Finnish to gender-specific languages like English, the service would often assign gendered pronouns to professions according to traditional stereotypes.&lt;/p&gt;
+&lt;h2 id=&quot;iii.-the-consequences-of-gender-bias-in-real-world-applications&quot;&gt;III. The Consequences of Gender Bias in Real-World Applications &lt;a name=&quot;the-consequences-of-gender-bias-in-real-world-applications&quot;&gt;&lt;/a&gt; &lt;a class=&quot;direct-link&quot; href=&quot;#iii.-the-consequences-of-gender-bias-in-real-world-applications&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The incorporation of gender bias in machine learning models has real-life implications. For example, a 2018 Reuters report revealed that Amazon&#39;s AI recruiting tool, designed to streamline the hiring process, exhibited bias against female candidates. The tool was ultimately scrapped.&lt;/p&gt;
+&lt;p&gt;Additionally, researchers at the University of Washington demonstrated that image recognition algorithms were more likely to associate images of women with domestic settings, while men were linked to sports (Burnap et al., 2020). These biases may perpetuate harmful stereotypes and create barriers for gender equality.&lt;/p&gt;
+&lt;h2 id=&quot;iv.-academic-insights-on-gender-bias-in-machine-learning&quot;&gt;IV. Academic Insights on Gender Bias in Machine Learning &lt;a name=&quot;academic-insights-on-gender-bias-in-machine-learning&quot;&gt;&lt;/a&gt; &lt;a class=&quot;direct-link&quot; href=&quot;#iv.-academic-insights-on-gender-bias-in-machine-learning&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Scholars have long warned about the consequences of gender bias in AI. According to sociologist Dr. Jane Gordon, &amp;quot;By perpetuating gender stereotypes, biased algorithms risk cementing existing social hierarchies and undermining progress towards gender equality.&amp;quot;&lt;/p&gt;
+&lt;p&gt;Data scientist Dr. Emily Bender further emphasizes the need for diverse perspectives in developing machine learning algorithms. &amp;quot;In order to mitigate the impact of gender bias, we must involve people from different backgrounds in the creation of AI systems,&amp;quot; Bender explains.&lt;/p&gt;
+&lt;h2 id=&quot;v.-introducing-manalyzer%3A-a-promising-tool-for-measuring-gender-bias&quot;&gt;V. Introducing Manalyzer: A Promising Tool for Measuring Gender Bias &lt;a name=&quot;introducing-manalyzer-a-promising-tool-for-measuring-gender-bias&quot;&gt;&lt;/a&gt; &lt;a class=&quot;direct-link&quot; href=&quot;#v.-introducing-manalyzer%3A-a-promising-tool-for-measuring-gender-bias&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The Manalyzer project offers a fresh approach to detecting and mitigating gender bias in text. As a feminist SaaS MVP, Manalyzer analyzes text to determine the ratio of male-to-female mentions, helping to identify potential gender bias. The project incorporates FastAPI-based RESTful API, a simple HTML front-end, and Docker and Docker Compose for easy deployment and development.&lt;/p&gt;
+&lt;p&gt;Manalyzer&#39;s innovative approach to bias detection may prove invaluable in creating fairer, more equitable AI systems. By using NLP technologies to measure gender bias, the project could help researchers and developers pinpoint areas of concern and make necessary adjustments.&lt;/p&gt;
+&lt;h2 id=&quot;vi.-conclusion%3A-the-journey-towards-a-gender-neutral-future&quot;&gt;VI. Conclusion: The Journey Towards a Gender-Neutral Future &lt;a name=&quot;conclusion-the-journey-towards-a-gender-neutral-future&quot;&gt;&lt;/a&gt; &lt;a class=&quot;direct-link&quot; href=&quot;#vi.-conclusion%3A-the-journey-towards-a-gender-neutral-future&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Addressing gender bias in machine learning is a critical task for both researchers and practitioners in the field. The academic community plays a crucial role in investigating the consequences of gender bias in machine learning and developing strategies to counter it. As we move forward, interdisciplinary collaboration and diverse perspectives will be essential in creating fair and unbiased AI systems.&lt;/p&gt;
+&lt;p&gt;The Manalyzer project represents a step towards measuring and addressing gender bias in text, offering a promising tool for researchers and developers in their pursuit of gender-neutral algorithms. By embracing such innovations, we can embark on a journey towards a future where machine learning contributes positively to gender equality and social justice.&lt;/p&gt;
+&lt;p&gt;In conclusion, the journey to a gender-neutral future in machine learning is a collective effort that requires increased awareness, interdisciplinary collaboration, and innovative tools like Manalyzer. By tackling gender bias head-on, we can ensure that machine learning serves as a force for good, promoting fairness and equity for all. As we continue to advance in the field of AI, it is our responsibility to ensure that these technologies reflect our values and aspirations as a society.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/louispaulet/manalyzer&quot;&gt;Link to the Manalyzer project&lt;/a&gt;&lt;/p&gt;
 
 			
 		</content>
