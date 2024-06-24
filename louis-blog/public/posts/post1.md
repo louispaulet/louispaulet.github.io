@@ -46,4 +46,4 @@ Moreover, the karaoke website can benefit from the Tortoise TTS Colab Notebook's
 
 [Karaoke Light - Try it out!](https://louispaulet.github.io/karaoke_light/)
 
-Published 08 Apr 2023.
+*Published 08 Apr 2023.*
