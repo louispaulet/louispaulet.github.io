@@ -1,5 +1,7 @@
 # Transparency Watch: Enhancing Public Accountability Through Open Data
 
+![screenshot of dataviz app homepage](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/dataviz_homepage.png?raw=true)
+
 In an era where trust in public institutions is constantly scrutinized, transparency and accountability have become paramount. The newly launched Transparency Watch website, [hatvp-dataviz.thefrenchartist.dev](https://hatvp-dataviz.thefrenchartist.dev/), is a significant step towards promoting these values. By leveraging open data from the Haute Autorité pour la transparence de la vie publique (HATVP), this platform offers insightful visualizations that shed light on the declarations of interest of public representatives and lobbying organizations in France.
 
 ## The Importance of Transparency in Politics
