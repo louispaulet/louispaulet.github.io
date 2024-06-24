@@ -2,7 +2,7 @@
 
 **5 min read.**
 
-![an image](https://louispaulet.github.io//img/remote/Z2vKn5g-1920w.png)
+![an image](https://github.com/louispaulet/louispaulet.github.io_old/blob/master/img/remote/Z2vKn5g-1920w.png?raw=true)
 
 [Karaoke Light - Try it out!](https://louispaulet.github.io/karaoke_light/)
 
@@ -46,4 +46,4 @@ Moreover, the karaoke website can benefit from the Tortoise TTS Colab Notebook's
 
 [Karaoke Light - Try it out!](https://louispaulet.github.io/karaoke_light/)
 
-Published 08 Apr 2023.
+*Published 08 Apr 2023.*
