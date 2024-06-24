@@ -2,7 +2,7 @@
 
 **2 min read.**
 
-![a gif](https://louispaulet.github.io//img/remote/ZeyTDf.gif)
+![a gif](https://github.com/louispaulet/louispaulet.github.io_old/blob/master/img/remote/ZeyTDf.gif?raw=true)
 
 This repository contains a simple web application that uses Keras and Flask to create an MNIST digit recognition model. The application allows users to upload an image or draw on an HTML canvas to get digit predictions.
 

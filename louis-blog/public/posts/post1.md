@@ -2,7 +2,7 @@
 
 **5 min read.**
 
-![an image](https://louispaulet.github.io//img/remote/Z2vKn5g-1920w.png)
+![an image](https://github.com/louispaulet/louispaulet.github.io_old/blob/master/img/remote/Z2vKn5g-1920w.png?raw=true)
 
 [Karaoke Light - Try it out!](https://louispaulet.github.io/karaoke_light/)
 

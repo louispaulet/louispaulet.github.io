@@ -2,7 +2,7 @@
 
 **3 min read.**
 
-![a gif](https://louispaulet.github.io//img/remote/137EOX.gif)
+![a gif](https://github.com/louispaulet/louispaulet.github.io_old/blob/master/img/remote/137EOX.gif?raw=true)
 
 This repository contains a Flask and React-based web application for finding the best matching text description for a set of images using OpenAI's CLIP model. The application provides a user-friendly interface for uploading images, inputting text descriptions, and displaying the best matching text for each image.
 
