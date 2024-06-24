@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
+import Post from './components/Post';
+
 
 const App = () => {
   return (
@@ -15,6 +17,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/posts/:postId" element={<Post />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
