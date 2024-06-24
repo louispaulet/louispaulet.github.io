@@ -1,6 +1,8 @@
 ## Introducing the HATVP RAG Assistant Project: Enhancing Transparency in Public Declarations
 
-![a gif](https://i.imgur.com/lTrqobh.mp4)
+![a gif of the assistant demo](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/hatvp-rag-assistant-capture.gif?raw=true)
+
+[Try it now! - Please be patient as ressources are allocated on the spot](https://hatvp-rag.thefrenchartist.dev/)
 
 Welcome to an exciting journey through the HATVP RAG Assistant project! This innovative initiative leverages cutting-edge technologies to facilitate transparency and access to public declarations submitted by French representatives. Let's dive into the details of this project, from its preparation phase to the backend operations, and explore how it seamlessly integrates with the frontend to deliver valuable insights to users.
 
