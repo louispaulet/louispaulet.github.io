@@ -22,6 +22,8 @@ Transparency Watch stands out with its user-friendly and interactive dashboards,
 
 #### Gender Equality Dashboard
 
+![screenshot of dataviz app homepage](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/gender_equality_dashboard.png?raw=true)
+
 The Gender Equality Dashboard is a highlight of the Transparency Watch website. It offers a detailed analysis of the gender representation among public officials. The dashboard includes:
 
 - **Top 10 Surnames**: A bar chart showcasing the most common surnames, revealing a significant male dominance.
@@ -30,6 +32,8 @@ The Gender Equality Dashboard is a highlight of the Transparency Watch website. 
 - **Geographical Distribution**: A map displaying the percentage of women representatives in each French department, helping identify regions with significant gender disparities.
 
 #### Publication Rate Dashboard
+
+![screenshot of dataviz app homepage](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/publication_rate_dashboard.png?raw=true)
 
 This dashboard focuses on the efficiency and timeliness of HATVP declarations' posting and publication. Key features include:
 
