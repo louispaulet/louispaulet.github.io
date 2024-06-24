@@ -4,6 +4,12 @@ import PostPreview from './../components/PostPreview';
 
 const Home = () => {
   const posts = [
+    {
+        "id": "post4",
+        "title": "Transparency Watch: Enhancing Public Accountability Through Open Data",
+        "summary": "Transparency Watch is a new platform leveraging HATVP datasets to promote transparency and accountability in public life. The website offers interactive dashboards that reveal insights into gender equality and the efficiency of declaration publications, empowering citizens and watchdogs to monitor public officials effectively.",
+        "postDate": "24 Jun 2024"
+    },
     { 
         id: 'post1', 
         title: 'The Synergy of Text-to-Speech, GPT-4 Text Generation, and Innovative AI Websites', 
@@ -21,8 +27,10 @@ const Home = () => {
         title: 'OpenAI CLIP labelling and searching', 
         summary: "CLIP (Contrastive Language-Image Pre-training) is a deep learning model developed by OpenAI that can learn visual concepts from natural language supervision. It can understand images based on their descriptions and generate descriptions of images. In this post, we'll explore what CLIP is, how it works, and some of its exciting applications.",
         postDate: "23 Mar 2023"
-    }
-    // Add more posts here
+    },
+    
+
+    // Add more posts here -- there are displayed in this order
   ];
 
   return (
