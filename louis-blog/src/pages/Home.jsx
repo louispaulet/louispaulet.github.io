@@ -10,6 +10,12 @@ const Home = () => {
         "summary": "Transparency Watch is a new platform leveraging HATVP datasets to promote transparency and accountability in public life. The website offers interactive dashboards that reveal insights into gender equality and the efficiency of declaration publications, empowering citizens and watchdogs to monitor public officials effectively.",
         "postDate": "24 Jun 2024"
     },
+    {
+        id: 'post5', 
+        title: 'HATVP RAG Assistant: Transparency in Public Declarations made easy', 
+        summary: "The HATVP RAG Assistant project leverages advanced AI and NLP technologies to streamline querying and retrieving public declarations from French representatives. By utilizing embedding techniques and language models, it provides users with easy access to relevant information, promoting transparency and accessibility. This post delves into the project's preparation, backend operations, and frontend integration.",
+        postDate: "24 Jun 2024"
+    },
     { 
         id: 'post1', 
         title: 'The Synergy of Text-to-Speech, GPT-4 Text Generation, and Innovative AI Websites', 
@@ -28,8 +34,6 @@ const Home = () => {
         summary: "CLIP (Contrastive Language-Image Pre-training) is a deep learning model developed by OpenAI that can learn visual concepts from natural language supervision. It can understand images based on their descriptions and generate descriptions of images. In this post, we'll explore what CLIP is, how it works, and some of its exciting applications.",
         postDate: "23 Mar 2023"
     },
-    
-
     // Add more posts here -- there are displayed in this order
   ];
 
