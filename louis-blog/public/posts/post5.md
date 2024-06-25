@@ -1,4 +1,4 @@
-## Introducing the HATVP RAG Assistant Project: Enhancing Transparency in Public Declarations
+# Introducing the HATVP RAG Assistant Project: Enhancing Transparency in Public Declarations
 
 ![a gif of the assistant demo](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/hatvp-rag-assistant-capture.gif?raw=true)
 
@@ -148,3 +148,5 @@ Explore the project on GitHub:
 - **Backend Project Repository**: [HATVP RAG Backend](https://github.com/louispaulet/hatvp_rag_api)
 
 Feel free to contribute, provide feedback, or simply enjoy the enhanced access to public information through the HATVP RAG Assistant. Happy querying!
+
+*Published 24 Jun 2024.*
