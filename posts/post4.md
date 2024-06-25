@@ -53,3 +53,5 @@ Transparency Watch is more than just a website; it is a powerful instrument for 
 In an age where transparency is more critical than ever, initiatives like Transparency Watch are essential for fostering a culture of accountability and ensuring that public officials act in the best interests of the citizens they serve.
 
 [Link to the Github repo](https://github.com/louispaulet/hatvp_reactjs_viz)
+
+*Published 24 Jun 2024.*
