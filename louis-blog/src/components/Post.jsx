@@ -18,7 +18,6 @@ const Post = () => {
 
   return (
     <div className="post-container prose prose-lg mx-auto">
-    <SocialLinks />
       <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
     <SocialLinks />
     </div>

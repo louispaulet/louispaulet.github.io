@@ -1,5 +1,11 @@
 [
   {
+    "id": "post6",
+    "title": "Unraveling the Mysteries of MMLU: A Comprehensive Analysis",
+    "summary": "Join us on an in-depth journey through the analysis of the MMLU dataset. Discover how shuffling answer choices and leveraging collective voting strategies can significantly enhance the performance of language models. From creating the shuffled dataset to performing inference and detailed result analysis, this comprehensive post covers all the steps and insights gained along the way.",
+    "postDate": "25 Jun 2024"
+  },
+  {
     "id": "post4",
     "title": "Transparency Watch: Enhancing Public Accountability Through Open Data",
     "summary": "Transparency Watch is a new platform leveraging HATVP datasets to promote transparency and accountability in public life. The website offers interactive dashboards that reveal insights into gender equality and the efficiency of declaration publications, empowering citizens and watchdogs to monitor public officials effectively.",
