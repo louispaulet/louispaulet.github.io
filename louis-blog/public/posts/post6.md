@@ -81,6 +81,8 @@ After a few backs-and-forths, we can proudly say that the dataset is correctly m
 
 With the shuffled MMLU dataset ready, we now have a robust foundation for further analysis and inference. This setup allows us to explore how different answer orders impact model performance and helps us refine our approach to achieving higher accuracy through collective intelligence.
 
+[Link to part 1 notebook](https://github.com/louispaulet/benchmark_experiments/blob/main/MMLU%20Dataset%20-%20multiple%20voters/Part_1_create_shuffled_mmlu_dataset.ipynb)  
+
 ## Part 2: Performing Complete Shuffled MMLU Inference 🧠💻
 
 With our shuffled dataset in hand, we now turn to the task of performing inference on this massive collection of questions.
@@ -93,7 +95,8 @@ In this part, we are dealing with an enormous version of the MMLU dataset. Why i
 
 To tackle this task, we leveraged the power of an A100 GPU in Google Colab. Here’s a quick rundown of our process:
 1. **Dataset Retrieval**: We fetched the shuffled MMLU dataset from the HuggingFace Hub.
-2. **Batch Inference**: We performed batched inference on 10 samples at a time to optimize for speed without overwhelming the GPU.
+2. **Batch Inference**: We performed batched inference on 10 samples at a time to optimize for speed without overwhelming the GPU.  
+3. **Fast model**: We use model `unsloth/llama-3-8b-bnb-4bit`, a quantized bits and bytes Q4 model, with inference lib FastLanguageModel from Unsloth. This model is fast and reliable: perfect for the job.  
 
 ### Why 10 Samples per Batch? 🤔
 
@@ -113,6 +116,8 @@ The inference dataset is [here](https://huggingface.co/datasets/the-french-artis
 ### Conclusion 🏁
 
 Now that the heavy lifting is done, we can shift gears and focus on analyzing the results. This analysis can be done in a GPU-free session, making it accessible even without high-end hardware. 🎉
+
+[Link to part 2 notebook](https://github.com/louispaulet/benchmark_experiments/blob/main/MMLU%20Dataset%20-%20multiple%20voters/Part_2_perform_complete_shuffled_MMLU_inference.ipynb)  
 
 ### Key Takeaways 📝
 
@@ -220,12 +225,14 @@ Same plot but as a line showing the accuracy progression of a letter per positio
 
 We have shown that no particular letter position is better than the others, and that the diminishing returns in average accuracy happen at 10 voters in the pool.  
 But how can we make sure we select the best letter orders to be part of our 10 voters (over the total 24 possible letter orders)?  
-And what is the influence of the order in which they are added to the voting pool?  
+And what is the influence of the order in which they are added to the voting pool? (important question if the benchmark were to stop at 70% completion).    
 
 We compared three selection methods:  
 * take letter order ABCD and then select all letter orders that have a letters in other positions (so ABDC is out, as A is already in position 0 in ABCD, and BCBA is ok as no letter is positionned like ABCD)  
 * Hamming distance  ([wiki](https://en.wikipedia.org/wiki/Hamming_distance))  
 * Levenshtein distance  ([wiki](https://en.wikipedia.org/wiki/Levenshtein_distance))  
+
+For each selection of letter orders, we compare the average accuracy of those selected and those not selected to ensure we don't have a massive disparity, indicating a hidden bias.  
 
 #### Method 1 (original letter order plus all orders that have letters in a different position)
 This yields the closest accuracy difference between both groups (selected and non-selected by order letters we chose).
@@ -242,29 +249,41 @@ This is the worst method, as the output letter orders are heavily biased towards
 Moreover, there is a large accuracy gap between select and not-selected groups.
 
 #### Adding letter orders to the voting pool  
+
+By using the Hamming distance, we get the following 10 letter orders:  
+['ABCD', 'BADC', 'CDAB', 'DCBA', 'ACDB', 'ADBC', 'BCAD', 'BDCA', 'CABD', 'CBDA']  
+
 We choose to add the selected letter orders randomly.  
 We shuffle the letter orders 10 times and add them sequentially.  
 
 Here are the results:  
+![line plot of letter order random shuffles](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/letter_order_10_line.png?raw=true)  
 
+With a regression line:  
+![line plot of letter order random shuffles with reg line](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/letter_order_10_reg.png?raw=true)  
 
+We achieve the best score possible with these 10 representative letter orders, showing that going up to 24 voters is a waste of computing time.  
+We couldn't find an ideal order to add the letter orders, the general progression is chaotic until 8/10 voters are present in the pool.  
+So, stopping a 10-voter benchmark at 80% would yield results with a 2-percentage point uncertainty.  
 
 ### Detailed Analysis 📈
 
-Our analysis revealed several interesting insights:
+Our comprehensive analysis yielded several noteworthy insights regarding bias mitigation, collective intelligence, and the influence of letter position on model performance.
 
 1. **Bias Mitigation**: Shuffling the answer choices significantly reduced the bias introduced by the order of answers. The mean accuracies across different permutations were more consistent, indicating that shuffling helps in mitigating positional bias.
 
-2. **Collective Intelligence**: By employing a voting mechanism across all permutations, we harnessed the power of collective intelligence, which resulted in higher overall accuracy. The voting method helped in selecting the most likely correct answer from the shuffled permutations. The average accuracy over the complete MMLU using the voting strategy is 60.87%, while the perfect performing letter order only reached 53%.  
+2. **Collective Intelligence**: By employing a voting mechanism across all permutations, we harnessed the power of collective intelligence, which resulted in higher overall accuracy. The voting method helped in selecting the most likely correct answer from the shuffled permutations. The average accuracy over the complete MMLU using the voting strategy is 60.87%, while the perfect performing letter order only reached 53%.
 
 3. **Letter Position Influence**: We observed that the influence of letter position on accuracy was minimal. This finding suggests that the model's performance was not heavily skewed by the position of the correct answer, reinforcing the robustness of our shuffling approach.
 
 ### Findings and Insights 🔍
 
-- **Improved Accuracy**: Using all 24 letter orders increased average accuracy from 50% to 60%, demonstrating a significant improvement.
+- **Improved Accuracy**: Using all 24 letter orders increased average accuracy from 53% to 60.87%, demonstrating a significant improvement.
 - **Optimal Shuffles**: Implementing 10 letter orders provided the best balance between added accuracy and computational efficiency, avoiding diminishing returns beyond this point.
 - **No Outlier Order**: No single letter order consistently outperformed others, indicating the absence of a beneficial outlier in the voting strategy.
-- **Position Independence**: The letter position in a letter order did not have a meaningful influence on total mean accuracy.
+- **Position Independence**: The letter position in a letter order did not have a meaningful influence on total mean accuracy.  
+
+[Link to part 3 notebook](https://github.com/louispaulet/benchmark_experiments/blob/main/MMLU%20Dataset%20-%20multiple%20voters/Part_3_Analyze_shuffled_MMLU_inference_results.ipynb)  
 
 ### Conclusion 🏁
 
@@ -275,3 +294,5 @@ Our main takeaways are:
 - Shuffling answer choices and using a collective voting mechanism can achieve approximately a 10 percentage point increase in accuracy with fewer computational resources.
 
 This concludes our deep dive into the MMLU dataset and the impact of shuffling answer choices on language model performance. We hope you found this journey insightful and inspiring. Until next time, happy coding! 🌟
+
+*Published 25 Jun 2024.*
