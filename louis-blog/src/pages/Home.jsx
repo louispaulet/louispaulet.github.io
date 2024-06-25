@@ -21,7 +21,7 @@ const Home = () => {
             <h1 className="text-9xl font-bold mb-4">Welcome&nbsp;to Louis&nbsp;Paulet blog</h1>
             <p className="text-xl mb-4 py-8">Random projects and AI insights</p>
       <Link to='/about'>
-        <button className="bg-white border-2 border-blue-500 text-black py-2 px-4 rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg">
+        <button className="bg-white border-2 border-blue-600 text-black py-2 px-4 rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-lg">
           Who is Louis Paulet ?
         </button>
       </Link>
@@ -30,7 +30,7 @@ const Home = () => {
             {/* Black bar */}
             <div className="w-10 bg-black mx-4"></div>
             <div>
-              <h2 className="text-3xl font-semibold mb-6">Recent Posts</h2>
+              <h2 className="text-3xl font-semibold mb-6 bg-black text-white inline-block py-1 px-1">Recent Posts</h2>
               <ul>
                 {posts.map((post) => (
                   <PostPreview

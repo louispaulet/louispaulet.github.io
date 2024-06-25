@@ -12,7 +12,7 @@ const PostPreview = ({ id, title, summary, postDate }) => {
       <Link to={`/posts/${id}`} className="block p-6 bg-gray-10 hover:bg-gray-100 rounded-lg shadow">
         <div className="flex">
           <div className="flex-shrink-0 mr-4">
-            <FaNewspaper className="text-6xl" />
+            <FaNewspaper className="text-6xl text-blue-600" />
           </div>
           <div className="flex-grow">
             <h3 className="text-2xl font-semibold">{title}</h3>
