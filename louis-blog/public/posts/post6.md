@@ -152,7 +152,102 @@ A crucial part of our analysis involves the voting step. Here, we aim to determi
    - For each unique question, we identified the most common predicted answer among the 24 permutations. This majority vote represents the collective decision of the model across different answer orders.
 
 3. **Validation of Majority Vote**:
-   - We ensured that the majority vote accurately represented the most frequent predictions by comparing the sizes and counts of the predicted answers.
+   - We ensured that the majority vote accurately represented the most frequent predictions by comparing the sizes and counts of the predicted answers.  
+   
+### Letter order performance over categories
+
+When looking at the average accuracy over the complete MMLU benchmark (all categories), we see that some letter orders perform better than others:  
+![bar plot of letter order acc over complete MMLU](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/total_mean_acc_per_letter_order.png?raw=true)  
+However, the difference is only 3 percentage points, while **the result of the voting strategy is 60.87% average accuracy**, showing that collective intellingence is key.  
+
+Bar plot of average accuracy per category (all letter orders averaged):  
+![bar plot of average accuracies](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/mmlu_mean_accuracy_per_category.png?raw=true)  
+We can observe massive differences between categories, with reasoning skills having the lowest scores, and knowledge-based tasks having the highest scores.  
+
+Now, lets mix these two plots and get the top 5 and bottom 5 !  
+
+MMLU Categories with the highest delta between the best performing letter order and the worst performing letter order:  
+![top 5 categories with a high delta in letter order accuracy](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/top_5_deltas_in_accuracy_per_letter_order_and_category.png?raw=true)
+
+MMLU categories with the lowest delta between best and worst letter order:    
+![flop 5 categories with a high delta in letter order accuracy](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/flop_5_deltas_in_accuracy_per_letter_order_and_category.png?raw=true)
+
+We see huge disparities in performance in the categories that the model struggles with. It seems like it answers at random, with a slight advantage using the voting strategy.  
+When the categories have a better average score, the difference between letter orders is lesser, and the voting strategy is less effective (the model cannot perform above its actual knowledge).  
+
+### Outliers and Followers  
+
+Are all letter orders benefitting from this voting system?  
+Haven't we all felt that the popular choice wasn't always the best?  
+We can measure it!  
+
+We coined the following 4 categories:  
+* agrees with popular vote and is right : 'beneficial follower'  
+* agrees with popular vote and is wrong : 'detrimental follower'  
+* disagrees with popular vote and is wrong : 'detrimental outlier'  
+* disagrees with popular vote and is right : 'beneficial outlier'  
+
+The total accuracy is the follower accuracy + outlier accuracy. The line plot below shows that all letter orders benefit from the collective vote:  
+![line plot of accuracy for followers outliers and total](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/total_mean_acc_follower_outlier_per_letter_order.png?raw=true)  
+It also shows that difference in accuracies from letter order to letter order are minimal.  
+
+So, around 5% of the time, each letter order would have fared better left to choose on its own.  
+But the rest of the time, the popular vote was wiser.  
+
+### How many voters are enough?
+
+We measure the average accuracy over all categories by adding random letter orders to the voting pool:  
+![line plot of voting performance](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/24_voters_lines.png?raw=true)  
+We can observe many different outcomes depending on the letter order that was added to the voting pool.  
+Same plot with a regression line:  
+![line plot of voting performance with regression line](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/24_voters_lines_regression.png?raw=true)  
+These line plots helped us to decide on the 10-voters diminishing returns rule.  
+
+We can see that the average accuracy is always rising, and we could try this experiment again, but this time, instead of shuffling the answers, we could rephrase the questions.  
+Then the choices.    
+As the regression line looks logarithmic, we would get diminishing returns by continuing this experiment, but the question remains: how high can it go?  
+
+### Letter order influence  
+
+We measured the influence of a letter position in a given letter order in relation to the total MMLU accuracy (no voting here).  
+We found minute differences in average accuracy suggesting that the letter A should be first and letter D should be last.  
+Box plot showing the average accuracy of a letter at positions 0 to 3 (eg. ABCD has letter A at position 0 and D at position 3):  
+![letter order acc boxplot](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/letter_order_acc_per_letter_position.png?raw=true)  
+Same plot but as a line showing the accuracy progression of a letter per position in the letter order:  
+![letter order acc lineplot](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/letter_order_acc_per_letter_position_lines.png?raw=true)  
+
+### How do we select the 10 letter orders?  
+
+We have shown that no particular letter position is better than the others, and that the diminishing returns in average accuracy happen at 10 voters in the pool.  
+But how can we make sure we select the best letter orders to be part of our 10 voters (over the total 24 possible letter orders)?  
+And what is the influence of the order in which they are added to the voting pool?  
+
+We compared three selection methods:  
+* take letter order ABCD and then select all letter orders that have a letters in other positions (so ABDC is out, as A is already in position 0 in ABCD, and BCBA is ok as no letter is positionned like ABCD)  
+* Hamming distance  ([wiki](https://en.wikipedia.org/wiki/Hamming_distance))  
+* Levenshtein distance  ([wiki](https://en.wikipedia.org/wiki/Levenshtein_distance))  
+
+#### Method 1 (original letter order plus all orders that have letters in a different position)
+This yields the closest accuracy difference between both groups (selected and non-selected by order letters we chose).
+However, the letter 'A' is never at the beginning, and D is never at the end (as specified, except for ABCD original order), which is a huge bias.
+If we were to select random samples, this would rarely happen.
+
+#### Method 2 : Hamming distance
+This is the best method as the accuracy difference between two groups is not too high, and not too low (between methods 1 & 2).
+It also has the best letter repartition, with a fair amount of letter orders starting by 'A' and ending by 'D'.
+We choose this selection method.
+
+#### Method 3 : Levenshtein distance
+This is the worst method, as the output letter orders are heavily biased towards letter 'A'.
+Moreover, there is a large accuracy gap between select and not-selected groups.
+
+#### Adding letter orders to the voting pool  
+We choose to add the selected letter orders randomly.  
+We shuffle the letter orders 10 times and add them sequentially.  
+
+Here are the results:  
+
+
 
 ### Detailed Analysis 📈
 
@@ -160,7 +255,7 @@ Our analysis revealed several interesting insights:
 
 1. **Bias Mitigation**: Shuffling the answer choices significantly reduced the bias introduced by the order of answers. The mean accuracies across different permutations were more consistent, indicating that shuffling helps in mitigating positional bias.
 
-2. **Collective Intelligence**: By employing a voting mechanism across all permutations, we harnessed the power of collective intelligence, which resulted in higher overall accuracy. The voting method helped in selecting the most likely correct answer from the shuffled permutations.
+2. **Collective Intelligence**: By employing a voting mechanism across all permutations, we harnessed the power of collective intelligence, which resulted in higher overall accuracy. The voting method helped in selecting the most likely correct answer from the shuffled permutations. The average accuracy over the complete MMLU using the voting strategy is 60.87%, while the perfect performing letter order only reached 53%.  
 
 3. **Letter Position Influence**: We observed that the influence of letter position on accuracy was minimal. This finding suggests that the model's performance was not heavily skewed by the position of the correct answer, reinforcing the robustness of our shuffling approach.
 
