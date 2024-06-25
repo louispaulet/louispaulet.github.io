@@ -1,6 +1,6 @@
 # Transparency Watch: Enhancing Public Accountability Through Open Data
 
-![screenshot of dataviz app homepage](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/dataviz_homepage.png?raw=true)
+![screenshot of dataviz app homepage](./../post_images/dataviz_homepage.webp)
 
 In an era where trust in public institutions is constantly scrutinized, transparency and accountability have become paramount. The newly launched Transparency Watch website, [hatvp-dataviz.thefrenchartist.dev](https://hatvp-dataviz.thefrenchartist.dev/), is a significant step towards promoting these values. By leveraging open data from the Haute Autorité pour la transparence de la vie publique (HATVP), this platform offers insightful visualizations that shed light on the declarations of interest of public representatives and lobbying organizations in France.
 
@@ -22,7 +22,7 @@ Transparency Watch stands out with its user-friendly and interactive dashboards,
 
 #### Gender Equality Dashboard
 
-![screenshot of dataviz app homepage](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/gender_equality_dashboard.png?raw=true)
+![screenshot of dataviz app homepage](./../post_images/gender_equality_dashboard.webp)
 
 The Gender Equality Dashboard is a highlight of the Transparency Watch website. It offers a detailed analysis of the gender representation among public officials. The dashboard includes:
 
@@ -33,7 +33,7 @@ The Gender Equality Dashboard is a highlight of the Transparency Watch website. 
 
 #### Publication Rate Dashboard
 
-![screenshot of dataviz app homepage](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/publication_rate_dashboard.png?raw=true)
+![screenshot of dataviz app homepage](./../post_images/publication_rate_dashboard.webp)
 
 This dashboard focuses on the efficiency and timeliness of HATVP declarations' posting and publication. Key features include:
 

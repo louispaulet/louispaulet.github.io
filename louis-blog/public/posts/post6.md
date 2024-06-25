@@ -4,7 +4,7 @@ Hello, AI aficionados! Today, we embark on a deep dive into the fascinating worl
 
 ## Part 1: Creating the Shuffled MMLU Dataset 🌀📚
 
-![a card shuffling gif](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Riffle_shuffle.gif/330px-Riffle_shuffle.gif)
+![a card shuffling gif](./../post_images/Riffle_shuffle.gif)
 
 Our journey begins with the creation of the shuffled MMLU dataset. This foundational step sets the stage for everything that follows.
 
@@ -216,20 +216,20 @@ A crucial part of our analysis involves the voting step. Here, we aim to determi
 ### Letter order performance over categories
 
 When looking at the average accuracy over the complete MMLU benchmark (all categories), we see that some letter orders perform better than others:  
-![bar plot of letter order acc over complete MMLU](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/total_mean_acc_per_letter_order.png?raw=true)  
+![bar plot of letter order acc over complete MMLU](./../post_images/total_mean_acc_per_letter_order.webp)  
 However, the difference is only 3 percentage points, while **the result of the voting strategy is 60.87% average accuracy**, showing that collective intellingence is key.  
 
 Bar plot of average accuracy per category (all letter orders averaged):  
-![bar plot of average accuracies](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/mmlu_mean_accuracy_per_category.png?raw=true)  
+![bar plot of average accuracies](./../post_images/mmlu_mean_accuracy_per_category.webp)  
 We can observe massive differences between categories, with reasoning skills having the lowest scores, and knowledge-based tasks having the highest scores.  
 
 Now, lets mix these two plots and get the top 5 and bottom 5 !  
 
 MMLU Categories with the highest delta between the best performing letter order and the worst performing letter order:  
-![top 5 categories with a high delta in letter order accuracy](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/top_5_deltas_in_accuracy_per_letter_order_and_category.png?raw=true)
+![top 5 categories with a high delta in letter order accuracy](./../post_images/top_5_deltas_in_accuracy_per_letter_order_and_category.webp)
 
 MMLU categories with the lowest delta between best and worst letter order:    
-![flop 5 categories with a high delta in letter order accuracy](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/flop_5_deltas_in_accuracy_per_letter_order_and_category.png?raw=true)
+![flop 5 categories with a high delta in letter order accuracy](./../post_images/flop_5_deltas_in_accuracy_per_letter_order_and_category.webp)
 
 We see huge disparities in performance in the categories that the model struggles with. It seems like it answers at random, with a slight advantage using the voting strategy.  
 When the categories have a better average score, the difference between letter orders is lesser, and the voting strategy is less effective (the model cannot perform above its actual knowledge).  
@@ -247,7 +247,7 @@ We coined the following 4 categories:
 * disagrees with popular vote and is right : 'beneficial outlier'  
 
 The total accuracy is the follower accuracy + outlier accuracy. The line plot below shows that all letter orders benefit from the collective vote:  
-![line plot of accuracy for followers outliers and total](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/total_mean_acc_follower_outlier_per_letter_order.png?raw=true)  
+![line plot of accuracy for followers outliers and total](./../post_images/total_mean_acc_follower_outlier_per_letter_order.webp)  
 It also shows that difference in accuracies from letter order to letter order are minimal.  
 
 So, around 5% of the time, each letter order would have fared better left to choose on its own.  
@@ -256,10 +256,10 @@ But the rest of the time, the popular vote was wiser.
 ### How many voters are enough?
 
 We measure the average accuracy over all categories by adding random letter orders to the voting pool:  
-![line plot of voting performance](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/24_voters_lines.png?raw=true)  
+![line plot of voting performance](./../post_images/24_voters_lines.webp)  
 We can observe many different outcomes depending on the letter order that was added to the voting pool.  
 Same plot with a regression line:  
-![line plot of voting performance with regression line](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/24_voters_lines_regression.png?raw=true)  
+![line plot of voting performance with regression line](./../post_images/24_voters_lines_regression.webp)  
 These line plots helped us to decide on the 10-voters diminishing returns rule.  
 
 We can see that the average accuracy is always rising, and we could try this experiment again, but this time, instead of shuffling the answers, we could rephrase the questions.  
@@ -271,9 +271,9 @@ As the regression line looks logarithmic, we would get diminishing returns by co
 We measured the influence of a letter position in a given letter order in relation to the total MMLU accuracy (no voting here).  
 We found minute differences in average accuracy suggesting that the letter A should be first and letter D should be last.  
 Box plot showing the average accuracy of a letter at positions 0 to 3 (eg. ABCD has letter A at position 0 and D at position 3):  
-![letter order acc boxplot](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/letter_order_acc_per_letter_position.png?raw=true)  
+![letter order acc boxplot](./../post_images/letter_order_acc_per_letter_position.webp)  
 Same plot but as a line showing the accuracy progression of a letter per position in the letter order:  
-![letter order acc lineplot](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/letter_order_acc_per_letter_position_lines.png?raw=true)  
+![letter order acc lineplot](./../post_images/letter_order_acc_per_letter_position_lines.webp)  
 
 ### How do we select the 10 letter orders?  
 
@@ -311,10 +311,10 @@ We choose to add the selected letter orders randomly.
 We shuffle the letter orders 10 times and add them sequentially.  
 
 Here are the results:  
-![line plot of letter order random shuffles](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/letter_order_10_line.png?raw=true)  
+![line plot of letter order random shuffles](./../post_images/letter_order_10_line.webp)  
 
 With a regression line:  
-![line plot of letter order random shuffles with reg line](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/letter_order_10_reg.png?raw=true)  
+![line plot of letter order random shuffles with reg line](./../post_images/letter_order_10_reg.webp)  
 
 We achieve the best score possible with these 10 representative letter orders, showing that going up to 24 voters is a waste of computing time.  
 We couldn't find an ideal order to add the letter orders, the general progression is chaotic until 8/10 voters are present in the pool.  

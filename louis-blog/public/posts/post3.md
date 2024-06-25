@@ -2,7 +2,7 @@
 
 **3 min read.**
 
-![a gif](https://github.com/louispaulet/louispaulet.github.io_old/blob/master/img/remote/137EOX.gif?raw=true)
+![a gif](./../post_images/openai_clip.gif)
 
 ## Disruptive Text-to-Image Embeddings: A Technological Marvel
 The concept of embedding text and images into a shared latent space is transformative. Traditionally, AI models have struggled to bridge the semantic gap between visual and linguistic information. However, OpenAI's CLIP model leverages vast datasets and advanced neural architectures to align textual and visual embeddings, enabling it to understand and match images with their most relevant textual descriptions with unprecedented accuracy.

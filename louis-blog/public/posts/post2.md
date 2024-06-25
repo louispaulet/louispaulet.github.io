@@ -2,7 +2,7 @@
 
 **2 min read.**
 
-![a gif](https://github.com/louispaulet/louispaulet.github.io_old/blob/master/img/remote/ZeyTDf.gif?raw=true)
+![a gif](./../post_images/mnist_app.gif)
 
 In the ever-evolving field of artificial intelligence, one of the fundamental tasks that has captivated researchers and enthusiasts alike is handwritten digit recognition. This seemingly simple problem, encapsulated by the MNIST dataset, serves as a crucial benchmark for developing and evaluating machine learning models. Today, we explore a fascinating project that leverages Keras and Flask to create a web application for real-time digit recognition, demonstrating the practical applications of AI in an accessible and interactive manner.
 

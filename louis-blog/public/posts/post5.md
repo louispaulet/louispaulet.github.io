@@ -1,6 +1,6 @@
 # Introducing the HATVP RAG Assistant Project: Enhancing Transparency in Public Declarations
 
-![a gif of the assistant demo](https://github.com/louispaulet/louispaulet.github.io/blob/main/louis-blog/public/post_images/hatvp-rag-assistant-capture.gif?raw=true)
+![a gif of the assistant demo](./../post_images/hatvp-rag-assistant-capture.gif)
 
 [Try it now! - Please be patient as ressources are allocated on the spot](https://hatvp-rag.thefrenchartist.dev/)
 
