@@ -52,7 +52,7 @@ const Home = () => {
               <h2 className="text-2xl lg:text-3xl font-semibold mb-6 bg-black text-white inline-block py-1 px-1">Recent Posts</h2>
               <ul>
                 {loading ? (
-                  Array.from({ length: 3 }).map((_, index) => (
+                  Array.from({ length: 6 }).map((_, index) => (
                     <li key={index} className="mb-4">
                       <div className="block p-6 bg-gray-100 rounded-lg shadow animate-pulse w-full">
                         <div className="flex">
