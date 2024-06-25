@@ -104,6 +104,60 @@ Some of the samples were exceptionally large (>4000 tokens), which could have ca
 - **Speed**: 10 samples per batch yielded 60 samples per second.
 - **Comparison**: Larger batches (e.g., 100 samples) only marginally increased the speed to 70 samples per second, not worth the additional complexity of handling huge variations in sample size.
 
+### Inference method  
+
+MMLU can be evaluated in many ways: we choose to measure logit probabilities for the tokens ' A B C D' (target tokens).  
+[Which is consistent with the original MMLU code implementation](https://github.com/hendrycks/test/pull/13)  
+Here is the code below:  
+````
+def get_number_result_from_question_batch_mode(rows):
+
+    prompts = []
+    for question, choices in zip(rows['question'], rows['choices']):
+        prompt = mmlu_prompt.format(
+            question,
+            format_choice(choices),
+            ""  # output - leave blank for model answer
+        )
+        prompts.append(prompt)
+
+    answer_tokens = tokenizer.encode(" A B C D", add_special_tokens=False, return_tensors="pt")
+    inputs = tokenizer(prompts, return_tensors="pt", padding=True).to("cuda")
+
+    logits_list = []
+    with torch.no_grad():
+        logits = model(inputs.input_ids, attention_mask=inputs.attention_mask).logits
+        torch.cuda.empty_cache()
+        for i in range(len(prompts)):
+            logits_ans = logits[i, -1, answer_tokens].cpu()
+            logits_list.append(logits_ans)
+
+    rows['inferred_answer'] = []
+    for logits_ans in logits_list:
+        prob_ans = torch.softmax(logits_ans, dim=-1)
+        inferred_answer = prob_ans.argmax(dim=-1)[0]
+        rows['inferred_answer'].append(inferred_answer)
+
+    return rows
+````
+
+`zip(rows['question'], rows['choices'])` loads 10 questions and 10 choices from the batch of size 10.  
+
+`answer_tokens = tokenizer.encode(" A B C D", add_special_tokens=False, return_tensors="pt")` makes a list of tensors with the target tokens.  
+
+`prob_ans = torch.softmax(logits_ans, dim=-1)` get the probas for each target token.  
+
+`inferred_answer = prob_ans.argmax(dim=-1)[0]` get the index of highest proba.  
+
+Fictional example:  
+Target tokens: [A, B, C, D]  
+
+Softmax probas: [0.15, 0.75, 0.3, 0.7]  
+
+Argmax result: 1 (indexes go from 0 to 3).  
+
+Selected answer: B (letter at index 1).  
+
 ### Inference Execution 🚀
 
 With our setup in place, we kicked off the inference process. The complete inference took approximately 3 hours on an A100 GPU. Not bad for such a massive dataset! ⏱️
