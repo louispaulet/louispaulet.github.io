@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
+import CvViewer from './pages/CvViewer';
 import Post from './components/Post';
 
 
@@ -16,6 +17,7 @@ const App = () => {
         <main className="flex-grow container mx-auto p-4">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/cv" element={<CvViewer />} />
             <Route path="/about" element={<About />} />
             <Route path="/posts/:postId" element={<Post />} />
             <Route path="*" element={<NotFound />} />
