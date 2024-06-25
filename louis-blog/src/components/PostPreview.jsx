@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaNewspaper } from "react-icons/fa";
+import { FcReading } from "react-icons/fc";
+
+
+
 
 const PostPreview = ({ id, title, summary, postDate }) => {
   return (
@@ -14,6 +18,9 @@ const PostPreview = ({ id, title, summary, postDate }) => {
             <h3 className="text-2xl font-semibold">{title}</h3>
             <p className="mt-2 text-lg text-gray-700">{summary}</p>
             <p className="mt-2 text-sm text-gray-500">Posted on {postDate}</p>
+            <p className="text-1xl font-semibold underline flex items-center">
+              Read more <FcReading    className="ml-1 text-2xl" />
+            </p>
           </div>
         </div>
       </Link>
