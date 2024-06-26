@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
+import Projects from './pages/Projects';
 import NotFound from './pages/NotFound';
 import Post from './components/Post';
 
@@ -21,6 +22,7 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/cv" element={<CvViewer />} />
               <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
               <Route path="/posts/:postId" element={<Post />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
