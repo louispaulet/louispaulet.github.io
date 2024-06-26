@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import PostPreview from './PostPreview';
 import { FaNewspaper } from "react-icons/fa";
 import { FcReading } from "react-icons/fc";
+import { FaAnglesDown } from "react-icons/fa6";
+
 import postsData from './../posts.json';
 
 const LatestPosts = () => {
@@ -18,7 +20,13 @@ const LatestPosts = () => {
 
   return (
     <div className="w-full">
-      <h2 className="text-2xl lg:text-3xl font-semibold mb-6 bg-black text-white inline-block py-1 px-1">Recent Posts</h2>
+     <div className="bg-black inline-block py-1 px-1 mb-4">
+       <h2 className="text-2xl lg:text-3xl font-semibold text-white flex items-center space-x-2">
+         <FaAnglesDown />
+         <span>Latest Posts</span>
+         <FaAnglesDown />
+       </h2>
+     </div>
       <ul>
         {loading ? (
           Array.from({ length: 6 }).map((_, index) => (
