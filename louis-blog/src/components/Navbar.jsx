@@ -14,6 +14,7 @@ const Navbar = () => {
         </div>
         <div className="flex space-x-4">
           <Link to="/" className="hover:text-gray-300">Home</Link>
+          <Link to="/projects" className="hover:text-gray-300">Projects</Link>
           <Link to="/about" className="hover:text-gray-300">About</Link>
         </div>
       </div>

@@ -11,7 +11,9 @@ const Home = () => {
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-1/2 lg:pr-4 mb-6 lg:mb-0">
             <h1 className="2xl:text-9xl xl:text-8xl lg:text-7xl md:text-8xl text-6xl font-bold mb-4 text-center lg:text-left">Welcome&nbsp;to Louis&nbsp;Paulet blog</h1>
-            <p className="text-lg lg:text-xl py-8 text-center lg:text-left">Random projects and AI insights</p>
+            <p className="text-lg lg:text-xl py-8 text-center lg:text-left">
+                Random <Link to="/projects" className="text-blue-600 underline hover:no-underline">projects</Link> and AI insights.
+            </p>
             <div className="flex justify-center lg:justify-start space-x-4 items-center">
               <div>
                 <Link to='/about'>
