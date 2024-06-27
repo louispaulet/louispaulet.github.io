@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import website_logo from './../cached_images/logo_favicon.webp'
+import website_logo from './../cached_images/logo_favicon_white_blue.webp'
 
 const Navbar = () => {
   return (
@@ -8,7 +8,9 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <Link to="/">
-            <img src={website_logo} alt="Louis Paulet" className="w-10 h-10 border-2 border-white" />
+          <div >
+            <img src={website_logo} alt="Louis Paulet" className="w-10 h-10 border-0 border-white" />
+           </div>
           </Link>
           <Link to="/" className="text-2xl font-bold">Louis Paulet Blog</Link>
         </div>
