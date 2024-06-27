@@ -1,11 +1,12 @@
-[
+// PostData.js
+const postData = [
   {
     "id": "post6",
     "title": "Unleashing Collective Intelligence: A Deep Dive into the Shuffled MMLU Dataset",
     "summary": "Join us on an in-depth journey through the analysis of the MMLU dataset. Discover how shuffling answer choices and leveraging collective voting strategies can significantly enhance the performance of language models. From creating the shuffled dataset to performing inference and detailed result analysis, this comprehensive post covers all the steps and insights gained along the way.",
     "postDate": "25 Jun 2024"
   },
-    {
+  {
     "id": "post7",
     "title": "Understanding the Arithmetic Capabilities of Modern Language Models",
     "summary": "This article is about benchmark creation, analyzing the arithmetic capabilities of various large language models when it comes to 1+1+1 sums. It discusses the methodology, evaluates the performance of different models, and highlights key findings.",
@@ -41,4 +42,6 @@
     "summary": "CLIP (Contrastive Language-Image Pre-training) is a deep learning model developed by OpenAI that can learn visual concepts from natural language supervision. It can understand images based on their descriptions and generate descriptions of images. In this post, we'll explore what CLIP is, how it works, and some of its exciting applications.",
     "postDate": "23 Mar 2023"
   }
-]
+];
+
+export default postData;
