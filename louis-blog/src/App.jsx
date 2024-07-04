@@ -7,13 +7,16 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import NotFound from './pages/NotFound';
 import Post from './components/Post';
+import UsePageTracking from './components/usePageTracking.js';
 
 // Dynamic import for CvViewer (heavy!)
 const CvViewer = lazy(() => import('./pages/CvViewer'));
 
 const App = () => {
+  
   return (
     <Router>
+      <UsePageTracking />
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow container mx-auto p-4">
