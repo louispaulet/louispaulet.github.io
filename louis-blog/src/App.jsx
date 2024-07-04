@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -7,13 +7,26 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import NotFound from './pages/NotFound';
 import Post from './components/Post';
+import { PageTracking } from './components/pageTracking';
+import ConsentBanner from './components/ConsentBanner';
 
 // Dynamic import for CvViewer (heavy!)
 const CvViewer = lazy(() => import('./pages/CvViewer'));
 
 const App = () => {
+  PageTracking();
+
+  const [showConsentBanner, setShowConsentBanner] = useState(false);
+
+  useEffect(() => {
+    const storedConsent = localStorage.getItem('ga_consent');
+    if (!storedConsent) {
+      setShowConsentBanner(true);
+    }
+  }, []);
+
   return (
-    <Router>
+    <>
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow container mx-auto p-4">
@@ -29,8 +42,9 @@ const App = () => {
           </Suspense>
         </main>
         <Footer />
+        {showConsentBanner && <ConsentBanner />}
       </div>
-    </Router>
+    </>
   );
 };
 
