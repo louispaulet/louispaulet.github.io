@@ -15,7 +15,7 @@ const CvViewer = lazy(() => import('./pages/CvViewer'));
 const App = () => {
   
   return (
-    <Router>
+  <>
       <UsePageTracking />
       <div className="flex flex-col min-h-screen">
         <Navbar />
@@ -33,7 +33,7 @@ const App = () => {
         </main>
         <Footer />
       </div>
-    </Router>
+  </>
   );
 };
 
