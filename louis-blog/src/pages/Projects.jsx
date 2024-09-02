@@ -15,6 +15,18 @@ const projects = [
     link: "https://hatvp-dataviz.thefrenchartist.dev/"
   },
     {
+    image: "./post_images/timeline_generator.webp", 
+    title: "Timeline Generator",
+    description: "Send your prompt and get a beautiful timeline of any event.",
+    link: "https://timeline.thefrenchartist.dev/#/timeline"
+  },
+  {
+    image: "./post_images/exquisite_menus.webp", 
+    title: "Exquisite Menus",
+    description: "Exquisite menus at fictional restaurants. Menus created by GPT4, and images of the dishes generated using FLUX-DEV-1.",
+    link: "https://exquisite-menus.thefrenchartist.dev/"
+  },
+    {
     image: "./project_placeholder.webp", 
     title: "New project coming soon!",
     description: "If you click you'll go back home.",
