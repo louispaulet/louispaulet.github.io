@@ -1,5 +1,11 @@
 // PostData.js
 const postData = [
+{
+  "id": "post8",
+  "title": "Client-Side MNIST Digit Recognition Using TensorFlow.js",
+  "summary": "This blog post explores a web-based application that performs handwritten digit recognition using the MNIST dataset entirely in the browser. The project leverages TensorFlow.js for real-time, client-side inference, highlighting the benefits of privacy, performance, and scalability in modern web development.",
+  "postDate": "04 Sep 2024"
+},
   {
     "id": "post6",
     "title": "Unleashing Collective Intelligence: A Deep Dive into the Shuffled MMLU Dataset",

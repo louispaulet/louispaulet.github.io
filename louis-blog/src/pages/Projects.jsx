@@ -27,6 +27,12 @@ const projects = [
     link: "https://exquisite-menus.thefrenchartist.dev/"
   },
     {
+    image: "./post_images/mnist-website.webp", 
+    title: "MNIST in the browser",
+    description: "Handwritten digit inference in the browser using Tensorflow.js",
+    link: "https://mnist.thefrenchartist.dev/"
+  },
+    {
     image: "./project_placeholder.webp", 
     title: "New project coming soon!",
     description: "If you click you'll go back home.",
