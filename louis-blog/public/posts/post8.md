@@ -2,6 +2,8 @@
 
 ![screenshot of the MNIST website](./post_images/mnist-website.webp)
 
+[This project is live! - Check the website](https://mnist.thefrenchartist.dev/)
+
 #### Overview
 
 This blog post presents a web-based application designed to perform handwritten digit recognition using the MNIST dataset. The application is built with TensorFlow.js, allowing the neural network to run entirely in the user's browser. This approach not only provides real-time feedback but also enhances user privacy by eliminating the need for server-side computation. In this post, we'll dive into the implementation details, the neural network model used, and the benefits of client-side processing for this type of application.
@@ -72,3 +74,5 @@ Implementing the digit recognition on the client side comes with several key ben
 This project is a demonstration of how modern web technologies, like TensorFlow.js, can be used to bring advanced machine learning models directly into the browser. By leveraging client-side processing, the application achieves both high performance and strong privacy protections. Whether you are a developer interested in exploring TensorFlow.js or a hobbyist curious about client-side AI, this project serves as an excellent example of what can be achieved with these tools.
 
 In the future, similar techniques can be applied to more complex models and tasks, pushing the boundaries of what is possible in browser-based machine learning. This project, while simple in its scope, opens the door to a wide range of possibilities for interactive and privacy-focused AI applications on the web.
+
+[This project is live! - Check the website](https://mnist.thefrenchartist.dev/)
