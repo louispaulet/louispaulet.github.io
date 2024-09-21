@@ -1,6 +1,12 @@
 // PostData.js
 const postData = [
 {
+  "id": "post9",
+  "title": "Benchmarking AI: Large Language Models and 3D Maze Generation with Three.js",
+  "summary": "The Maze Benchmark project tests various large language models (LLMs) by challenging them to generate 3D mazes using Three.js, evaluating their coding abilities and interactive visualization performance. Top-performing models like GPT-4 and GPT-o1 delivered high-quality code with minimal iterations, while lower-tier models struggled with functionality and debugging.",
+  "postDate": "21 Sep 2024"
+},
+{
   "id": "post8",
   "title": "Client-Side MNIST Digit Recognition Using TensorFlow.js",
   "summary": "This blog post explores a web-based application that performs handwritten digit recognition using the MNIST dataset entirely in the browser. The project leverages TensorFlow.js for real-time, client-side inference, highlighting the benefits of privacy, performance, and scalability in modern web development.",
