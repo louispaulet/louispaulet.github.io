@@ -33,6 +33,12 @@ const projects = [
     link: "https://mnist.thefrenchartist.dev/"
   },
     {
+    image: "./post_images/maze_benchmark.png", 
+    title: "The maze benchmark",
+    description: "Benchmarking LLMs by generating 3d interactive mazes in JS.",
+    link: "https://louispaulet.github.io/maze_benchmark/"
+  },
+    {
     image: "./project_placeholder.webp", 
     title: "New project coming soon!",
     description: "If you click you'll go back home.",
