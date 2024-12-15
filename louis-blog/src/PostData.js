@@ -1,6 +1,12 @@
 // PostData.js
 const postData = [
 {
+  "id": "post10",
+  "title": "Optimizing Our RAG Pipeline: From Crawling Chaos to Deduplication Mastery",
+  "summary": "This post details the journey of transforming a messy dataset of HTML documentation into a streamlined Retrieval-Augmented Generation (RAG) pipeline. It covers identifying duplicate data, cleaning embeddings, and preparing for a scalable deployment using cloud-based solutions. Key lessons include handling crawling issues, deduplicating embeddings, and deploying cost-effective, managed services.",
+  "postDate": "15 Dec 2024"
+},
+{
   "id": "post9",
   "title": "Benchmarking AI: Large Language Models and 3D Maze Generation with Three.js",
   "summary": "The Maze Benchmark project tests various large language models (LLMs) by challenging them to generate 3D mazes using Three.js, evaluating their coding abilities and interactive visualization performance. Top-performing models like GPT-4 and GPT-o1 delivered high-quality code with minimal iterations, while lower-tier models struggled with functionality and debugging.",
