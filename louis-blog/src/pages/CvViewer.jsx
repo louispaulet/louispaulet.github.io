@@ -1,16 +1,26 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { Link as ScrollLink, Element } from 'react-scroll';
-import PDFViewer from './../components/PdfViewer.jsx';
-import SocialLinks from './../components/SocialLinks';
 
 const CvViewer = () => {
-  const pdfUrlEn = 'https://storage.googleapis.com/cv_storage_loulou/Louis_Paulet_CV_EN.pdf';
-  const pdfUrlFr = 'https://storage.googleapis.com/cv_storage_loulou/Louis_Paulet_CV_FR.pdf';
-
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-4xl font-semibold mb-2 text-center">The curriculum vitae corner</h1>
+      <h1 className="text-4xl font-semibold mb-4 text-center">The curriculum vitae corner</h1>
+      <p className="text-lg mb-8">I am not currently looking for a job.</p>
+      <div className="flex space-x-4">
+        <RouterLink to="/">
+          <button className="bg-white border-2 border-blue-600 text-black py-2 px-4 rounded-lg hover:shadow-lg">
+            Back to Homepage
+          </button>
+        </RouterLink>
+        <RouterLink to="/projects">
+          <button className="bg-blue-600 border-2 border-blue-600 text-white py-2 px-4 rounded-lg hover:shadow-lg">
+            Go to Projects
+          </button>
+        </RouterLink>
+      </div>
+
+      {/* Original content commented out for future use */}
+      {/*
       <p>There is a french and an english version.</p>
       <div className="text-center">
         <RouterLink to="#english_version">
@@ -34,6 +44,7 @@ const CvViewer = () => {
         </Element>
       </div>
       <SocialLinks />
+      */}
     </div>
   );
 };
