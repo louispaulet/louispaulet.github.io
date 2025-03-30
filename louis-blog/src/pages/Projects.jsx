@@ -2,23 +2,12 @@ import React from 'react';
 import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [
-  {
-    image: "./post_images/hatvp-rag-assistant-capture.gif", 
-    title: "HATVP RAG Assistant",
-    description: "An assistant to help discover french representative data using RAG to prevent hallucinations",
-    link: "https://hatvp-rag.thefrenchartist.dev/"
-  },
+  
   {
     image: "./post_images/dataviz_homepage.webp", 
     title: "HATVP DATAVIZ",
     description: "A website to see plots about french representative data to act on open data possibilities",
     link: "https://hatvp-dataviz.thefrenchartist.dev/"
-  },
-    {
-    image: "./post_images/timeline_generator.webp", 
-    title: "Timeline Generator",
-    description: "Send your prompt and get a beautiful timeline of any event.",
-    link: "https://timeline.thefrenchartist.dev/#/timeline"
   },
   {
     image: "./post_images/exquisite_menus.webp", 
@@ -37,6 +26,18 @@ const projects = [
     title: "The maze benchmark",
     description: "Benchmarking LLMs by generating 3d interactive mazes in JS.",
     link: "https://louispaulet.github.io/maze_benchmark/"
+  },
+  {
+    image: "./post_images/timeline_generator.webp", 
+    title: "Timeline Generator",
+    description: "Send your prompt and get a beautiful timeline of any event.",
+    link: "https://timeline.thefrenchartist.dev/#/timeline"
+  },
+  {
+    image: "./post_images/hatvp-rag-assistant-capture.gif", 
+    title: "HATVP RAG Assistant",
+    description: "An assistant to help discover french representative data using RAG to prevent hallucinations",
+    link: "https://hatvp-rag.thefrenchartist.dev/"
   },
     {
     image: "./project_placeholder.webp", 
