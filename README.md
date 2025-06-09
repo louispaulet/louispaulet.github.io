@@ -34,8 +34,8 @@ Make sure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/louispaulet/vite_blog.git
-   cd vite_blog
+   git clone https://github.com/louispaulet/louispaulet.github.io.git
+   cd louispaulet.github.io
    ```
 
 2. Install dependencies:
@@ -55,7 +55,7 @@ Make sure you have the following installed:
 Here's an overview of the project's main files and directories:
 
 ```
-vite_blog/
+louispaulet.github.io/
 ├── public/                # Static assets
 │   ├── posts/        # Blog posts (.md) go here
 ├── src/
