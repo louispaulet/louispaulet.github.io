@@ -8,8 +8,8 @@ const postData = [
   },
   {
     "id": "post10",
-    "title": "Checkout.com's documentation RAG Pipeline: From Crawling Chaos to Deduplication Mastery",
-    "summary": "This post details the journey of transforming a messy dataset of HTML documentation into a streamlined Retrieval-Augmented Generation (RAG) pipeline. It covers identifying duplicate data, cleaning embeddings, and preparing for a scalable deployment using cloud-based solutions. Key lessons include handling crawling issues, deduplicating embeddings, and deploying cost-effective, managed services.",
+    "title": "How We Cleaned Up Checkout.com's Docs for a Simple RAG Pipeline",
+    "summary": "This post explains how we cleaned up a messy set of HTML documentation to build a simple Retrieval-Augmented Generation (RAG) pipeline. It talks about finding duplicate data, fixing embeddings, and getting ready to deploy the system using cloud services. Key takeaways include dealing with crawling problems, removing duplicate embeddings, and using affordable managed services.",
     "postDate": "15 Dec 2024"
   },
   {
