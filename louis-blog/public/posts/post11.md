@@ -77,5 +77,5 @@ recommendations are generated.
 
 This project makes it easy to discover new YouTube creators tailored to your interests. The GPT‑4.1‑nano model provides curated results, while real‑time link verification ensures each channel is valid.
 
-*Published 25 Jun 2024.*
+*Published 09 Jun 2025.*
 
