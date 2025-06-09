@@ -30,7 +30,7 @@ const App = () => {
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow container mx-auto p-4">
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div className="mt-8">Loading...</div>}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/cv" element={<CvViewer />} />
