@@ -44,7 +44,6 @@ This folder contains the Flask backend for the application. The backend consists
 This folder contains the React frontend for the application. The frontend provides a user interface for uploading images, inputting text descriptions, and displaying the results.
 
 - `Dockerfile`: Configuration for building the frontend Docker container
-- `src/App.css`: CSS file containing the styles for the frontend
 - `src/App.js`: Main React component, containing the application logic and user interface
 
 ### Other Files 

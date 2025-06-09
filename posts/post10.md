@@ -1,4 +1,4 @@
-# **Checkout.com's documentation RAG Pipeline: From Crawling Chaos to Deduplication Mastery** 🚀
+# **How We Cleaned Up Checkout.com's Docs for a Simple RAG Pipeline** 🚀
 
 We set out to create a system that could answer questions about Checkout.com's documentation by leveraging the power of large language models (LLMs). To achieve this, we needed a robust Retrieval-Augmented Generation (RAG) pipeline. Our approach was straightforward: 
 
