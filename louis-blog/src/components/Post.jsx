@@ -14,12 +14,16 @@ const Post = () => {
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}posts/${postId}.md`)
       .then((res) => {
-        if (!res.ok) {
-          throw new Error('Failed to fetch');
+        const contentType = res.headers.get('content-type') || '';
+        if (!res.ok || contentType.includes('text/html')) {
+          throw new Error('Failed to fetch markdown');
         }
         return res.text();
       })
       .then((text) => {
+        if (text.trim().startsWith('<!DOCTYPE')) {
+          throw new Error('Received HTML instead of markdown');
+        }
         setContent(text);
         setLoadError(false);
       })
