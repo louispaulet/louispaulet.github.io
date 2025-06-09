@@ -33,14 +33,20 @@ const projects = [
     description: "Send your prompt and get a beautiful timeline of any event.",
     link: "https://timeline.thefrenchartist.dev/#/timeline"
   },
+  // {
+  //   image: "./post_images/hatvp-rag-assistant-capture.gif",
+  //   title: "HATVP RAG Assistant",
+  //   description: "An assistant to help discover french representative data using RAG to prevent hallucinations",
+  //   link: "https://hatvp-rag.thefrenchartist.dev/"
+  // },
   {
-    image: "./post_images/hatvp-rag-assistant-capture.gif", 
-    title: "HATVP RAG Assistant",
-    description: "An assistant to help discover french representative data using RAG to prevent hallucinations",
-    link: "https://hatvp-rag.thefrenchartist.dev/"
+    image: "./post_images/youtube_recomender_project_thumbnail.webp",
+    title: "GPT YouTube Recommender",
+    description: "Get personalized YouTube channel suggestions powered by GPT-4.1-nano",
+    link: "https://gpt-reco.thefrenchartist.dev/"
   },
-    {
-    image: "./project_placeholder.webp", 
+  {
+    image: "./project_placeholder.webp",
     title: "New project coming soon!",
     description: "If you click you'll go back home.",
     link: ""
