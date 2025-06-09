@@ -19,6 +19,12 @@ const postData = [
   "postDate": "04 Sep 2024"
 },
   {
+    "id": "post11",
+    "title": "GPT YouTube Channel Recommender",
+    "summary": "Discover new YouTube channels by leveraging GPT-4.1-nano. This React + Vite app analyzes your subscriptions and provides curated suggestions with live link validation.",
+    "postDate": "25 Jun 2024"
+  },
+  {
     "id": "post6",
     "title": "Unleashing Collective Intelligence: A Deep Dive into the Shuffled MMLU Dataset",
     "summary": "Join us on an in-depth journey through the analysis of the MMLU dataset. Discover how shuffling answer choices and leveraging collective voting strategies can significantly enhance the performance of language models. From creating the shuffled dataset to performing inference and detailed result analysis, this comprehensive post covers all the steps and insights gained along the way.",
