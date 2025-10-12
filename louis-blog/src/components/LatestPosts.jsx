@@ -6,14 +6,11 @@ import postData from './../PostData';
 const LatestPosts = () => {
   return (
     <div className="w-full">
-      <div className="bg-black inline-block py-1 px-1 mb-4">
-        <h2 className="text-2xl lg:text-3xl font-semibold text-white flex items-center space-x-2">
-          <FaAnglesDown />
-          <span>Latest Posts</span>
-          <FaAnglesDown />
-        </h2>
+      <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold uppercase tracking-[0.35em] text-slate-200">
+        <FaAnglesDown className="text-lg" />
+        Latest Posts
       </div>
-      <ul>
+      <ul className="space-y-4">
         {postData.map((post) => (
           <PostPreview
             key={post.id}

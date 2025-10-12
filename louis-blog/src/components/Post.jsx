@@ -34,9 +34,19 @@ const Post = () => {
   }
 
   return (
-    <div className="post-container prose prose-lg mx-auto">
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
-      <SocialLinks />
+    <div className="post-container mx-auto max-w-4xl space-y-10">
+      <div className="overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60 p-10 shadow-2xl">
+        <ReactMarkdown remarkPlugins={[remarkGfm]} className="prose prose-lg prose-invert max-w-none">
+          {content}
+        </ReactMarkdown>
+      </div>
+      <div className="rounded-3xl border border-white/10 bg-slate-900/60 p-8 shadow-xl">
+        <h2 className="text-xl font-semibold text-white">Continue the conversation</h2>
+        <p className="mt-2 text-sm text-slate-300">
+          Reach out to collaborate, challenge the ideas in this article, or share your own builds.
+        </p>
+        <SocialLinks />
+      </div>
     </div>
   );
 };
