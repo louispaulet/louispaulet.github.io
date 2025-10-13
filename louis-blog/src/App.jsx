@@ -7,20 +7,25 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import NotFound from './pages/NotFound';
 import Post from './components/Post';
-import { PageTracking } from './components/pageTracking';
+import usePageAnalytics from './components/usePageAnalytics';
 import ConsentBanner from './components/ConsentBanner';
 
 // Dynamic import for CvViewer (heavy!)
 const CvViewer = lazy(() => import('./pages/CvViewer'));
 
 const App = () => {
-  PageTracking();
+  usePageAnalytics();
 
   const [showConsentBanner, setShowConsentBanner] = useState(false);
 
   useEffect(() => {
-    const storedConsent = localStorage.getItem('ga_consent');
-    if (!storedConsent) {
+    try {
+      const storedConsent = window.localStorage?.getItem('ga_consent');
+      if (!storedConsent) {
+        setShowConsentBanner(true);
+      }
+    } catch (error) {
+      console.warn('Consent banner fallback triggered; localStorage unavailable.', error);
       setShowConsentBanner(true);
     }
   }, []);
