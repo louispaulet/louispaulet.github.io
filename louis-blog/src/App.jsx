@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
+import Posts from './pages/Posts';
 import NotFound from './pages/NotFound';
 import Post from './components/Post';
 import usePageAnalytics from './components/usePageAnalytics';
@@ -41,6 +42,7 @@ const App = () => {
               <Route path="/cv" element={<CvViewer />} />
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/posts" element={<Posts />} />
               <Route path="/posts/:postId" element={<Post />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
