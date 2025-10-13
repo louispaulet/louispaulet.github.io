@@ -52,29 +52,32 @@ const ConsentBanner = () => {
   if (consentGiven) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 flex justify-between items-center">
-      <p className="text-sm">
-        We use cookies to improve your experience. Choose your preference.
-      </p>
-      <div className="flex space-x-4">
-        <button
-          className="bg-green-500 hover:bg-green-700 text-white py-1 px-3 rounded"
-          onClick={acceptAll}
-        >
-          Oh yes please ! Give me all the cookies you have !
-        </button>
-        <button
-          className="bg-yellow-500 hover:bg-yellow-700 text-white py-1 px-3 rounded"
-          onClick={acceptMinimum}
-        >
-          Accept minimal dose of cookies.
-        </button>
-        <button
-          className="bg-red-500 hover:bg-red-700 text-white py-1 px-3 rounded"
-          onClick={rejectAll}
-        >
-          Reject All.
-        </button>
+    <div className="fixed inset-x-0 bottom-6 z-50 flex justify-center px-4">
+      <div className="flex w-full max-w-5xl flex-col gap-4 rounded-3xl border border-white/10 bg-slate-950/90 p-6 text-sm text-slate-200 shadow-2xl shadow-blue-950/40 backdrop-blur">
+        <div>
+          <p className="text-base font-semibold text-white">Cookie preferences</p>
+          <p className="mt-1 text-sm text-slate-300">We use analytics to understand usage and improve the experience. Choose how much signal you want to share.</p>
+        </div>
+        <div className="flex flex-wrap items-center gap-3">
+          <button
+            className="inline-flex items-center rounded-full border border-emerald-400/50 bg-emerald-500/20 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-emerald-200 transition hover:-translate-y-0.5 hover:border-emerald-200 hover:bg-emerald-500/30"
+            onClick={acceptAll}
+          >
+            Accept all
+          </button>
+          <button
+            className="inline-flex items-center rounded-full border border-amber-400/50 bg-amber-500/20 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-amber-200 transition hover:-translate-y-0.5 hover:border-amber-200 hover:bg-amber-500/30"
+            onClick={acceptMinimum}
+          >
+            Essential only
+          </button>
+          <button
+            className="inline-flex items-center rounded-full border border-rose-400/50 bg-rose-500/20 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-rose-200 transition hover:-translate-y-0.5 hover:border-rose-200 hover:bg-rose-500/30"
+            onClick={rejectAll}
+          >
+            Reject all
+          </button>
+        </div>
       </div>
     </div>
   );

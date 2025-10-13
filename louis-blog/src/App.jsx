@@ -5,37 +5,44 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
+import Posts from './pages/Posts';
 import NotFound from './pages/NotFound';
 import Post from './components/Post';
-import { PageTracking } from './components/pageTracking';
+import usePageAnalytics from './components/usePageAnalytics';
 import ConsentBanner from './components/ConsentBanner';
 
 // Dynamic import for CvViewer (heavy!)
 const CvViewer = lazy(() => import('./pages/CvViewer'));
 
 const App = () => {
-  PageTracking();
+  usePageAnalytics();
 
   const [showConsentBanner, setShowConsentBanner] = useState(false);
 
   useEffect(() => {
-    const storedConsent = localStorage.getItem('ga_consent');
-    if (!storedConsent) {
+    try {
+      const storedConsent = window.localStorage?.getItem('ga_consent');
+      if (!storedConsent) {
+        setShowConsentBanner(true);
+      }
+    } catch (error) {
+      console.warn('Consent banner fallback triggered; localStorage unavailable.', error);
       setShowConsentBanner(true);
     }
   }, []);
 
   return (
     <>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex min-h-screen flex-col bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-slate-100">
         <Navbar />
-        <main className="flex-grow container mx-auto p-4">
+        <main className="container mx-auto w-full flex-grow px-4 pb-24 pt-12 sm:px-8 lg:max-w-6xl">
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/cv" element={<CvViewer />} />
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/posts" element={<Posts />} />
               <Route path="/posts/:postId" element={<Post />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
