@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 border-b border-white/10 bg-slate-900/60 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 sm:px-8">
         <Link to="/" className="flex items-center space-x-3 transition hover:opacity-90">
-          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 via-blue-400 to-indigo-500 shadow-lg shadow-blue-900/50">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#246BFF] shadow-lg shadow-blue-900/50">
             <img src={website_logo} alt="Louis Paulet" className="h-8 w-8" />
           </div>
           <div className="flex flex-col">
