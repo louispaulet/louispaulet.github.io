@@ -56,12 +56,12 @@ const projects = [
 const Projects = () => {
   return (
     <div className="space-y-12">
-      <div className="rounded-3xl border border-white/10 bg-slate-900/60 p-8 text-center shadow-2xl">
-        <p className="mx-auto mb-4 inline-flex items-center gap-2 rounded-full border border-blue-400/40 px-4 py-1 text-xs font-semibold uppercase tracking-[0.4em] text-blue-200">
+      <div className="neuo-panel--soft p-10 text-center shadow-brand-neuo">
+        <p className="mx-auto mb-4 inline-flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-megawide text-muted">
           Ship fast · Ship polished
         </p>
-        <h1 className="text-4xl font-semibold text-white sm:text-5xl">Live projects</h1>
-        <p className="mt-4 text-sm text-slate-300">
+        <h1 className="font-display text-4xl font-semibold text-white sm:text-5xl">Live projects</h1>
+        <p className="mt-4 text-sm text-muted">
           Every project below is running in production today—click through to interact with the builds, explore the code, and see the systems in motion.
         </p>
       </div>

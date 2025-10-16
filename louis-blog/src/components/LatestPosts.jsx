@@ -11,20 +11,20 @@ const LatestPosts = () => {
     <div className="space-y-8">
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div className="space-y-3">
-          <span className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-slate-200">
+          <span className="neuo-chip">
             <FaAnglesDown className="text-sm" />
             Latest Posts
           </span>
           <h2 className="text-3xl font-semibold text-white sm:text-4xl">
             Fresh signals from the build logs.
           </h2>
-          <p className="max-w-2xl text-sm text-slate-300 sm:text-base">
+          <p className="max-w-2xl text-sm text-muted sm:text-base">
             Two rows of what’s new—drop into the articles that trace research, experiments, and shipping notes.
           </p>
         </div>
         <Link
           to="/posts"
-          className="inline-flex items-center justify-center rounded-full border border-blue-400/60 bg-blue-500/10 px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-blue-200 transition hover:-translate-y-0.5 hover:border-blue-200 hover:bg-blue-500/20"
+          className="neuo-button"
         >
           More
         </Link>

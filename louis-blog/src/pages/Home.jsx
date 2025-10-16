@@ -7,104 +7,91 @@ import LatestPosts from './../components/LatestPosts';
 const Home = () => {
   return (
     <div className="space-y-20">
-      <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-blue-800 via-blue-700 to-indigo-700 px-6 py-16 shadow-2xl shadow-blue-950/40 sm:px-10">
-        <div className="absolute -right-20 -top-24 h-64 w-64 rounded-full bg-blue-400/40 blur-3xl" />
-        <div className="absolute -bottom-32 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-indigo-500/30 blur-3xl" />
-        <div className="relative space-y-10 text-white">
-          <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.5em] text-blue-100">
-            Insight-driven builds
-          </p>
+      <section className="relative overflow-hidden p-10 sm:p-14">
+        <div className="neuo-panel absolute inset-0" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-20" />
+        <div className="absolute -right-20 top-10 h-52 w-52 bg-brand-accent/20 blur-3xl" />
+        <div className="absolute left-10 top-0 h-32 w-px bg-gradient-to-b from-brand-accent/60 via-transparent to-transparent" />
+        <div className="relative space-y-12">
+          <span className="neuo-chip">Insight-driven builds</span>
           <div className="space-y-6">
-            <h1 className="text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl">
-              Welcome to the studio where data science meets product craftsmanship.
+            <h1 className="font-display text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-6xl">
+              Data products engineered with FAANG-grade polish.
             </h1>
-            <p className="max-w-2xl text-lg text-blue-100 sm:text-xl">
-              I design, prototype, and ship analytical experiences that feel as polished as the tech powering them. Explore
-              <Link to="/projects" className="ml-1 underline decoration-blue-200/60 underline-offset-4 transition hover:text-white">
-                production-ready experiments
+            <p className="max-w-2xl text-lg text-muted sm:text-xl">
+              I architect analytical experiences that balance rigorous infrastructure with elegant human interfaces. Explore
+              <Link to="/projects" className="ml-2 text-brand-accent underline decoration-brand-accent/40 underline-offset-4">
+                production launches
               </Link>{' '}
-              and thoughtful takes on the future of AI tooling.
+              and long-form build logs crafted for decision-makers.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-4">
-            <Link
-              to="/about"
-              className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold tracking-wide text-white shadow-lg shadow-blue-900/40 transition hover:-translate-y-0.5 hover:bg-white/20"
-            >
+            <Link to="/about" className="neuo-button">
               Meet Louis Paulet
             </Link>
-            <Link
-              to="/cv"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold tracking-wide text-blue-700 shadow-lg shadow-blue-900/40 transition hover:-translate-y-0.5 hover:shadow-2xl"
-            >
+            <Link to="/cv" className="neuo-button neuo-button--accent">
               Access the CV
             </Link>
           </div>
-          <div className="grid gap-4 text-sm text-blue-100 sm:grid-cols-3">
-            <div className="rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur">
-              <p className="text-3xl font-bold text-white">20+</p>
-              <p>Products & experiments launched to the public.</p>
+          <div className="grid gap-5 text-sm text-muted sm:grid-cols-3">
+            <div className="neuo-panel--soft p-6">
+              <p className="font-display text-3xl font-semibold text-white">20+</p>
+              <p className="mt-2">Shipped experiments and product surfaces.</p>
             </div>
-            <div className="rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur">
-              <p className="text-3xl font-bold text-white">Full-stack</p>
-              <p>From insight modeling to polished front-end delivery.</p>
+            <div className="neuo-panel--soft p-6">
+              <p className="font-display text-3xl font-semibold text-white">Full-stack</p>
+              <p className="mt-2">From modelling pipelines to enterprise-grade UI.</p>
             </div>
-            <div className="rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur">
-              <p className="text-3xl font-bold text-white">Always shipping</p>
-              <p>Zero to live experiences using modern AI pipelines.</p>
+            <div className="neuo-panel--soft p-6">
+              <p className="font-display text-3xl font-semibold text-white">In-production</p>
+              <p className="mt-2">Systems relied on by teams across Europe.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="rounded-3xl border border-white/10 bg-slate-900/60 p-8 shadow-2xl shadow-blue-950/40">
+      <section className="neuo-panel--soft p-10 shadow-brand-neuo">
         <LatestPosts />
       </section>
 
       <section className="grid gap-8 lg:grid-cols-3">
-        <div className="rounded-3xl border border-white/10 bg-slate-900/60 p-8 shadow-xl transition hover:-translate-y-1 hover:border-blue-400/40">
-          <h2 className="text-lg font-semibold uppercase tracking-[0.4em] text-blue-300">AI Systems</h2>
-          <p className="mt-4 text-2xl font-semibold text-white">Applied intelligence that scales.</p>
-          <p className="mt-3 text-sm text-slate-300">
-            From retrieval augmented generation to in-browser inference, explore experiments that bridge research and production
-            rigor.
+        <div className="neuo-panel--soft p-8 transition hover:shadow-brand-neuo">
+          <h2 className="text-sm uppercase tracking-megawide text-brand-accent/80">AI Systems</h2>
+          <p className="mt-4 font-display text-2xl font-semibold text-white">Applied intelligence that scales.</p>
+          <p className="mt-3 text-sm text-muted">
+            From retrieval augmented generation to in-browser inference, explore experiments that bridge research and production rigor.
           </p>
         </div>
-        <div className="rounded-3xl border border-white/10 bg-slate-900/60 p-8 shadow-xl transition hover:-translate-y-1 hover:border-blue-400/40">
-          <h2 className="text-lg font-semibold uppercase tracking-[0.4em] text-blue-300">Design Language</h2>
-          <p className="mt-4 text-2xl font-semibold text-white">Experiences inspired by enterprise polish.</p>
-          <p className="mt-3 text-sm text-slate-300">
-            Interfaces that feel at home in the biggest tech companies, crafted with intent, motion, and depth.
+        <div className="neuo-panel--soft p-8 transition hover:shadow-brand-neuo">
+          <h2 className="text-sm uppercase tracking-megawide text-brand-accent/80">Design Language</h2>
+          <p className="mt-4 font-display text-2xl font-semibold text-white">Experiences inspired by enterprise polish.</p>
+          <p className="mt-3 text-sm text-muted">
+            Interfaces that feel at home in leading product organisations, crafted with intent, motion, and depth.
           </p>
         </div>
-        <div className="rounded-3xl border border-white/10 bg-slate-900/60 p-8 shadow-xl transition hover:-translate-y-1 hover:border-blue-400/40">
-          <h2 className="text-lg font-semibold uppercase tracking-[0.4em] text-blue-300">Open data</h2>
-          <p className="mt-4 text-2xl font-semibold text-white">Transparent analytics for public good.</p>
-          <p className="mt-3 text-sm text-slate-300">
+        <div className="neuo-panel--soft p-8 transition hover:shadow-brand-neuo">
+          <h2 className="text-sm uppercase tracking-megawide text-brand-accent/80">Open Data</h2>
+          <p className="mt-4 font-display text-2xl font-semibold text-white">Transparent analytics for public good.</p>
+          <p className="mt-3 text-sm text-muted">
             Dive into visual narratives, civic transparency tools, and open-source projects ready for collaboration.
           </p>
         </div>
       </section>
 
-      <section className="rounded-3xl border border-white/10 bg-slate-900/60 p-8 shadow-xl">
+      <section className="neuo-panel--soft p-10 shadow-brand-neuo-soft">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <h2 className="text-3xl font-semibold text-white sm:text-4xl">Let’s build the next data experience together.</h2>
-            <p className="mt-3 max-w-2xl text-sm text-slate-300">
+            <h2 className="font-display text-3xl font-semibold text-white sm:text-4xl">Let’s build the next data experience together.</h2>
+            <p className="mt-3 max-w-2xl text-sm text-muted">
               Whether you need a product engineer for your next launch or a data scientist to pressure-test your AI roadmap, I’d love to collaborate.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-4">
-            <Link
-              to="/projects"
-              className="inline-flex items-center rounded-full border border-blue-400/50 px-6 py-3 text-sm font-semibold text-blue-200 transition hover:-translate-y-0.5 hover:border-blue-200 hover:bg-blue-500/20"
-            >
+            <Link to="/projects" className="neuo-button">
               Browse live builds
             </Link>
-            <Link
-              to="/about"
-              className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
-            >
+            <Link to="/about" className="neuo-button neuo-button--accent">
               Partner with Louis
             </Link>
           </div>

@@ -43,36 +43,38 @@ function PDFViewer({ pdfUrl }) {
   }
 
   return (
-    <div className="flex flex-col items-center border rounded-lg p-4">
-      <div className="w-full flex justify-center overflow-x-auto">
+    <div className="flex flex-col items-center gap-4 border border-white/10 bg-brand-secondary/85 p-6 shadow-brand-neuo-soft">
+      <div className="flex w-full justify-center overflow-x-auto">
         <Document file={pdfUrl} onLoadSuccess={onDocumentLoadSuccess}>
           <Page pageNumber={pageNumber} width={800} />
         </Document>
       </div>
       {numPages > 1 && (
-        <div className="mt-2 flex items-center justify-center">
-          <button 
-            onClick={goToPrevPage} 
-            disabled={pageNumber <= 1} 
-            className="px-2 py-1 bg-gray-300 rounded mx-1 w-20 text-center"
+        <div className="flex items-center justify-center gap-3 text-sm text-muted">
+          <button
+            onClick={goToPrevPage}
+            disabled={pageNumber <= 1}
+            className="px-4 py-2 text-xs font-semibold uppercase tracking-megawide text-white/80 transition disabled:opacity-40"
+            style={{ background: 'var(--brand-primary)', border: '1px solid rgba(255,255,255,0.15)' }}
           >
             Previous
           </button>
           <span className="mx-2">
             Page {pageNumber} of {numPages}
           </span>
-          <button 
-            onClick={goToNextPage} 
-            disabled={pageNumber >= numPages} 
-            className="px-2 py-1 bg-gray-300 rounded mx-1 w-20 text-center"
+          <button
+            onClick={goToNextPage}
+            disabled={pageNumber >= numPages}
+            className="px-4 py-2 text-xs font-semibold uppercase tracking-megawide text-white/80 transition disabled:opacity-40"
+            style={{ background: 'var(--brand-primary)', border: '1px solid rgba(255,255,255,0.15)' }}
           >
             Next
           </button>
         </div>
       )}
-      <button 
-        onClick={downloadPDF} 
-        className="mt-2 px-2 py-1 bg-blue-500 text-white rounded"
+      <button
+        onClick={downloadPDF}
+        className="neuo-button neuo-button--accent"
       >
         Download PDF
       </button>

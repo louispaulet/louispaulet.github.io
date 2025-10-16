@@ -33,7 +33,11 @@ const App = () => {
 
   return (
     <>
-      <div className="flex min-h-screen flex-col bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-slate-100">
+      <div className="relative flex min-h-screen flex-col bg-gradient-to-br from-brand-primary via-brand-primary to-brand-secondary text-white/90">
+        <div className="pointer-events-none absolute inset-0 -z-10 opacity-70">
+          <div className="gridline-bg absolute inset-0" />
+          <div className="absolute inset-y-0 right-[18%] w-px bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+        </div>
         <Navbar />
         <main className="container mx-auto w-full flex-grow px-4 pb-24 pt-12 sm:px-8 lg:max-w-6xl">
           <Suspense fallback={<div>Loading...</div>}>

@@ -1,3 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --brand-primary: #030712;
+    --brand-secondary: #0b1124;
+    --brand-accent: #4c6fff;
+    --brand-text: #f8f9ff;
+    --brand-muted: rgba(237, 240, 255, 0.65);
+    --brand-gridline: rgba(255, 255, 255, 0.08);
+  }
+
+  html {
+    font-family: 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, rgba(3, 7, 18, 1) 0%, rgba(11, 17, 36, 1) 100%);
+  }
+
+  body {
+    @apply bg-transparent text-[15px] leading-relaxed text-white/90 antialiased;
+  }
+
+  ::selection {
+    background: rgba(76, 111, 255, 0.35);
+    color: var(--brand-text);
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Space Grotesk', 'IBM Plex Sans', system-ui, sans-serif;
+  }
+
+  .neuo-panel {
+    background: radial-gradient(circle at 30% 30%, rgba(76, 111, 255, 0.08), transparent 55%),
+      linear-gradient(145deg, rgba(11, 17, 36, 0.95), rgba(3, 7, 18, 0.98));
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.65), -18px -18px 40px rgba(76, 111, 255, 0.12);
+  }
+
+  .neuo-panel--soft {
+    background: linear-gradient(150deg, rgba(11, 17, 36, 0.9), rgba(3, 7, 18, 0.94));
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.55), -12px -12px 28px rgba(76, 111, 255, 0.08);
+  }
+
+  .neuo-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    font-size: 0.7rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, rgba(11, 17, 36, 0.96), rgba(3, 7, 18, 0.92));
+    color: var(--brand-text);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.6), -10px -10px 22px rgba(76, 111, 255, 0.16);
+    transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease, color 200ms ease;
+  }
+
+  .neuo-button:hover,
+  .neuo-button:focus-visible {
+    transform: translateY(-2px);
+    border-color: rgba(76, 111, 255, 0.5);
+    box-shadow: 14px 14px 28px rgba(0, 0, 0, 0.7), -12px -12px 26px rgba(76, 111, 255, 0.18);
+    color: rgba(237, 240, 255, 0.92);
+  }
+
+  .neuo-button--accent {
+    background: linear-gradient(135deg, rgba(76, 111, 255, 0.95), rgba(76, 111, 255, 0.8));
+    color: #030712;
+    border-color: rgba(76, 111, 255, 0.9);
+    box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.55), -12px -12px 24px rgba(76, 111, 255, 0.2);
+  }
+
+  .neuo-button--accent:hover,
+  .neuo-button--accent:focus-visible {
+    color: #030712;
+    border-color: rgba(237, 240, 255, 0.5);
+    box-shadow: 14px 14px 32px rgba(0, 0, 0, 0.6), -14px -14px 30px rgba(76, 111, 255, 0.28);
+  }
+
+  .neuo-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.65rem 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: rgba(237, 240, 255, 0.75);
+    background: rgba(76, 111, 255, 0.08);
+    border: 1px solid rgba(76, 111, 255, 0.2);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  }
+
+  .accent-bar {
+    width: 4rem;
+    height: 0.15rem;
+    background: linear-gradient(90deg, rgba(76, 111, 255, 0), rgba(76, 111, 255, 0.8));
+  }
+}
+
+@layer utilities {
+  .text-muted {
+    color: var(--brand-muted);
+  }
+
+  .gridline-bg {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.045) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 120px 120px;
+    background-position: -40px -40px;
+  }
+}
