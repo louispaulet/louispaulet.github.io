@@ -1,5 +1,5 @@
 import React, { Suspense, lazy, useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -16,8 +16,15 @@ const CvViewer = lazy(() => import('./pages/CvViewer'));
 
 const App = () => {
   usePageAnalytics();
+  const location = useLocation();
 
   const [showConsentBanner, setShowConsentBanner] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [location.pathname, location.search]);
 
   useEffect(() => {
     try {
