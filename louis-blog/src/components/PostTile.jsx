@@ -14,7 +14,7 @@ const PostTile = ({ id, title, summary, postDate }) => {
           <h3 className="mt-6 text-xl font-semibold text-primary transition-colors duration-300 group-hover:text-accent">
             {title}
           </h3>
-          <p className="mt-3 text-sm leading-relaxed text-secondary">
+          <p className="post-preview-summary mt-3 text-sm leading-relaxed text-secondary">
             {summary}
           </p>
           <div className="mt-auto pt-6 text-xs font-semibold uppercase tracking-[0.35em] text-primary">
