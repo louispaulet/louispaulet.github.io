@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:where(*, *::before, *::after) {
+  border-radius: 0 !important;
+}
+
 :root {
   --color-primary: #1f3d7a;
   --color-secondary: #6f7d8c;
@@ -156,6 +160,17 @@ a {
 
 .prose-light :where(p, li, blockquote):not(:where([class~="not-prose"] *)) {
   color: var(--color-secondary);
+}
+
+.prose-light :where(h1):not(:where([class~="not-prose"] *)) {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .prose-light :where(h1):not(:where([class~="not-prose"] *)) {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
 }
 
 .post-preview-summary {

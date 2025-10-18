@@ -1,6 +1,12 @@
 // PostData.js
 const postData = [
   {
+    "id": "post12",
+    "title": "Groq AllIn Studio: Shipping a Unified AI Playground",
+    "summary": "A deep dive into Groq AllIn Studio—a React + Vite workspace that bundles twelve Groq-backed experiences with a Cloudflare Worker proxy, real-time analytics, and a polished shell for demos and production launches.",
+    "postDate": "09 Jun 2025"
+  },
+  {
     "id": "post11",
     "title": "GPT YouTube Channel Recommender",
     "summary": "Discover new YouTube channels by leveraging GPT-4.1-nano. This React + Vite app analyzes your subscriptions and provides curated suggestions with live link validation.",

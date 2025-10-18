@@ -2,6 +2,12 @@ import React from 'react';
 import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [
+  {
+    image: "./post_images/groqallin_landing_page.webp",
+    title: "Groq AllIn Studio",
+    description: "A unified React + Vite workspace that bundles twelve Groq-powered assistants, Flux image labs, and structured `/obj` flows behind a single polished shell.",
+    link: "https://groq-allin.thefrenchartist.dev/"
+  },
   
   {
     image: "./post_images/dataviz_homepage.webp", 
