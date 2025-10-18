@@ -43,36 +43,36 @@ function PDFViewer({ pdfUrl }) {
   }
 
   return (
-    <div className="flex flex-col items-center border rounded-lg p-4">
-      <div className="w-full flex justify-center overflow-x-auto">
+    <div className="flex flex-col items-center gap-4 border border-soft bg-surface p-4 text-secondary shadow-[12px_12px_24px_rgba(185,194,212,0.4),-12px_-12px_24px_rgba(255,255,255,0.9)]">
+      <div className="flex w-full justify-center overflow-x-auto">
         <Document file={pdfUrl} onLoadSuccess={onDocumentLoadSuccess}>
           <Page pageNumber={pageNumber} width={800} />
         </Document>
       </div>
       {numPages > 1 && (
         <div className="mt-2 flex items-center justify-center">
-          <button 
-            onClick={goToPrevPage} 
-            disabled={pageNumber <= 1} 
-            className="px-2 py-1 bg-gray-300 rounded mx-1 w-20 text-center"
+          <button
+            onClick={goToPrevPage}
+            disabled={pageNumber <= 1}
+            className="neumorphic-button mx-1 w-24 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-primary hover:text-accent disabled:cursor-not-allowed disabled:opacity-60"
           >
             Previous
           </button>
           <span className="mx-2">
             Page {pageNumber} of {numPages}
           </span>
-          <button 
-            onClick={goToNextPage} 
-            disabled={pageNumber >= numPages} 
-            className="px-2 py-1 bg-gray-300 rounded mx-1 w-20 text-center"
+          <button
+            onClick={goToNextPage}
+            disabled={pageNumber >= numPages}
+            className="neumorphic-button mx-1 w-24 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-primary hover:text-accent disabled:cursor-not-allowed disabled:opacity-60"
           >
             Next
           </button>
         </div>
       )}
-      <button 
-        onClick={downloadPDF} 
-        className="mt-2 px-2 py-1 bg-blue-500 text-white rounded"
+      <button
+        onClick={downloadPDF}
+        className="neumorphic-button mt-2 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-primary hover:text-accent"
       >
         Download PDF
       </button>

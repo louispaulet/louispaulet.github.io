@@ -55,13 +55,13 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="space-y-12">
-      <div className="rounded-3xl border border-white/10 bg-slate-900/60 p-8 text-center shadow-2xl">
-        <p className="mx-auto mb-4 inline-flex items-center gap-2 rounded-full border border-blue-400/40 px-4 py-1 text-xs font-semibold uppercase tracking-[0.4em] text-blue-200">
+    <div className="space-y-12 text-secondary">
+      <div className="neumorphic-surface p-8 text-center">
+        <p className="mx-auto mb-4 inline-flex items-center gap-2 border border-soft bg-surface px-4 py-1 text-xs font-semibold uppercase tracking-[0.4em] text-accent">
           Ship fast · Ship polished
         </p>
-        <h1 className="text-4xl font-semibold text-white sm:text-5xl">Live projects</h1>
-        <p className="mt-4 text-sm text-slate-300">
+        <h1 className="text-4xl font-semibold text-primary sm:text-5xl">Live projects</h1>
+        <p className="mt-4 text-sm text-secondary">
           Every project below is running in production today—click through to interact with the builds, explore the code, and see the systems in motion.
         </p>
       </div>
