@@ -16,7 +16,7 @@ const LatestPosts = () => {
             Latest Posts
           </span>
           <h2 className="text-3xl font-semibold text-primary sm:text-4xl">
-            Fresh signals from the build logs.
+            Latest blog posts
           </h2>
           <p className="max-w-2xl text-sm text-secondary sm:text-base">
             Two rows of what’s new—drop into the articles that trace research, experiments, and shipping notes.

@@ -9,7 +9,7 @@ const PostTile = ({ id, title, summary, postDate }) => {
         <div className="relative flex h-full flex-col">
           <div className="flex items-center justify-between text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-secondary">
             <span className="inline-flex items-center gap-2">
-              <span className="tile-indicator tile-indicator--interactive">Interactive</span>
+              <span className="tile-indicator tile-indicator--interactive">Click me!</span>
               {postDate}
             </span>
             <FaArrowUpRightFromSquare className="text-sm text-accent transition group-hover:translate-x-1" />
