@@ -42,6 +42,15 @@ const LatestPosts = () => {
           </div>
         ))}
       </div>
+
+      <div className="flex justify-end">
+        <Link
+          to="/posts"
+          className="neumorphic-button inline-flex items-center justify-center px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-primary hover:text-accent"
+        >
+          More
+        </Link>
+      </div>
     </div>
   );
 };

@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import postData from './../PostData';
 import PostTile from '../components/PostTile';
 
 const Posts = () => {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, []);
+
   return (
     <div className="space-y-14 text-secondary">
       <header className="space-y-5">
