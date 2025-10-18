@@ -90,3 +90,11 @@ a {
 .prose-light :where(p, li, blockquote):not(:where([class~="not-prose"] *)) {
   color: var(--color-secondary);
 }
+
+.post-preview-summary {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}

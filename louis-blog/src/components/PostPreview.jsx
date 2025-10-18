@@ -15,7 +15,7 @@ const PostPreview = ({ id, title, summary, postDate }) => {
           </div>
           <div className="flex flex-col">
             <h3 className="text-xl font-semibold text-primary transition group-hover:text-accent">{title}</h3>
-            <p className="mt-2 text-sm text-secondary">{summary}</p>
+            <p className="post-preview-summary mt-2 text-sm text-secondary">{summary}</p>
             <div className="mt-4 flex items-center justify-between text-xs uppercase tracking-[0.3em] text-secondary">
               <span>Posted {postDate}</span>
               <span className="flex items-center gap-2 font-semibold text-primary transition group-hover:text-accent">
