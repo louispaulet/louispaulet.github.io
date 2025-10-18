@@ -3,17 +3,17 @@ import { Link as RouterLink } from 'react-router-dom';
 
 const CvViewer = () => {
   return (
-    <div className="flex flex-col items-center">
-      <h1 className="text-4xl font-semibold mb-4 text-center">The curriculum vitae corner</h1>
-      <p className="text-lg mb-8">I am not currently looking for a job.</p>
-      <div className="flex space-x-4">
+    <div className="flex flex-col items-center gap-6 text-secondary">
+      <h1 className="text-4xl font-semibold text-primary">The curriculum vitae corner</h1>
+      <p className="text-lg">I am not currently looking for a job.</p>
+      <div className="flex gap-4">
         <RouterLink to="/">
-          <button className="bg-white border-2 border-blue-600 text-black py-2 px-4 rounded-lg hover:shadow-lg">
+          <button className="neumorphic-button px-6 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-primary hover:text-accent">
             Back to Homepage
           </button>
         </RouterLink>
         <RouterLink to="/projects">
-          <button className="bg-blue-600 border-2 border-blue-600 text-white py-2 px-4 rounded-lg hover:shadow-lg">
+          <button className="neumorphic-button px-6 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-primary hover:text-accent">
             Go to Projects
           </button>
         </RouterLink>
@@ -24,10 +24,10 @@ const CvViewer = () => {
       <p>There is a french and an english version.</p>
       <div className="text-center">
         <RouterLink to="#english_version">
-          <ScrollLink to="english_version" smooth={true} duration={500} className="text-blue-500 underline mr-4">Jump to English CV</ScrollLink>
+          <ScrollLink to="english_version" smooth={true} duration={500} className="text-accent underline mr-4">Jump to English CV</ScrollLink>
         </RouterLink>
         <RouterLink to="#french_version">
-          <ScrollLink to="french_version" smooth={true} duration={500} className="text-blue-500 underline">Jump to French CV</ScrollLink>
+          <ScrollLink to="french_version" smooth={true} duration={500} className="text-accent underline">Jump to French CV</ScrollLink>
         </RouterLink>
       </div>
       <p><em> "CVs! Download 'em boil 'em stick 'em in a stew" </em></p>

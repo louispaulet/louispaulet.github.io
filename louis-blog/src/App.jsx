@@ -33,7 +33,7 @@ const App = () => {
 
   return (
     <>
-      <div className="flex min-h-screen flex-col bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-slate-100">
+      <div className="flex min-h-screen flex-col bg-gradient-to-br from-[#f8f9fc] via-[#eef1f6] to-[#e6e9f2] text-primary">
         <Navbar />
         <main className="container mx-auto w-full flex-grow px-4 pb-24 pt-12 sm:px-8 lg:max-w-6xl">
           <Suspense fallback={<div>Loading...</div>}>
