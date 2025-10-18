@@ -43,15 +43,18 @@ const Home = () => {
             </Link>
           </div>
           <div className="grid gap-4 text-sm sm:grid-cols-3">
-            <div className="neumorphic-surface p-4">
+            <div className="tile-static neumorphic-surface space-y-3 p-4">
+              <span className="tile-indicator tile-indicator--static">Info</span>
               <p className="text-3xl font-bold text-primary">20+</p>
               <p className="text-secondary">Products & experiments launched to the public.</p>
             </div>
-            <div className="neumorphic-surface p-4">
+            <div className="tile-static neumorphic-surface space-y-3 p-4">
+              <span className="tile-indicator tile-indicator--static">Info</span>
               <p className="text-3xl font-bold text-primary">Full-stack</p>
               <p className="text-secondary">From insight modeling to polished front-end delivery.</p>
             </div>
-            <div className="neumorphic-surface p-4">
+            <div className="tile-static neumorphic-surface space-y-3 p-4">
+              <span className="tile-indicator tile-indicator--static">Info</span>
               <p className="text-3xl font-bold text-primary">Always shipping</p>
               <p className="text-secondary">Zero to live experiences using modern AI pipelines.</p>
             </div>
@@ -64,21 +67,24 @@ const Home = () => {
       </section>
 
       <section className="grid gap-8 lg:grid-cols-3">
-        <div className="neumorphic-surface p-8 transition hover:shadow-[18px_18px_36px_rgba(185,194,212,0.55),-18px_-18px_36px_rgba(255,255,255,0.95)]">
+        <div className="tile-static neumorphic-surface space-y-4 p-8">
+          <span className="tile-indicator tile-indicator--static">Info</span>
           <h2 className="text-xs font-semibold uppercase tracking-[0.5em] text-secondary">AI Systems</h2>
           <p className="mt-4 text-2xl font-semibold text-primary">Applied intelligence that scales.</p>
           <p className="mt-3 text-sm text-secondary">
             From retrieval augmented generation to in-browser inference, explore experiments that bridge research and production rigor.
           </p>
         </div>
-        <div className="neumorphic-surface p-8 transition hover:shadow-[18px_18px_36px_rgba(185,194,212,0.55),-18px_-18px_36px_rgba(255,255,255,0.95)]">
+        <div className="tile-static neumorphic-surface space-y-4 p-8">
+          <span className="tile-indicator tile-indicator--static">Info</span>
           <h2 className="text-xs font-semibold uppercase tracking-[0.5em] text-secondary">Design Language</h2>
           <p className="mt-4 text-2xl font-semibold text-primary">Experiences inspired by enterprise polish.</p>
           <p className="mt-3 text-sm text-secondary">
             Interfaces that feel at home in the biggest tech companies, crafted with intent, motion, and depth.
           </p>
         </div>
-        <div className="neumorphic-surface p-8 transition hover:shadow-[18px_18px_36px_rgba(185,194,212,0.55),-18px_-18px_36px_rgba(255,255,255,0.95)]">
+        <div className="tile-static neumorphic-surface space-y-4 p-8">
+          <span className="tile-indicator tile-indicator--static">Info</span>
           <h2 className="text-xs font-semibold uppercase tracking-[0.5em] text-secondary">Open Data</h2>
           <p className="mt-4 text-2xl font-semibold text-primary">Transparent analytics for public good.</p>
           <p className="mt-3 text-sm text-secondary">
