@@ -43,13 +43,18 @@ const FeaturedProjectSpotlight = () => {
             </Link>
           </div>
         </div>
-        <div className="relative h-64 overflow-hidden rounded-3xl border border-soft bg-surface shadow-[16px_16px_32px_rgba(185,194,212,0.35),-16px_-16px_32px_rgba(255,255,255,0.85)] sm:h-72">
+        <a
+          href="https://groq-allin.thefrenchartist.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative block h-64 overflow-hidden border border-soft bg-surface shadow-[16px_16px_32px_rgba(185,194,212,0.35),-16px_-16px_32px_rgba(255,255,255,0.85)] transition hover:-translate-y-1 sm:h-72"
+        >
           <img
             src="/post_images/groqallin_landing_page.webp"
             alt="Groq AllIn Studio illustration"
             className="h-full w-full object-cover object-center transition duration-700 hover:scale-105"
           />
-        </div>
+        </a>
       </div>
     </section>
   );

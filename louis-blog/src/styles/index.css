@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:where(*, *::before, *::after) {
+  border-radius: 0 !important;
+}
+
 :root {
   --color-primary: #1f3d7a;
   --color-secondary: #6f7d8c;
