@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className="mt-auto border-t border-soft bg-white/70 py-10 text-secondary">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-0 sm:flex-row sm:items-center sm:justify-between sm:px-8">
         <div>
           <p className="serif-accent text-sm uppercase text-accent">Always shipping</p>
           <p className="mt-3 text-lg font-semibold text-primary">Louis Paulet • Data Experiences</p>

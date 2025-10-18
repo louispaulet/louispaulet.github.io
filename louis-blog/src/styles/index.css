@@ -158,6 +158,17 @@ a {
   color: var(--color-secondary);
 }
 
+.prose-light :where(h1):not(:where([class~="not-prose"] *)) {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .prose-light :where(h1):not(:where([class~="not-prose"] *)) {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+}
+
 .post-preview-summary {
   display: -webkit-box;
   -webkit-line-clamp: 4;
