@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SocialLinks from './../components/SocialLinks';
 import LatestPosts from './../components/LatestPosts';
+import FeaturedProjectSpotlight from './../components/FeaturedProjectSpotlight';
 
 const Home = () => {
   return (
@@ -61,6 +62,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <FeaturedProjectSpotlight />
 
       <section className="neumorphic-surface p-6 sm:p-8">
         <LatestPosts />
