@@ -6,7 +6,7 @@ import LatestPosts from './../components/LatestPosts';
 
 const Home = () => {
   return (
-    <div className="space-y-20 text-secondary">
+    <div className="space-y-16 text-secondary sm:space-y-20">
       <section className="relative overflow-hidden neumorphic-surface px-6 py-16 sm:px-10">
         <div className="absolute inset-y-0 left-0 w-1 bg-[var(--color-accent)]/60" />
         <div className="relative space-y-10">
@@ -62,12 +62,12 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="neumorphic-surface p-8">
+      <section className="neumorphic-surface p-6 sm:p-8">
         <LatestPosts />
       </section>
 
       <section className="grid gap-8 lg:grid-cols-3">
-        <div className="tile-static neumorphic-surface space-y-4 p-8">
+        <div className="tile-static neumorphic-surface space-y-4 p-6 sm:p-8">
           <span className="tile-indicator tile-indicator--static">Info</span>
           <h2 className="text-xs font-semibold uppercase tracking-[0.5em] text-secondary">AI Systems</h2>
           <p className="mt-4 text-2xl font-semibold text-primary">Applied intelligence that scales.</p>
@@ -75,7 +75,7 @@ const Home = () => {
             From retrieval augmented generation to in-browser inference, explore experiments that bridge research and production rigor.
           </p>
         </div>
-        <div className="tile-static neumorphic-surface space-y-4 p-8">
+        <div className="tile-static neumorphic-surface space-y-4 p-6 sm:p-8">
           <span className="tile-indicator tile-indicator--static">Info</span>
           <h2 className="text-xs font-semibold uppercase tracking-[0.5em] text-secondary">Design Language</h2>
           <p className="mt-4 text-2xl font-semibold text-primary">Experiences inspired by enterprise polish.</p>
@@ -83,7 +83,7 @@ const Home = () => {
             Interfaces that feel at home in the biggest tech companies, crafted with intent, motion, and depth.
           </p>
         </div>
-        <div className="tile-static neumorphic-surface space-y-4 p-8">
+        <div className="tile-static neumorphic-surface space-y-4 p-6 sm:p-8">
           <span className="tile-indicator tile-indicator--static">Info</span>
           <h2 className="text-xs font-semibold uppercase tracking-[0.5em] text-secondary">Open Data</h2>
           <p className="mt-4 text-2xl font-semibold text-primary">Transparent analytics for public good.</p>
@@ -93,7 +93,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="neumorphic-surface p-8">
+      <section className="neumorphic-surface p-6 sm:p-8">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <h2 className="text-3xl font-semibold text-primary sm:text-4xl">Let’s build the next data experience together.</h2>

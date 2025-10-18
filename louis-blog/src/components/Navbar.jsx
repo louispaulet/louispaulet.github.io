@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 border-b border-soft bg-white/80 backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-0 py-5 sm:px-8">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-5 sm:px-8">
         <Link
           to="/"
           className="flex flex-col items-start gap-2 transition hover:opacity-90 sm:flex-row sm:items-center sm:gap-4"
@@ -35,9 +35,6 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex items-center gap-4 text-[0.7rem] font-semibold uppercase tracking-[0.35em] text-secondary md:hidden">
-          <Link to="/" className="text-secondary transition hover:text-primary" onClick={scrollToTop}>
-            Home
-          </Link>
           <Link to="/projects" className="text-secondary transition hover:text-primary" onClick={scrollToTop}>
             Projects
           </Link>
