@@ -49,11 +49,6 @@ const FeaturedProjectSpotlight = () => {
             alt="Groq AllIn Studio illustration"
             className="h-full w-full object-cover object-center transition duration-700 hover:scale-105"
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#f1f3fb] via-transparent to-transparent opacity-80" />
-          <div className="absolute bottom-6 left-6 right-6 flex flex-wrap gap-4 rounded-2xl border border-soft bg-surface/90 px-5 py-4 text-xs font-semibold uppercase tracking-[0.35em] text-primary shadow-[8px_8px_18px_rgba(185,194,212,0.35)]">
-            <span>Live on Groq Cloud</span>
-            <span>Optimized for demos</span>
-          </div>
         </div>
       </div>
     </section>
