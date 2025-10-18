@@ -45,7 +45,7 @@ const FeaturedProjectSpotlight = () => {
         </div>
         <div className="relative h-64 overflow-hidden rounded-3xl border border-soft bg-surface shadow-[16px_16px_32px_rgba(185,194,212,0.35),-16px_-16px_32px_rgba(255,255,255,0.85)] sm:h-72">
           <img
-            src="https://groq-allin.thefrenchartist.dev/all_in/allin_illustration_banner.png"
+            src="/post_images/groqallin_landing_page.webp"
             alt="Groq AllIn Studio illustration"
             className="h-full w-full object-cover object-center transition duration-700 hover:scale-105"
           />

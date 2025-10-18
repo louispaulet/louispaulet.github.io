@@ -3,7 +3,7 @@ import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [
   {
-    image: "https://groq-allin.thefrenchartist.dev/all_in/allin_illustration_banner.png",
+    image: "./post_images/groqallin_landing_page.webp",
     title: "Groq AllIn Studio",
     description: "A unified React + Vite workspace that bundles twelve Groq-powered assistants, Flux image labs, and structured `/obj` flows behind a single polished shell.",
     link: "https://groq-allin.thefrenchartist.dev/"

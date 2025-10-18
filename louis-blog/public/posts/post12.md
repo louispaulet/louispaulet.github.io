@@ -2,6 +2,8 @@
 
 When Groq released the AllIn challenge I wanted something more compelling than a pile of disconnected demos. The result is **Groq AllIn Studio**—a single React workspace that wraps twelve assistants, a gallery of Flux-powered image labs, and a Cloudflare Worker proxy behind one immersive shell. It now lives at [groq-allin.thefrenchartist.dev](https://groq-allin.thefrenchartist.dev/) and serves as my go-to playground for showcasing Groq-backed experiences.
 
+![Screenshot of the Groq AllIn Studio landing page](./post_images/groqallin_landing_page.webp)
+
 ## Why bundle everything?
 
 I kept joining hackathons and spinning up one-off repos for each idea. That workflow is fine for quick experiments, but it breaks down when you want to iterate, cut releases, and let people explore multiple assistants without changing tabs. AllIn Studio solves that by:
