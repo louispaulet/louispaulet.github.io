@@ -1,44 +1,41 @@
 import { Link } from 'react-router-dom';
+import { FaArrowRight } from 'react-icons/fa6';
 
 const FeaturedProjectSpotlight = () => {
   return (
-    <section className="relative overflow-hidden neumorphic-surface px-6 py-12 text-secondary sm:px-10 sm:py-16">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[var(--color-accent)]/15 via-transparent to-[#f4f7ff]" />
-      <div className="relative grid gap-10 lg:grid-cols-[1.25fr_1fr] lg:items-center">
-        <div className="space-y-6">
-          <span className="inline-flex items-center gap-2 border border-soft bg-surface px-4 py-2 text-xs font-semibold uppercase tracking-[0.45em] text-accent">
-            Spotlight launch
-          </span>
-          <h2 className="text-3xl font-semibold text-primary sm:text-4xl">
+    <section className="relative overflow-hidden border-y border-soft py-12 text-secondary sm:py-14">
+      <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div className="space-y-6 lg:pr-4">
+          <p className="section-kicker">Current flagship</p>
+          <h2 className="text-3xl font-semibold leading-tight text-primary sm:text-4xl">
             Groq AllIn Studio is now live with 12 assistants in one shell.
           </h2>
-          <p className="max-w-2xl text-sm text-secondary sm:text-base">
+          <p className="max-w-2xl text-sm leading-7 text-secondary sm:text-base">
             The new AllIn workspace unifies Flux image labs, schema-driven `/obj` flows, real-time news analysis, and playful remixes
             behind a single React + Vite experience. A Cloudflare Worker keeps Groq and Together keys secure while powering chat, news,
             and image APIs.
           </p>
-          <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-secondary">
-            <span className="tile-indicator tile-indicator--interactive">Flux gallery</span>
-            <span className="tile-indicator tile-indicator--interactive">/obj schemas</span>
-            <span className="tile-indicator tile-indicator--interactive">Cloudflare Worker</span>
+          <div className="grid gap-3 text-sm text-primary sm:grid-cols-3">
+            <div className="neumorphic-press border border-soft bg-surface p-3">Flux image labs</div>
+            <div className="neumorphic-press border border-soft bg-surface p-3">Structured `/obj` flows</div>
+            <div className="neumorphic-press border border-soft bg-surface p-3">Cloudflare Worker APIs</div>
           </div>
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <a
               href="https://groq-allin.thefrenchartist.dev/"
               target="_blank"
               rel="noopener noreferrer"
-              className="neumorphic-button inline-flex items-center gap-2 px-6 py-3 text-xs font-semibold uppercase tracking-[0.4em] text-primary transition hover:text-accent"
+              className="neumorphic-button inline-flex items-center gap-3 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary transition hover:text-accent"
             >
               Launch the workspace
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="h-4 w-4">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-              </svg>
+              <FaArrowRight />
             </a>
             <Link
               to="/posts/post12"
-              className="neumorphic-button inline-flex items-center gap-2 px-6 py-3 text-xs font-semibold uppercase tracking-[0.4em] text-primary transition hover:text-accent"
+              className="inline-flex items-center gap-3 border border-strong bg-white/60 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary transition hover:border-[var(--color-accent)] hover:text-accent"
             >
               Read the build log
+              <FaArrowRight />
             </Link>
           </div>
         </div>
@@ -46,7 +43,7 @@ const FeaturedProjectSpotlight = () => {
           href="https://groq-allin.thefrenchartist.dev/"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative block h-64 overflow-hidden border border-soft bg-surface shadow-[16px_16px_32px_rgba(185,194,212,0.35),-16px_-16px_32px_rgba(255,255,255,0.85)] transition hover:-translate-y-1 sm:h-72"
+          className="neumorphic-surface relative block h-72 overflow-hidden bg-surface transition hover:-translate-y-1 sm:h-96"
         >
           <img
             src="/post_images/groqallin_landing_page.webp"

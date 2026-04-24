@@ -43,7 +43,7 @@ function PDFViewer({ pdfUrl }) {
   }
 
   return (
-    <div className="flex flex-col items-center gap-4 border border-soft bg-surface p-4 text-secondary shadow-[12px_12px_24px_rgba(185,194,212,0.4),-12px_-12px_24px_rgba(255,255,255,0.9)]">
+    <div className="neumorphic-surface flex flex-col items-center gap-4 bg-surface p-4 text-secondary">
       <div className="flex w-full justify-center overflow-x-auto">
         <Document file={pdfUrl} onLoadSuccess={onDocumentLoadSuccess}>
           <Page pageNumber={pageNumber} width={800} />
@@ -54,7 +54,7 @@ function PDFViewer({ pdfUrl }) {
           <button
             onClick={goToPrevPage}
             disabled={pageNumber <= 1}
-            className="neumorphic-button mx-1 w-24 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-primary hover:text-accent disabled:cursor-not-allowed disabled:opacity-60"
+            className="neumorphic-button mx-1 w-24 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary hover:text-accent disabled:cursor-not-allowed disabled:opacity-60"
           >
             Previous
           </button>
@@ -64,7 +64,7 @@ function PDFViewer({ pdfUrl }) {
           <button
             onClick={goToNextPage}
             disabled={pageNumber >= numPages}
-            className="neumorphic-button mx-1 w-24 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-primary hover:text-accent disabled:cursor-not-allowed disabled:opacity-60"
+            className="neumorphic-button mx-1 w-24 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-primary hover:text-accent disabled:cursor-not-allowed disabled:opacity-60"
           >
             Next
           </button>
@@ -72,7 +72,7 @@ function PDFViewer({ pdfUrl }) {
       )}
       <button
         onClick={downloadPDF}
-        className="neumorphic-button mt-2 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-primary hover:text-accent"
+        className="neumorphic-button mt-2 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary hover:text-accent"
       >
         Download PDF
       </button>

@@ -6,19 +6,21 @@ import profile_pic from "./../cached_images/louis_picture.webp";
 const About = () => {
   return (
     <div className="space-y-12 text-secondary">
-      <section className="neumorphic-surface p-10">
-        <div className="flex flex-col items-center gap-8 text-center">
-          <div className="flex h-40 w-40 items-center justify-center border border-soft bg-surface shadow-[12px_12px_24px_rgba(185,194,212,0.45),-12px_-12px_24px_rgba(255,255,255,0.95)]">
+      <section className="neumorphic-surface p-8 sm:p-10">
+        <div className="grid gap-8 lg:grid-cols-[auto_1fr] lg:items-center">
+          <div className="mx-auto flex h-40 w-40 items-center justify-center border border-soft bg-surface shadow-[7px_8px_18px_rgba(89,108,135,0.16),-6px_-6px_14px_rgba(255,255,255,0.82)] lg:mx-0">
             <img src={profile_pic} alt="Louis Paulet" className="h-36 w-36 object-cover" />
           </div>
-          <div className="space-y-4">
+          <div className="space-y-4 text-center lg:text-left">
             <h1 className="text-4xl font-semibold text-primary sm:text-5xl">Meet Louis Paulet</h1>
-            <p className="serif-accent text-xs uppercase tracking-[0.5em] text-accent">Data Scientist · Product Engineer · AI Builder</p>
-            <p className="text-base text-secondary sm:text-lg">
+            <p className="section-kicker">Data scientist · product engineer · AI builder</p>
+            <p className="max-w-3xl text-base leading-8 text-secondary sm:text-lg">
               I build data-rich products that feel refined enough for the world’s most demanding teams. From adtech ecosystems to civic transparency platforms, I lead projects that turn ambitious ideas into shipped experiences.
             </p>
+            <div className="lg:-ml-2">
+              <SocialLinks />
+            </div>
           </div>
-          <SocialLinks />
         </div>
       </section>
 
@@ -46,19 +48,19 @@ const About = () => {
         <div className="neumorphic-surface space-y-6 p-8">
           <h2 className="text-2xl font-semibold text-primary">Toolbox & languages</h2>
           <div className="grid gap-4 sm:grid-cols-2">
-            <div className="neumorphic-surface neumorphic-press p-4 text-sm text-primary">
+            <div className="neumorphic-press border border-soft bg-surface p-4 text-sm leading-6 text-primary">
               <FaPython className="mb-2 text-2xl text-accent" />
               Python for data products, experimentation, and automation.
             </div>
-            <div className="neumorphic-surface neumorphic-press p-4 text-sm text-primary">
+            <div className="neumorphic-press border border-soft bg-surface p-4 text-sm leading-6 text-primary">
               <FaRProject className="mb-2 text-2xl text-accent" />
               R for analytical storytelling and interactive dashboards.
             </div>
-            <div className="neumorphic-surface neumorphic-press p-4 text-sm text-primary">
+            <div className="neumorphic-press border border-soft bg-surface p-4 text-sm leading-6 text-primary">
               <FaDatabase className="mb-2 text-2xl text-accent" />
               SQL for data warehousing, insights, and operational pipelines.
             </div>
-            <div className="neumorphic-surface neumorphic-press p-4 text-sm text-primary">
+            <div className="neumorphic-press border border-soft bg-surface p-4 text-sm leading-6 text-primary">
               <FaGithub className="mb-2 text-2xl text-accent" />
               Git-driven collaboration with a focus on shipping real products.
             </div>

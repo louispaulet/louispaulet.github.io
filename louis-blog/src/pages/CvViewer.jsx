@@ -7,12 +7,12 @@ const CvViewer = () => {
       <p className="text-lg">I am not currently looking for a job.</p>
       <div className="flex gap-4">
         <RouterLink to="/">
-          <button className="neumorphic-button px-6 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-primary hover:text-accent">
+          <button className="neumorphic-button px-6 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary hover:text-accent">
             Back to Homepage
           </button>
         </RouterLink>
         <RouterLink to="/projects">
-          <button className="neumorphic-button px-6 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-primary hover:text-accent">
+          <button className="neumorphic-button px-6 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary hover:text-accent">
             Go to Projects
           </button>
         </RouterLink>

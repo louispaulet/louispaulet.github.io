@@ -1,28 +1,31 @@
 import { Link } from 'react-router-dom';
-import website_logo from './../cached_images/logo_favicon_white_blue.webp'
+import website_logo from './../cached_images/logo_favicon_white_blue.webp';
 
 const Navbar = () => {
   const navLinkClasses =
-    'relative text-sm font-semibold tracking-[0.28em] uppercase text-secondary transition-colors after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--color-accent)] after:transition-all hover:text-primary hover:after:w-full';
+    'relative text-xs font-semibold uppercase tracking-[0.18em] text-secondary transition-colors after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--color-accent)] after:transition-all hover:text-primary hover:after:w-full';
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-soft bg-white/80 backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-5 sm:px-8">
+    <nav className="sticky top-0 z-50 border-b border-soft bg-[rgba(249,251,254,0.88)] shadow-[0_8px_26px_rgba(89,108,135,0.1)] backdrop-blur-md">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-4 py-4 sm:px-8">
         <Link
           to="/"
-          className="flex flex-col items-start gap-2 transition hover:opacity-90 sm:flex-row sm:items-center sm:gap-4"
+          className="flex min-w-0 items-center gap-3 transition hover:opacity-90"
         >
-          <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center border border-soft bg-surface shadow-[8px_8px_16px_rgba(185,194,212,0.45),-8px_-8px_16px_rgba(255,255,255,0.95)]">
+          <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center border border-soft bg-surface shadow-[5px_6px_14px_rgba(89,108,135,0.16),-5px_-5px_12px_rgba(255,255,255,0.82)]">
             <img src={website_logo} alt="Louis Paulet" className="h-8 w-8 object-contain" />
           </div>
-          <div className="flex flex-col">
-            <span className="text-[0.7rem] uppercase tracking-[0.35em] text-secondary sm:text-xs">Louis Paulet</span>
-            <span className="text-lg font-semibold leading-tight text-primary sm:text-xl">Data & AI Insights</span>
+          <div className="flex min-w-0 flex-col">
+            <span className="text-[0.68rem] uppercase tracking-[0.22em] text-muted">Louis Paulet</span>
+            <span className="truncate text-base font-semibold leading-tight text-primary sm:text-lg">Data & AI Systems</span>
           </div>
         </Link>
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-7 md:flex">
           <Link to="/" className={navLinkClasses}>
             Home
+          </Link>
+          <Link to="/posts" className={navLinkClasses}>
+            Writing
           </Link>
           <Link to="/projects" className={navLinkClasses}>
             Projects
@@ -31,7 +34,10 @@ const Navbar = () => {
             About
           </Link>
         </div>
-        <div className="flex items-center gap-4 text-[0.7rem] font-semibold uppercase tracking-[0.35em] text-secondary md:hidden">
+        <div className="flex flex-wrap items-center justify-end gap-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-secondary md:hidden">
+          <Link to="/posts" className="text-secondary transition hover:text-primary">
+            Writing
+          </Link>
           <Link to="/projects" className="text-secondary transition hover:text-primary">
             Projects
           </Link>
@@ -42,7 +48,7 @@ const Navbar = () => {
         <div className="hidden md:block">
           <Link
             to="/cv"
-            className="neumorphic-button inline-flex items-center px-6 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-primary"
+            className="neumorphic-button inline-flex items-center px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary"
           >
             View CV
           </Link>

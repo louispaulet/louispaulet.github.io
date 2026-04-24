@@ -1,37 +1,37 @@
 import { Link } from 'react-router-dom';
-import { FaAnglesDown } from 'react-icons/fa6';
+import { FaArrowRight } from 'react-icons/fa6';
 import postData from './../PostData';
 import PostTile from './PostTile';
 
-const LatestPosts = () => {
+const LatestPosts = ({ compact = false }) => {
   const featuredPosts = postData.slice(0, 6);
 
   return (
-    <div className="space-y-8 text-secondary">
+    <div className="space-y-6 text-secondary">
+      {!compact && (
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div className="space-y-3">
-          <span className="inline-flex items-center gap-3 border border-soft bg-surface px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-accent">
-            <FaAnglesDown className="text-sm" />
-            Latest Posts
-          </span>
+          <p className="section-kicker">Latest writing</p>
           <h2 className="text-3xl font-semibold text-primary sm:text-4xl">
             Latest blog posts
           </h2>
-          <p className="max-w-2xl text-sm text-secondary sm:text-base">
-            Two rows of what’s new—drop into the articles that trace research, experiments, and shipping notes.
+          <p className="max-w-2xl text-sm leading-7 text-secondary sm:text-base">
+            Recent notes from research, experiments, and shipped products.
           </p>
         </div>
         <Link
           to="/posts"
-          className="neumorphic-button inline-flex items-center justify-center px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-primary hover:text-accent"
+          className="neumorphic-button inline-flex items-center justify-center gap-3 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary hover:text-accent"
         >
           More
+          <FaArrowRight />
         </Link>
       </div>
+      )}
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className={compact ? 'grid gap-4' : 'grid gap-5 sm:grid-cols-2 lg:grid-cols-3'}>
         {featuredPosts.map((post) => (
-          <div key={post.id} className="aspect-square">
+          <div key={post.id}>
             <PostTile
               id={post.id}
               title={post.title}
@@ -40,15 +40,6 @@ const LatestPosts = () => {
             />
           </div>
         ))}
-      </div>
-
-      <div className="flex justify-end">
-        <Link
-          to="/posts"
-          className="neumorphic-button inline-flex items-center justify-center px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-primary hover:text-accent"
-        >
-          More
-        </Link>
       </div>
     </div>
   );

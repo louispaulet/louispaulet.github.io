@@ -4,25 +4,19 @@ import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 const PostTile = ({ id, title, summary, postDate }) => {
   return (
     <Link to={`/posts/${id}`} className="group flex h-full w-full">
-      <article className="tile-interactive relative flex h-full w-full flex-col bg-surface p-6 text-secondary transition duration-300 hover:-translate-y-1">
-        <div className="relative flex h-full flex-col">
-          <div className="flex items-center justify-between text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-secondary">
-            <span className="inline-flex items-center gap-2">
-              <span className="tile-indicator tile-indicator--interactive">Click me!</span>
-              {postDate}
-            </span>
-            <FaArrowUpRightFromSquare className="text-sm text-accent transition group-hover:translate-x-1" />
-          </div>
-          <h3 className="mt-6 text-xl font-semibold text-primary transition-colors duration-300 group-hover:text-accent">
-            {title}
-          </h3>
-          <p className="post-preview-summary mt-3 text-sm leading-relaxed text-secondary">
-            {summary}
-          </p>
-          <div className="mt-auto pt-6 text-xs font-semibold uppercase tracking-[0.35em] text-primary">
-            Open article
+      <article className="tile-interactive flex h-full w-full flex-col p-5 text-secondary sm:p-6">
+        <div className="flex items-start justify-between gap-6">
+          <time className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">{postDate}</time>
+          <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center border border-soft bg-surface text-accent transition group-hover:border-[var(--color-accent)] group-hover:text-primary">
+            <FaArrowUpRightFromSquare className="text-sm" />
           </div>
         </div>
+        <h3 className="mt-5 text-xl font-semibold leading-snug text-primary transition-colors duration-300 group-hover:text-accent">
+          {title}
+        </h3>
+        <p className="post-preview-summary mt-3 text-sm leading-7 text-secondary">
+          {summary}
+        </p>
       </article>
     </Link>
   );

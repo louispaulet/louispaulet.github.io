@@ -2,7 +2,7 @@ import { FaLinkedin, FaGithub, FaArtstation } from 'react-icons/fa';
 
 function SocialLinks() {
   const linkBaseClasses =
-    'neumorphic-button inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.3em] text-primary';
+    'neumorphic-button inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.16em] text-primary';
 
   return (
     <div className="flex flex-wrap items-center justify-center gap-4 py-6">
