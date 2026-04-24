@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import website_logo from './../cached_images/logo_favicon_white_blue.webp'
 

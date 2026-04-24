@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaPython, FaRProject, FaDatabase, FaGithub } from 'react-icons/fa';
 import ReactCountryFlag from "react-country-flag";
 import SocialLinks from './../components/SocialLinks';

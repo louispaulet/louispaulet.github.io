@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaLinkedin, FaGithub, FaArtstation } from 'react-icons/fa';
 
 function SocialLinks() {

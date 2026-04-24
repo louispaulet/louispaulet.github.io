@@ -1,4 +1,3 @@
-import React from 'react';
 import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [

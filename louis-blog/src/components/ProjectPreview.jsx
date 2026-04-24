@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ProjectPreview = ({ image, title, description, link }) => {
   return (
     <a
