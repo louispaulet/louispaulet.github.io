@@ -31,6 +31,8 @@ const Posts = () => {
               title={post.title}
               summary={post.summary}
               postDate={post.postDate}
+              image={post.heroImage}
+              imageAlt={post.heroAlt}
             />
           </div>
         ))}
