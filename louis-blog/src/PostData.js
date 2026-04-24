@@ -13,12 +13,6 @@ const postData = [
     "postDate": "06 Jun 2025"
   },
   {
-    "id": "post10",
-    "title": "Cleaning Checkout.com Docs for a Small RAG Pipeline",
-    "summary": "This post explains how we cleaned up a messy set of HTML documentation to build a simple Retrieval-Augmented Generation (RAG) pipeline. It talks about finding duplicate data, fixing embeddings, and getting ready to deploy the system using cloud services. Key takeaways include dealing with crawling problems, removing duplicate embeddings, and using affordable managed services.",
-    "postDate": "15 Dec 2024"
-  },
-  {
     "id": "post9",
     "title": "Maze Benchmark: Testing LLMs on 3D Three.js Code",
     "summary": "The Maze Benchmark project tests various large language models (LLMs) by challenging them to generate 3D mazes using Three.js, evaluating their coding abilities and interactive visualization performance. Top-performing models like GPT-4 and GPT-o1 delivered high-quality code with minimal iterations, while lower-tier models struggled with functionality and debugging.",
