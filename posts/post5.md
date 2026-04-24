@@ -1,4 +1,4 @@
-# Introducing the HATVP RAG Assistant Project: Enhancing Transparency in Public Declarations
+# HATVP RAG Assistant: Searching Public Declarations
 
 ![a gif of the assistant demo](./../post_images/hatvp-rag-assistant-capture.gif)
 

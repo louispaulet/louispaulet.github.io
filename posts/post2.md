@@ -1,4 +1,4 @@
-# Exploring Handwritten Digit Recognition with Keras and Flask
+# Handwritten Digit Recognition with Keras and Flask
 
 **2 min read.**
 

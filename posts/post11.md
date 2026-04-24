@@ -1,4 +1,4 @@
-# GPT YouTube Channel Recommender 🚀
+# GPT YouTube Recommender: Finding Channels Outside the Feed
 
 ![Screenshot of the GPT YouTube Channel Recommender interface](./post_images/youtube_recomender_project_thumbnail.webp)
 
@@ -78,4 +78,3 @@ recommendations are generated.
 This project makes it easy to discover new YouTube creators tailored to your interests. The GPT‑4.1‑nano model provides curated results, while real‑time link verification ensures each channel is valid.
 
 *Published 09 Jun 2025.*
-

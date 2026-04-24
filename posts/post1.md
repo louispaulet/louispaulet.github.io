@@ -1,4 +1,4 @@
-# The Synergy of Text-to-Speech, GPT-4 Text Generation, and Innovative AI Websites
+# Karaoke Light: Text-to-Speech Meets GPT-4
 
 **5 min read.**
 
