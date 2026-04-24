@@ -1,4 +1,4 @@
-# Groq AllIn Studio: Shipping a Unified AI Playground
+# Groq AllIn Studio: Twelve AI Assistants in One Workspace
 
 When Groq released the AllIn challenge I wanted something more compelling than a pile of disconnected demos. The result is **Groq AllIn Studio**—a single React workspace that wraps twelve assistants, a gallery of Flux-powered image labs, and a Cloudflare Worker proxy behind one immersive shell. It now lives at [groq-allin.thefrenchartist.dev](https://groq-allin.thefrenchartist.dev/) and serves as my go-to playground for showcasing Groq-backed experiences.
 

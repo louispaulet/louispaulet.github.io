@@ -17,7 +17,7 @@ const Navbar = () => {
           </div>
           <div className="flex min-w-0 flex-col">
             <span className="text-[0.68rem] uppercase tracking-[0.22em] text-muted">Louis Paulet</span>
-            <span className="truncate text-base font-semibold leading-tight text-primary sm:text-lg">Data & AI Systems</span>
+            <span className="truncate text-base font-semibold leading-tight text-primary sm:text-lg">AI, data, shipped tools</span>
           </div>
         </Link>
         <div className="hidden items-center gap-7 md:flex">
@@ -50,7 +50,7 @@ const Navbar = () => {
             to="/cv"
             className="neumorphic-button inline-flex items-center px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary"
           >
-            View CV
+            CV
           </Link>
         </div>
       </div>

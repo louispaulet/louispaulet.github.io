@@ -1,4 +1,4 @@
-### Client-Side MNIST Digit Recognition Using TensorFlow.js
+### MNIST in the Browser with TensorFlow.js
 
 ![screenshot of the MNIST website](./post_images/mnist-website.webp)
 

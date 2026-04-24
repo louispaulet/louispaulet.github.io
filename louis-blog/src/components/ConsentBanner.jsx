@@ -55,27 +55,27 @@ const ConsentBanner = () => {
     <div className="fixed inset-x-0 bottom-6 z-50 flex justify-center px-4">
       <div className="neumorphic-surface flex w-full max-w-5xl flex-col gap-4 bg-surface p-6 text-sm text-secondary backdrop-blur">
         <div>
-          <p className="text-base font-semibold text-primary">Cookie preferences</p>
-          <p className="mt-1 text-sm text-secondary">We use analytics to understand usage and improve the experience. Choose how much signal you want to share.</p>
+          <p className="text-base font-semibold text-primary">Analytics preferences</p>
+          <p className="mt-1 text-sm text-secondary">I use analytics to learn what is useful and improve the site. Pick the level you are comfortable sharing.</p>
         </div>
         <div className="flex flex-wrap items-center gap-3">
           <button
             className="neumorphic-button inline-flex items-center px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary hover:text-accent"
             onClick={acceptAll}
           >
-            Accept all
+            Allow analytics
           </button>
           <button
             className="neumorphic-button inline-flex items-center px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary hover:text-accent"
             onClick={acceptMinimum}
           >
-            Essential only
+            Minimal analytics
           </button>
           <button
             className="neumorphic-button inline-flex items-center px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary hover:text-accent"
             onClick={rejectAll}
           >
-            Reject all
+            No analytics
           </button>
         </div>
       </div>

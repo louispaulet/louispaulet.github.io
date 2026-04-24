@@ -11,19 +11,19 @@ const LatestPosts = ({ compact = false }) => {
       {!compact && (
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div className="space-y-3">
-          <p className="section-kicker">Latest writing</p>
+          <p className="section-kicker">Latest notes</p>
           <h2 className="text-3xl font-semibold text-primary sm:text-4xl">
-            Latest blog posts
+            Recent build notes
           </h2>
           <p className="max-w-2xl text-sm leading-7 text-secondary sm:text-base">
-            Recent notes from research, experiments, and shipped products.
+            Recent notes from experiments, benchmarks, and shipped tools.
           </p>
         </div>
         <Link
           to="/posts"
           className="neumorphic-button inline-flex items-center justify-center gap-3 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary hover:text-accent"
         >
-          More
+          Archive
           <FaArrowRight />
         </Link>
       </div>

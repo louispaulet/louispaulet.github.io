@@ -44,9 +44,9 @@ const Post = () => {
         </ReactMarkdown>
       </div>
       <div className="border border-soft bg-surface p-6 shadow-[12px_12px_24px_rgba(185,194,212,0.45),-12px_-12px_24px_rgba(255,255,255,0.95)] sm:p-8">
-        <h2 className="text-xl font-semibold text-primary">Continue the conversation</h2>
+        <h2 className="text-xl font-semibold text-primary">Continue the thread</h2>
         <p className="mt-2 text-sm text-secondary">
-          Reach out to collaborate, challenge the ideas in this article, or share your own builds.
+          Reach out to compare notes, challenge the article, or share what you are building.
         </p>
         <SocialLinks />
       </div>

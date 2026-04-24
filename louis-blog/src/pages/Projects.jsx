@@ -11,37 +11,37 @@ const projects = [
   
   {
     image: "./post_images/dataviz_homepage.webp", 
-    title: "HATVP DATAVIZ",
+    title: "HATVP Dataviz",
     category: "Data visualization",
-    description: "A website to see plots about french representative data to act on open data possibilities",
+    description: "Interactive charts for exploring French public representative data and the possibilities of open civic datasets.",
     link: "https://hatvp-dataviz.thefrenchartist.dev/"
   },
   {
     image: "./post_images/exquisite_menus.webp", 
     title: "Exquisite Menus",
     category: "Generative media",
-    description: "Exquisite menus at fictional restaurants. Menus created by GPT4, and images of the dishes generated using FLUX-DEV-1.",
+    description: "Fictional restaurant menus generated with GPT-4, paired with dish images created using FLUX.",
     link: "https://exquisite-menus.thefrenchartist.dev/"
   },
     {
     image: "./post_images/mnist-website.webp", 
     title: "MNIST in the browser",
     category: "Browser ML",
-    description: "Handwritten digit inference in the browser using Tensorflow.js",
+    description: "Handwritten digit recognition running directly in the browser with TensorFlow.js.",
     link: "https://mnist.thefrenchartist.dev/"
   },
     {
     image: "./post_images/maze_benchmark.png", 
-    title: "The maze benchmark",
+    title: "Maze Benchmark",
     category: "LLM benchmark",
-    description: "Benchmarking LLMs by generating 3d interactive mazes in JS.",
+    description: "A benchmark that asks LLMs to generate interactive 3D mazes in JavaScript and Three.js.",
     link: "https://louispaulet.github.io/maze_benchmark/"
   },
   {
     image: "./post_images/timeline_generator.webp", 
     title: "Timeline Generator",
     category: "AI interface",
-    description: "Send your prompt and get a beautiful timeline of any event.",
+    description: "Turn a prompt into a clean visual timeline for an event, topic, or story.",
     link: "https://timeline.thefrenchartist.dev/#/timeline"
   },
   // {
@@ -54,7 +54,7 @@ const projects = [
     image: "./post_images/youtube_recomender_project_thumbnail.webp",
     title: "GPT YouTube Recommender",
     category: "Recommendation system",
-    description: "Get personalized YouTube channel suggestions powered by GPT-4.1-nano",
+    description: "Personalized YouTube channel suggestions powered by GPT-4.1-nano.",
     link: "https://gpt-reco.thefrenchartist.dev/"
   }
 ];
@@ -64,11 +64,11 @@ const Projects = () => {
     <div className="space-y-10 text-secondary">
       <header className="grid gap-6 border-b border-soft pb-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
         <div>
-          <p className="section-kicker">Production work</p>
-          <h1 className="mt-3 text-4xl font-semibold text-primary sm:text-5xl">Live projects</h1>
+          <p className="section-kicker">Shipped projects</p>
+          <h1 className="mt-3 text-4xl font-semibold text-primary sm:text-5xl">Projects you can open</h1>
         </div>
         <p className="max-w-2xl text-sm leading-7 text-secondary lg:justify-self-end">
-          Running builds across AI tooling, open data, browser inference, and playful product experiments. Each surface is a working destination, not a placeholder.
+          Working builds across AI tooling, open data, browser inference, and playful product experiments. Each card points to something live, inspectable, or ready to try.
         </p>
       </header>
 

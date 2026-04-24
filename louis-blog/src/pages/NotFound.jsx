@@ -4,9 +4,9 @@ const NotFound = () => {
   return (
     <div className="neumorphic-surface flex flex-col items-center justify-center gap-6 p-12 text-center text-secondary">
       <div className="flex h-20 w-20 items-center justify-center border border-soft bg-surface text-3xl font-bold text-accent">404</div>
-      <h1 className="text-3xl font-semibold text-primary">Page Not Found</h1>
+      <h1 className="text-3xl font-semibold text-primary">Page not found</h1>
       <p className="max-w-md text-sm text-secondary">
-        The page you are looking for doesn’t exist—or it may have shipped under a different URL. Let’s get you back on track.
+        This URL does not exist, or the thing moved while the site kept shipping.
       </p>
       <Link
         to="/"

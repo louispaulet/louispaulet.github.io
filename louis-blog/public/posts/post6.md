@@ -1,4 +1,4 @@
-# Unleashing Collective Intelligence: A Deep Dive into the Shuffled MMLU Dataset
+# Shuffled MMLU: Testing Whether Answer Order Changes Model Accuracy
 
 Hello, AI aficionados! Today, we embark on a deep dive into the fascinating world of the Massive Multitask Language Understanding (MMLU) dataset. This epic journey is divided into three parts, each one building on the last, to explore how shuffling the dataset impacts language model performance, how we can leverage collective intelligence, and what insights we can glean from our experiments. So, grab your favorite beverage, get comfy, and join us for a thrilling ride through the world of AI and natural language processing. 🌐✨
 

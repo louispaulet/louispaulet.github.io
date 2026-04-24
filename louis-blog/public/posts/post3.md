@@ -1,4 +1,4 @@
-# OpenAI CLIP labelling and searching
+# OpenAI CLIP for Image Labelling and Search
 
 **3 min read.**
 

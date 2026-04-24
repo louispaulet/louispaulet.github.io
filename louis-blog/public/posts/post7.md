@@ -1,4 +1,4 @@
-# Understanding the Arithmetic Capabilities of Modern Language Models by creating a benchmark dataset
+# Repetitive Sums: A Tiny Benchmark for LLM Arithmetic
 
 ## Introduction
 
@@ -76,4 +76,4 @@ As we move forward, benchmarks like these will play a crucial role in guiding th
 
 For a detailed look at the benchmark datasets and to explore the full leaderboard, visit the [Repetitive Sums Benchmark Dataset](https://huggingface.co/datasets/the-french-artist/repetitive_sums_benchmark_leaderboard/viewer/default/train) on HuggingFace Hub.
 
-*Published 25 Jun 2024.*  
+*Published 25 Jun 2024.*

@@ -3,17 +3,17 @@ import { Link as RouterLink } from 'react-router-dom';
 const CvViewer = () => {
   return (
     <div className="flex flex-col items-center gap-6 text-secondary">
-      <h1 className="text-4xl font-semibold text-primary">The curriculum vitae corner</h1>
-      <p className="text-lg">I am not currently looking for a job.</p>
+      <h1 className="text-4xl font-semibold text-primary">CV</h1>
+      <p className="text-lg">I am not currently looking for a job, but the route stays here for context.</p>
       <div className="flex gap-4">
         <RouterLink to="/">
           <button className="neumorphic-button px-6 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary hover:text-accent">
-            Back to Homepage
+            Back home
           </button>
         </RouterLink>
         <RouterLink to="/projects">
           <button className="neumorphic-button px-6 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary hover:text-accent">
-            Go to Projects
+            View projects
           </button>
         </RouterLink>
       </div>

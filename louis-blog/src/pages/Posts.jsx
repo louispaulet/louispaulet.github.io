@@ -15,12 +15,11 @@ const Posts = () => {
         <div>
           <p className="section-kicker">Writing</p>
           <h1 className="mt-3 text-4xl font-semibold leading-tight text-primary sm:text-5xl">
-            Every insight, benchmark, and build log in one place.
+            Writing from the builds.
           </h1>
         </div>
         <p className="max-w-3xl text-sm leading-7 text-secondary lg:justify-self-end">
-          Browse the complete archive of writing, from emergent AI tooling sprints to product analytics deep dives. Each entry anchors
-          a project, exploration, or dataset ready for follow-through.
+          Notes on AI tools, benchmarks, datasets, and product experiments, written from the workbench rather than the sidelines.
         </p>
       </header>
 

@@ -1,4 +1,4 @@
-# Transparency Watch: Enhancing Public Accountability Through Open Data
+# Transparency Watch: Open Data for Public Accountability
 
 ![screenshot of dataviz app homepage](./../post_images/dataviz_homepage.webp)
 
