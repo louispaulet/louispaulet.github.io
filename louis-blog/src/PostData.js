@@ -16,19 +16,25 @@ const postData = [
     "id": "post9",
     "title": "Maze Benchmark: Testing LLMs on 3D Three.js Code",
     "summary": "The Maze Benchmark project tests various large language models (LLMs) by challenging them to generate 3D mazes using Three.js, evaluating their coding abilities and interactive visualization performance. Top-performing models like GPT-4 and GPT-o1 delivered high-quality code with minimal iterations, while lower-tier models struggled with functionality and debugging.",
-    "postDate": "21 Sep 2024"
+    "postDate": "21 Sep 2024",
+    "heroImage": "/post_images/maze-benchmark-hero-wide.png",
+    "heroAlt": "Abstract geometric maze benchmark artwork"
   },
   {
     "id": "post8",
     "title": "MNIST in the Browser with TensorFlow.js",
     "summary": "This blog post explores a web-based application that performs handwritten digit recognition using the MNIST dataset entirely in the browser. The project leverages TensorFlow.js for real-time, client-side inference, highlighting the benefits of privacy, performance, and scalability in modern web development.",
-    "postDate": "04 Sep 2024"
+    "postDate": "04 Sep 2024",
+    "heroImage": "/post_images/mnist-hero-wide.png",
+    "heroAlt": "Abstract MNIST neural-grid artwork"
   },
   {
     "id": "post6",
     "title": "Shuffled MMLU: Testing Whether Answer Order Changes Model Accuracy",
     "summary": "Join us on an in-depth journey through the analysis of the MMLU dataset. Discover how shuffling answer choices and leveraging collective voting strategies can significantly enhance the performance of language models. From creating the shuffled dataset to performing inference and detailed result analysis, this comprehensive post covers all the steps and insights gained along the way.",
-    "postDate": "25 Jun 2024"
+    "postDate": "25 Jun 2024",
+    "heroImage": "/post_images/shuffled-mmlu-hero-wide.png",
+    "heroAlt": "Abstract shuffled answer grid artwork"
   },
   {
     "id": "post7",
@@ -46,7 +52,9 @@ const postData = [
     "id": "post5",
     "title": "HATVP RAG Assistant: Searching Public Declarations",
     "summary": "The HATVP RAG Assistant project leverages advanced AI and NLP technologies to streamline querying and retrieving public declarations from French representatives. By utilizing embedding techniques and language models, it provides users with easy access to relevant information, promoting transparency and accessibility. This post delves into the project's preparation, backend operations, and frontend integration.",
-    "postDate": "24 Jun 2024"
+    "postDate": "24 Jun 2024",
+    "heroImage": "/post_images/rag-assistant-hero-wide.png",
+    "heroAlt": "Abstract retrieval-augmented document flow artwork"
   },
   {
     "id": "post1",
@@ -64,7 +72,9 @@ const postData = [
     "id": "post3",
     "title": "OpenAI CLIP for Image Labelling and Search",
     "summary": "CLIP (Contrastive Language-Image Pre-training) is a deep learning model developed by OpenAI that can learn visual concepts from natural language supervision. It can understand images based on their descriptions and generate descriptions of images. In this post, we'll explore what CLIP is, how it works, and some of its exciting applications.",
-    "postDate": "23 Mar 2023"
+    "postDate": "23 Mar 2023",
+    "heroImage": "/post_images/clip-hero-wide.png",
+    "heroAlt": "Abstract image-text embedding map artwork"
   }
 ];
 
