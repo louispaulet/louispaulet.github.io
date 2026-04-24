@@ -25,13 +25,13 @@ npm run lint
 npm run deploy
 ```
 
-- `npm run dev` starts Vite with an increased HTTP header size.
+- `npm run dev` starts Vite with an increased HTTP header size on fixed port `5173` and refuses to fall back to another port.
 - `npm run build` creates the production build in `dist/`.
 - `npm run preview` serves the production build locally.
 - `npm run lint` runs ESLint across JavaScript and JSX files.
 - `npm run deploy` publishes `dist/` with `gh-pages`.
 
-The root `Makefile` also exposes `make install`, `make run`, `make build`, and `make deploy`.
+The root `Makefile` also exposes `make install`, `make run`, `make dev`, `make build`, and `make deploy`.
 
 ## App Structure
 

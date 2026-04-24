@@ -16,12 +16,13 @@ make install
 make run
 ```
 
-The development server runs the app from `louis-blog/` on port `5173`.
+The development server runs the app from `louis-blog/` on port `5173`. If something is already using that port, `make run` clears it before starting Vite.
 
 ## Root Commands
 
 - `make install` installs app dependencies with `npm --prefix louis-blog install`.
-- `make run` starts the Vite development server on port `5173`.
+- `make run` starts the Vite development server on port `5173` after clearing any existing process on that port.
+- `make dev` is an alias for `make run`.
 - `make build` builds the production app.
 - `make deploy` builds and deploys the app with the configured `gh-pages` flow.
 
