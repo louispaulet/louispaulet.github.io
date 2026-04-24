@@ -12,8 +12,8 @@ const Navbar = () => {
           to="/"
           className="flex min-w-0 items-center gap-3 transition hover:opacity-90"
         >
-          <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center border border-soft bg-surface shadow-[5px_6px_14px_rgba(89,108,135,0.16),-5px_-5px_12px_rgba(255,255,255,0.82)]">
-            <img src={website_logo} alt="Louis Paulet" className="h-8 w-8 object-contain" />
+          <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center border border-soft bg-surface shadow-[3px_4px_10px_rgba(89,108,135,0.14),-3px_-3px_8px_rgba(255,255,255,0.78)]">
+            <img src={website_logo} alt="Louis Paulet" className="h-7 w-7 object-contain" />
           </div>
           <div className="flex min-w-0 flex-col">
             <span className="text-[0.68rem] uppercase tracking-[0.22em] text-muted">Louis Paulet</span>
