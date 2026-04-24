@@ -16,9 +16,6 @@ const Footer = () => {
         <div className="max-w-xl">
           <p className="serif-accent text-xs uppercase tracking-[0.26em] text-[#dbe7d5]">Shipping in public</p>
           <p className="mt-4 text-2xl font-semibold text-[#f6f8f2]">Louis Paulet &middot; AI and data builds</p>
-          <p className="mt-3 max-w-lg text-sm leading-6 text-[#d0dccc]">
-            Calm engineering work, framed by a quiet jungle backdrop.
-          </p>
         </div>
         <div className="lg:self-center">
           <a
