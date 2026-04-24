@@ -10,7 +10,9 @@ const postData = [
     "id": "post11",
     "title": "GPT YouTube Recommender: Finding Channels Outside the Feed",
     "summary": "Discover new YouTube channels by leveraging GPT-4.1-nano. This React + Vite app analyzes your subscriptions and provides curated suggestions with live link validation.",
-    "postDate": "06 Jun 2025"
+    "postDate": "06 Jun 2025",
+    "heroImage": "/post_images/gpt-youtube-recommender-hero-wide.png",
+    "heroAlt": "Abstract recommendation graph for a YouTube recommender"
   },
   {
     "id": "post9",
