@@ -15,6 +15,14 @@ const postData = [
     "heroAlt": "Abstract recommendation graph for a YouTube recommender"
   },
   {
+    "id": "post10",
+    "title": "Cleaning Checkout.com Docs for a Small RAG Pipeline",
+    "summary": "Transforming a messy collection of Checkout.com documentation pages into a cleaner RAG pipeline by deduplicating crawled data, pruning embeddings, and tightening retrieval quality.",
+    "postDate": "15 Dec 2024",
+    "heroImage": "/post_images/checkout-rag-pipeline-hero-wide.png",
+    "heroAlt": "Abstract document pipeline with retrieval and deduplication flow"
+  },
+  {
     "id": "post9",
     "title": "Maze Benchmark: Testing LLMs on 3D Three.js Code",
     "summary": "The Maze Benchmark project tests various large language models (LLMs) by challenging them to generate 3D mazes using Three.js, evaluating their coding abilities and interactive visualization performance. Top-performing models like GPT-4 and GPT-o1 delivered high-quality code with minimal iterations, while lower-tier models struggled with functionality and debugging.",
@@ -42,13 +50,17 @@ const postData = [
     "id": "post7",
     "title": "Repetitive Sums: A Tiny Benchmark for LLM Arithmetic",
     "summary": "This article is about benchmark creation, analyzing the arithmetic capabilities of various large language models when it comes to 1+1+1 sums. It discusses the methodology, evaluates the performance of different models, and highlights key findings.",
-    "postDate": "25 Jun 2024"
+    "postDate": "25 Jun 2024",
+    "heroImage": "/post_images/repetitive-sums-hero-wide.png",
+    "heroAlt": "Abstract arithmetic benchmark with stacked numeric signals"
   },
   {
     "id": "post4",
     "title": "Transparency Watch: Open Data for Public Accountability",
     "summary": "Transparency Watch is a new platform leveraging HATVP datasets to promote transparency and accountability in public life. The website offers interactive dashboards that reveal insights into gender equality and the efficiency of declaration publications, empowering citizens and watchdogs to monitor public officials effectively.",
-    "postDate": "24 Jun 2024"
+    "postDate": "24 Jun 2024",
+    "heroImage": "/post_images/transparency-watch-hero-wide.png",
+    "heroAlt": "Abstract civic data dashboard with charts and grid layers"
   },
   {
     "id": "post5",
@@ -62,13 +74,17 @@ const postData = [
     "id": "post1",
     "title": "Karaoke Light: Text-to-Speech Meets GPT-4",
     "summary": "The incredible advances in artificial intelligence have led to transformative breakthroughs in multiple fields, including text-to-speech (TTS) and natural language understanding. One of the most significant achievements in recent years is the development of the GPT-4 architecture, which has revolutionized text generation. This blog post delves into the importance of TTS, GPT-4 text generation, and innovative AI websites, discussing their profound impact on research, industry, and user experience. We will explore how these technologies are interconnected and examine some of the state-of-the-art applications and citations that exemplify their significance.",
-    "postDate": "08 Apr 2023"
+    "postDate": "08 Apr 2023",
+    "heroImage": "/post_images/karaoke-light-hero-wide.png",
+    "heroAlt": "Abstract audio waves and speech synthesis visual for karaoke"
   },
   {
     "id": "post2",
     "title": "Handwritten Digit Recognition with Keras and Flask",
     "summary": "Building a model that can accurately recognize hand-drawn digits is a classic problem in the field of computer vision. In addition to building a highly accurate CNN model, I also developed a user-friendly interface that allows users to draw their own digits on a canvas and see the model's predictions in real time.",
-    "postDate": "23 Mar 2023"
+    "postDate": "23 Mar 2023",
+    "heroImage": "/post_images/mnist-keras-flask-hero-wide.png",
+    "heroAlt": "Abstract handwritten digit recognition pipeline with neural network signals"
   },
   {
     "id": "post3",
