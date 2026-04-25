@@ -17,14 +17,6 @@ const postData = [
     "heroAlt": "Abstract recommendation graph for a YouTube recommender"
   },
   {
-    "id": "post10",
-    "title": "Cleaning Checkout.com Docs for a Small RAG Pipeline",
-    "summary": "Transforming a messy collection of Checkout.com documentation pages into a cleaner RAG pipeline by deduplicating crawled data, pruning embeddings, and tightening retrieval quality.",
-    "postDate": "15 Dec 2024",
-    "heroImage": "/post_images/checkout-rag-pipeline-hero-wide.png",
-    "heroAlt": "Abstract document pipeline with retrieval and deduplication flow"
-  },
-  {
     "id": "post9",
     "title": "Maze Benchmark: Testing LLMs on 3D Three.js Code",
     "summary": "The Maze Benchmark project tests various large language models (LLMs) by challenging them to generate 3D mazes using Three.js, evaluating their coding abilities and interactive visualization performance. Top-performing models like GPT-4 and GPT-o1 delivered high-quality code with minimal iterations, while lower-tier models struggled with functionality and debugging.",
