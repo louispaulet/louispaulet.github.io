@@ -1,15 +1,27 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import website_logo from './../cached_images/logo_favicon_white_blue.webp';
 
 const Navbar = () => {
+  const location = useLocation();
   const navLinkClasses =
     'relative text-xs font-semibold uppercase tracking-[0.18em] text-secondary transition-colors after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--color-accent)] after:transition-all hover:text-primary hover:after:w-full';
+  const isHomePage = location.pathname === '/';
+
+  const handleLogoClick = (event) => {
+    if (!isHomePage || typeof window === 'undefined') {
+      return;
+    }
+
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <nav className="sticky top-0 z-50 border-b border-soft bg-[rgba(249,251,254,0.88)] shadow-[0_8px_26px_rgba(89,108,135,0.1)] backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-4 py-2 sm:px-8 sm:py-3">
         <Link
           to="/"
+          onClick={handleLogoClick}
           className="flex min-w-0 items-center gap-4 transition hover:opacity-90"
         >
           <img
