@@ -4,7 +4,9 @@ const postData = [
     "id": "post12",
     "title": "Groq AllIn Studio: Twelve AI Assistants in One Workspace",
     "summary": "A deep dive into Groq AllIn Studio—a React + Vite workspace that bundles twelve Groq-backed experiences with a Cloudflare Worker proxy, real-time analytics, and a polished shell for demos and production launches.",
-    "postDate": "09 Jun 2025"
+    "postDate": "09 Jun 2025",
+    "heroImage": "/post_images/groq-allin-studio-hero-wide.png",
+    "heroAlt": "Abstract workspace hub with twelve assistant modules"
   },
   {
     "id": "post11",
