@@ -27,6 +27,16 @@ This site should sound like practical notes from someone who builds, tests, and 
 - world's most demanding teams
 - vague hype
 - over-formal portfolio language
+- availability statements that imply job-seeking unless explicitly requested
+- "open to work", "available for full-time roles", or similar hiring-signal copy by default
+
+## Employment-safe copy
+
+When writing about current work, keep the wording neutral and current-state focused.
+
+- Prefer phrases like "currently focused on", "building", or "shipping" instead of availability statements.
+- Do not suggest openness to advisory work, freelance work, or new roles unless the user asks for that specifically.
+- If a CTA or bio could be read as recruiting language, rewrite it so it describes the work rather than the job market.
 
 ## CTA style
 
