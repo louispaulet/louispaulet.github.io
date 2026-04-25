@@ -8,8 +8,8 @@ const About = () => {
     <div className="space-y-12 text-secondary">
       <section className="neumorphic-surface p-8 sm:p-10">
         <div className="grid gap-8 lg:grid-cols-[auto_1fr] lg:items-center">
-          <div className="mx-auto flex h-40 w-40 items-center justify-center border border-soft bg-surface shadow-[7px_8px_18px_rgba(89,108,135,0.16),-6px_-6px_14px_rgba(255,255,255,0.82)] lg:mx-0">
-            <img src={profile_pic} alt="Louis Paulet" className="h-36 w-36 object-cover" />
+          <div className="mx-auto flex h-80 w-80 items-center justify-center border border-soft bg-surface shadow-[7px_8px_18px_rgba(89,108,135,0.16),-6px_-6px_14px_rgba(255,255,255,0.82)] lg:mx-0">
+            <img src={profile_pic} alt="Louis Paulet" className="h-72 w-72 object-cover" />
           </div>
           <div className="space-y-4 text-center lg:text-left">
             <h1 className="text-4xl font-semibold text-primary sm:text-5xl">About Louis Paulet</h1>
