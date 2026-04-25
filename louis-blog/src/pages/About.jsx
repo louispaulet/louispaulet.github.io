@@ -75,7 +75,7 @@ const About = () => {
         <div className="flex flex-col gap-6">
           <h2 className="text-3xl font-semibold text-primary">Let&apos;s build something useful.</h2>
           <p className="text-sm text-secondary">
-            I am open to advisory work, full-time roles, and experimental collaborations across Europe.
+            I&apos;m currently focused on shipping thoughtful products and learning from practical problems.
           </p>
           <SocialLinks />
         </div>
