@@ -2,6 +2,13 @@ import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [
   {
+    image: "./post_images/wunderwiki.jpg",
+    title: "Strange Wikipedia Atlas",
+    category: "Knowledge graph",
+    description: "A curated atlas of unusual Wikipedia pages with editorial collections, semantic graph exploration, and generated rabbit-hole trails.",
+    link: "https://wunderwiki.thefrenchartist.dev/"
+  },
+  {
     image: "./post_images/ponzi-simulator.jpg",
     title: "Ponzi Simulator",
     category: "Simulation",
