@@ -2,6 +2,13 @@ import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [
   {
+    image: "./post_images/simple-city-builder.webp",
+    title: "Simple City Builder",
+    category: "Browser game",
+    description: "A 3D city builder for placing homes, roads, bridges, and services while managing citizens, funds, happiness, fitness, and the city economy.",
+    link: "https://city-builder.thefrenchartist.dev/"
+  },
+  {
     image: "./post_images/groqallin_landing_page.webp",
     title: "Groq AllIn Studio",
     category: "AI workspace",
