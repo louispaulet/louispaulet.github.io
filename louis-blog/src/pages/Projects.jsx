@@ -34,7 +34,7 @@ const projects = [
     image: "./post_images/exquisite_menus.webp", 
     title: "Exquisite Menus",
     category: "Generative media",
-    description: "Fictional restaurant menus generated with GPT-4, paired with dish images created using FLUX.",
+    description: "An AI dining atlas where OpenAI Image Generator v2.0 visualizes fictional cuisine, restaurants, hot sauces, and menu worlds.",
     link: "https://exquisite-menus.thefrenchartist.dev/"
   },
     {
