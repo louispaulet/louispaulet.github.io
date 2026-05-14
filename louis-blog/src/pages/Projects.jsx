@@ -2,6 +2,13 @@ import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [
   {
+    image: "./post_images/ponzi-simulator.jpg",
+    title: "Ponzi Simulator",
+    category: "Simulation",
+    description: "An educational simulator for tuning recruitment-driven fraud scenarios and watching reserves, liabilities, payouts, and collapse risk evolve month by month.",
+    link: "https://ponzi.thefrenchartist.dev/"
+  },
+  {
     image: "./post_images/simple-city-builder.webp",
     title: "Simple City Builder",
     category: "Browser game",
