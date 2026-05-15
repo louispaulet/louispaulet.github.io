@@ -2,7 +2,7 @@ import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [
   {
-    image: "./post_images/wunderwiki.jpg",
+    image: "./post_images/strange-wikipedia-atlas-preview.webp",
     title: "Strange Wikipedia Atlas",
     category: "Knowledge graph",
     description: "A curated atlas of unusual Wikipedia pages with editorial collections, semantic graph exploration, and generated rabbit-hole trails.",
