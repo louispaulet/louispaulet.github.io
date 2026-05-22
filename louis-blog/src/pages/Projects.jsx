@@ -2,6 +2,13 @@ import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [
   {
+    image: "./post_images/facial-expression-detection.webp",
+    title: "Facial Expression Detection",
+    category: "Browser ML",
+    description: "A local-only webcam demo that compares FaceAPI and Human for browser-based facial expression detection while keeping frames on device.",
+    link: "https://face-classifier.thefrenchartist.dev/#/"
+  },
+  {
     image: "./post_images/strange-wikipedia-atlas-preview.webp",
     title: "Strange Wikipedia Atlas",
     category: "Knowledge graph",
