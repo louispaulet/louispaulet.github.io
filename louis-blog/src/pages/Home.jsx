@@ -11,6 +11,12 @@ const Home = () => {
     ['Full-stack', 'from data modeling to usable interfaces'],
     ['AI systems', 'retrieval, browser ML, agents, and workflow tools'],
   ];
+  const projectSnapshots = [
+    ['/post_images/groqallin_landing_page.webp', 'Groq AllIn Studio'],
+    ['/post_images/strange-wikipedia-atlas-preview.webp', 'Strange Wikipedia Atlas'],
+    ['/post_images/maze_benchmark.png', 'Maze Benchmark'],
+    ['/post_images/dataviz_homepage.webp', 'HATVP Dataviz'],
+  ];
 
   const focusAreas = [
     {
@@ -32,53 +38,69 @@ const Home = () => {
 
   return (
     <div className="space-y-14 text-secondary sm:space-y-20">
-      <section className="grid gap-6 lg:grid-cols-[1.35fr_0.65fr] lg:items-stretch">
-        <div className="neumorphic-surface relative overflow-hidden px-6 py-14 sm:px-10 sm:py-16">
-          <div className="absolute left-0 top-0 h-full w-[3px] bg-[var(--color-accent)]" />
-          <div className="relative max-w-4xl space-y-8">
-            <p className="section-kicker">AI tools · data interfaces · build logs</p>
-            <div className="space-y-6">
-              <h1 className="max-w-4xl text-4xl font-semibold leading-tight text-primary sm:text-5xl md:text-6xl">
-                I turn data and AI ideas into working tools people can try.
-              </h1>
-              <p className="max-w-2xl text-lg leading-8 text-secondary">
-                I prototype, test, and ship web experiences where the model, data, and interface all have to earn their place.
-              </p>
-            </div>
-            <div className="flex flex-wrap items-center gap-3">
-              <Link
-                to="/projects"
-                className="neumorphic-button inline-flex items-center gap-3 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary hover:text-accent"
-              >
-                Explore projects
-                <FaArrowRight />
-              </Link>
-              <Link
-                to="/about"
-                className="inline-flex items-center gap-3 border border-strong bg-white/60 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary transition hover:border-[var(--color-accent)] hover:text-accent"
-              >
-                About me
-                <FaArrowRight />
-              </Link>
-              <Link
-                to="/cv"
-                className="inline-flex items-center gap-3 px-2 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-secondary transition hover:text-accent"
-              >
-                CV
-                <FaArrowRight />
-              </Link>
+      <section className="neumorphic-surface relative overflow-hidden">
+        <div className="grid gap-0 lg:grid-cols-[1.25fr_0.75fr]">
+          <div className="relative px-6 py-12 sm:px-10 sm:py-16">
+            <div className="absolute left-0 top-0 h-full w-[3px] bg-[var(--color-accent)]" />
+            <div className="relative max-w-4xl space-y-8">
+              <p className="section-kicker">AI tools · data interfaces · build logs</p>
+              <div className="space-y-6">
+                <h1 className="max-w-4xl text-4xl font-semibold leading-tight text-primary sm:text-5xl md:text-6xl">
+                  I turn data and AI ideas into working tools people can try.
+                </h1>
+                <p className="max-w-2xl text-lg leading-8 text-secondary">
+                  I prototype, test, and ship web experiences where the model, data, and interface all have to earn their place.
+                </p>
+              </div>
+              <div className="flex flex-wrap items-center gap-3">
+                <Link
+                  to="/projects"
+                  className="cta cta-primary"
+                >
+                  Explore projects
+                  <FaArrowRight />
+                </Link>
+                <Link
+                  to="/about"
+                  className="cta cta-secondary"
+                >
+                  About me
+                  <FaArrowRight />
+                </Link>
+                <Link
+                  to="/cv"
+                  className="cta cta-tertiary"
+                >
+                  CV
+                  <FaArrowRight />
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
 
-        <aside className="grid gap-3">
-          {metrics.map(([value, label]) => (
-            <div key={value} className="tile-static px-5 py-6">
-              <p className="text-3xl font-semibold text-primary">{value}</p>
-              <p className="mt-3 text-sm leading-6 text-secondary">{label}</p>
-            </div>
+          <aside className="grid border-t border-soft bg-surface/70 lg:border-l lg:border-t-0">
+            {metrics.map(([value, label]) => (
+              <div key={value} className="border-b border-soft px-6 py-6 last:border-b-0">
+                <p className="text-3xl font-semibold text-primary">{value}</p>
+                <p className="mt-3 text-sm leading-6 text-secondary">{label}</p>
+              </div>
+            ))}
+          </aside>
+        </div>
+        <div className="grid border-t border-soft bg-white/45 sm:grid-cols-4">
+          {projectSnapshots.map(([src, alt]) => (
+            <Link
+              key={alt}
+              to="/projects"
+              className="group relative h-28 overflow-hidden border-b border-soft sm:border-b-0 sm:border-r sm:last:border-r-0"
+            >
+              <img src={src} alt={alt} className="h-full w-full object-cover object-center opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-100" />
+              <span className="absolute inset-x-0 bottom-0 bg-[rgba(19,42,85,0.82)] px-3 py-2 text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-white">
+                {alt}
+              </span>
+            </Link>
           ))}
-        </aside>
+        </div>
       </section>
 
       <FeaturedProjectSpotlight />
@@ -104,7 +126,7 @@ const Home = () => {
           </p>
           <Link
             to="/posts"
-            className="neumorphic-button inline-flex items-center gap-3 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary hover:text-accent"
+            className="cta cta-secondary"
           >
             Read the archive
             <FaArrowRight />
@@ -127,14 +149,14 @@ const Home = () => {
           <div className="flex flex-wrap items-center gap-3 lg:justify-end">
             <Link
               to="/projects"
-              className="neumorphic-button inline-flex items-center gap-3 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary hover:text-accent"
+              className="cta cta-primary"
             >
               See projects
               <FaArrowRight />
             </Link>
             <Link
               to="/about"
-              className="neumorphic-button inline-flex items-center gap-3 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary hover:text-accent"
+              className="cta cta-secondary"
             >
               About me
               <FaArrowRight />

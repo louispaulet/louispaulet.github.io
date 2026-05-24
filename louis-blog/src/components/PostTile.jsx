@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 
-const PostTile = ({ id, title, summary, postDate, image, imageAlt }) => {
+const PostTile = ({ id, title, summary, postDate, image, imageAlt, tags = [] }) => {
   return (
     <Link to={`/posts/${id}`} className="group flex h-full w-full">
       <article className="tile-interactive flex h-full w-full flex-col p-5 text-secondary sm:p-6">
@@ -22,12 +22,21 @@ const PostTile = ({ id, title, summary, postDate, image, imageAlt }) => {
             <FaArrowUpRightFromSquare className="text-sm" />
           </div>
         </div>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {tags.slice(0, 3).map((tag) => (
+            <span key={tag} className="meta-chip">{tag}</span>
+          ))}
+        </div>
         <h3 className="mt-5 text-xl font-semibold leading-snug text-primary transition-colors duration-300 group-hover:text-accent">
           {title}
         </h3>
         <p className="post-preview-summary mt-3 text-sm leading-7 text-secondary">
           {summary}
         </p>
+        <span className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary transition group-hover:text-accent">
+          Read build note
+          <FaArrowUpRightFromSquare className="text-[0.7rem]" />
+        </span>
       </article>
     </Link>
   );

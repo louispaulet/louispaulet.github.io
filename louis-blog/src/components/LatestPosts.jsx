@@ -21,7 +21,7 @@ const LatestPosts = ({ compact = false }) => {
         </div>
         <Link
           to="/posts"
-          className="neumorphic-button inline-flex items-center justify-center gap-3 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary hover:text-accent"
+          className="cta cta-secondary"
         >
           Archive
           <FaArrowRight />
@@ -37,6 +37,7 @@ const LatestPosts = ({ compact = false }) => {
               title={post.title}
               summary={post.summary}
               postDate={post.postDate}
+              tags={['Latest', 'Build note']}
             />
           </div>
         ))}

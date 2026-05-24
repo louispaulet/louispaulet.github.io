@@ -24,14 +24,14 @@ const FeaturedProjectSpotlight = () => {
               href="https://groq-allin.thefrenchartist.dev/"
               target="_blank"
               rel="noopener noreferrer"
-              className="neumorphic-button inline-flex items-center gap-3 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary transition hover:text-accent"
+              className="cta cta-primary"
             >
               Open workspace
               <FaArrowRight />
             </a>
             <Link
               to="/posts/post12"
-              className="inline-flex items-center gap-3 border border-strong bg-white/60 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary transition hover:border-[var(--color-accent)] hover:text-accent"
+              className="cta cta-secondary"
             >
               Read build log
               <FaArrowRight />
