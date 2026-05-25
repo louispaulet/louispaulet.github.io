@@ -3,6 +3,15 @@ import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [
   {
+    image: "./post_images/repetitive-sums-hero-wide.png",
+    title: "Repetitive Sums Benchmark",
+    category: "LLM benchmark",
+    filters: ["AI", "Benchmark"],
+    badges: ["Benchmark", "LLM", "Arithmetic"],
+    description: "A live leaderboard and dot-matrix explorer for comparing how language models handle repetitive sums from 2 through 100.",
+    link: "https://repsums.thefrenchartist.dev/#/"
+  },
+  {
     image: "./post_images/facial-expression-detection.webp",
     title: "Facial Expression Detection",
     category: "Browser ML",
