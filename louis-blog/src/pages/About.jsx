@@ -15,7 +15,7 @@ const About = () => {
             <h1 className="text-4xl font-semibold text-primary sm:text-5xl">About Louis Paulet</h1>
             <p className="section-kicker">Data scientist · product engineer · AI builder</p>
             <p className="max-w-3xl text-base leading-8 text-secondary sm:text-lg">
-              I build data-rich tools that are clear enough to use and sturdy enough to ship. The work spans adtech, civic transparency, browser ML, retrieval systems, and small AI products that start as experiments and become public builds.
+              I build data-rich tools that are clear enough to use and sturdy enough to ship. The work spans adtech, civic transparency, browser ML, retrieval systems, and small AI products that start as experiments and become public builds, including a <a href="https://louispaulet.github.io/#/posts/post7" className="text-accent underline underline-offset-4">repetitive sums benchmark</a> for testing LLM arithmetic.
             </p>
             <div className="lg:-ml-2">
               <SocialLinks />
