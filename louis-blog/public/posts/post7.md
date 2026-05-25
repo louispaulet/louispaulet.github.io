@@ -7,7 +7,8 @@ Is it 10? 13? 16?
 
 Large language models (LLMs) have become a cornerstone of numerous applications, ranging from natural language processing to creative content generation. However, their proficiency in performing basic arithmetic tasks remains an intriguing area of study. The repetitive sums benchmark sheds light on this aspect, evaluating how well these models can compute simple sums of ones, such as 1+1+1.  
 
-[Check the project here](https://github.com/louispaulet/benchmark_experiments/tree/main/Repetitive%20Sums%20Benchmark%20Dataset)  
+[Explore the live benchmark app](https://repsums.thefrenchartist.dev/#/)  
+[Check the project source here](https://github.com/louispaulet/benchmark_experiments/tree/main/Repetitive%20Sums%20Benchmark%20Dataset)  
 [Check the dataset here](https://huggingface.co/datasets/the-french-artist/repetitive_sums_benchmark)   
 [Check the leaderboard here](https://huggingface.co/datasets/the-french-artist/repetitive_sums_benchmark_leaderboard/viewer/default/train)  
 
