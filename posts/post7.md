@@ -12,6 +12,15 @@ Large language models (LLMs) have become a cornerstone of numerous applications,
 [Check the dataset here](https://huggingface.co/datasets/the-french-artist/repetitive_sums_benchmark)   
 [Check the leaderboard here](https://huggingface.co/datasets/the-french-artist/repetitive_sums_benchmark_leaderboard/viewer/default/train)  
 
+## Update: Part 2 live benchmark (25 May 2026)
+
+We recently revisited the benchmark with a clean Part 2 workspace and a live website: [Repetitive Sums Benchmark](https://repsums.thefrenchartist.dev/#/). The app combines the original benchmark archive with current detailed runs, so the leaderboard, matrix, history table, and row-level result views can be explored in one place.
+
+The new detailed benchmark runs test **gpt-5.5**, **gpt-5.4**, and **gpt-5.4-mini** on the same repeated-addition task, with expected answers from 2 through 100. In the current leaderboard, gpt-5.5 and gpt-5.4 both reach 100% accuracy across all 99 questions, while gpt-5.4-mini reaches 87.88% accuracy with a longest correct streak of 56.
+
+This Part 2 run uses the OpenAI Responses API with output text logprobs and top-token alternatives captured. For every detailed model run, the project stores all 99 row-level answers, including the parsed answer, correctness, latency, token logprobs, and top-token alternatives. The repository now also includes a cleaned 2026 workspace with Part 2 results, combined leaderboard data, historical model metadata, recovered historical correctness maps from the original charts, and the Vite + React site used for the live app.
+
+The original 2024 analysis below remains useful as the baseline story: it explains why this tiny arithmetic task is surprisingly revealing, and the update above shows how the same benchmark now looks with newer frontier models and a more inspectable interface.
 
 We tested 33 models using the following providers:  
 * [openAI](https://openai.com/)  
