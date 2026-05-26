@@ -3,6 +3,15 @@ import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [
   {
+    image: "./post_images/self-investigation.webp",
+    title: "Self Investigation",
+    category: "Activity dashboard",
+    filters: ["Data"],
+    badges: ["GitHub", "Analytics", "Data"],
+    description: "A personal dashboard for exploring five years of GitHub commit rhythms, repository focus, message themes, and work cadence.",
+    link: "https://selfinvest.thefrenchartist.dev/#/"
+  },
+  {
     image: "./post_images/repetitive-sums-hero-wide.png",
     title: "Repetitive Sums Benchmark",
     category: "LLM benchmark",
