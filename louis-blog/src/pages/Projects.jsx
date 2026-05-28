@@ -3,6 +3,15 @@ import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [
   {
+    image: "./post_images/michelin-restaurants.webp",
+    title: "Michelin Restaurants",
+    category: "Data map",
+    filters: ["Data"],
+    badges: ["Wikidata", "Map", "Dining"],
+    description: "A searchable list and map for exploring Michelin-starred restaurants from Wikidata with cuisines, star tiers, and addresses.",
+    link: "https://michelin.thefrenchartist.dev/#/"
+  },
+  {
     image: "./post_images/self-investigation.webp",
     title: "Self Investigation",
     category: "Activity dashboard",
