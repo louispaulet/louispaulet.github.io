@@ -1,6 +1,22 @@
 // PostData.js
 const postData = [
   {
+    "id": "post13",
+    "title": "Empty Room Studio: Clearing Furniture with OpenAI Image Edits",
+    "summary": "A build note on Empty Room Studio, a React + Cloudflare Worker demo that uploads room photos and uses OpenAI image edit models to remove furniture while keeping the API key server-side.",
+    "postDate": "04 Jun 2026",
+    "heroImage": "/post_images/empty-room-studio.png",
+    "heroAlt": "Empty Room Studio interface with upload controls and an empty before-after queue"
+  },
+  {
+    "id": "post7",
+    "title": "Repetitive Sums: A Tiny Benchmark for LLM Arithmetic",
+    "summary": "Updated with the 2026 Part 2 benchmark: a live Repetitive Sums app now combines the original archive with detailed GPT-5.5, GPT-5.4, and GPT-5.4-mini runs, row-level logprobs, and a dot-matrix explorer.",
+    "postDate": "25 May 2026",
+    "heroImage": "/post_images/repetitive-sums-hero-wide.png",
+    "heroAlt": "Abstract arithmetic benchmark with stacked numeric signals"
+  },
+  {
     "id": "post12",
     "title": "Groq AllIn Studio: Twelve AI Assistants in One Workspace",
     "summary": "A deep dive into Groq AllIn Studio—a React + Vite workspace that bundles twelve Groq-backed experiences with a Cloudflare Worker proxy, real-time analytics, and a polished shell for demos and production launches.",
@@ -39,14 +55,6 @@ const postData = [
     "postDate": "25 Jun 2024",
     "heroImage": "/post_images/shuffled-mmlu-hero-wide.png",
     "heroAlt": "Abstract shuffled answer grid artwork"
-  },
-  {
-    "id": "post7",
-    "title": "Repetitive Sums: A Tiny Benchmark for LLM Arithmetic",
-    "summary": "This article is about benchmark creation, analyzing the arithmetic capabilities of various large language models when it comes to 1+1+1 sums. It discusses the methodology, evaluates the performance of different models, and highlights key findings.",
-    "postDate": "25 Jun 2024",
-    "heroImage": "/post_images/repetitive-sums-hero-wide.png",
-    "heroAlt": "Abstract arithmetic benchmark with stacked numeric signals"
   },
   {
     "id": "post4",

@@ -1,6 +1,6 @@
-import { FaArrowRight } from 'react-icons/fa6';
+import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 
-const ProjectPreview = ({ image, title, description, link, category }) => {
+const ProjectPreview = ({ image, title, description, link, category, badges = [] }) => {
   return (
     <a
       href={link || '/'}
@@ -15,10 +15,19 @@ const ProjectPreview = ({ image, title, description, link, category }) => {
       <div className="flex flex-1 flex-col p-6">
         <div className="flex items-start justify-between gap-5">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">{category}</p>
-          <FaArrowRight className="mt-1 flex-shrink-0 text-sm text-accent transition group-hover:translate-x-1" />
+          <FaArrowUpRightFromSquare className="mt-1 flex-shrink-0 text-sm text-accent transition group-hover:translate-x-1 group-hover:-translate-y-1" />
         </div>
         <h2 className="mt-4 text-2xl font-semibold leading-tight text-primary transition group-hover:text-accent">{title}</h2>
         <p className="mt-3 flex-1 text-sm leading-7 text-secondary">{description}</p>
+        <div className="mt-5 flex flex-wrap gap-2">
+          {['Live', ...badges].slice(0, 4).map((badge) => (
+            <span key={badge} className="meta-chip">{badge}</span>
+          ))}
+        </div>
+        <span className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary transition group-hover:text-accent">
+          Open live build
+          <FaArrowUpRightFromSquare className="text-[0.7rem]" />
+        </span>
       </div>
     </a>
   );

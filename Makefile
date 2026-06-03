@@ -2,7 +2,7 @@ PROJECT_DIR := louis-blog
 NPM := npm --prefix $(PROJECT_DIR)
 PORT := 5173
 
-.PHONY: install run dev build deploy kill-port
+.PHONY: install up run dev test build deploy kill-port
 
 install:
 	$(NPM) install
@@ -17,7 +17,13 @@ kill-port:
 run: kill-port
 	$(NPM) run dev
 
+up: run
+
 dev: run
+
+test: install
+	$(NPM) run lint
+	$(NPM) run build
 
 build:
 	$(NPM) run build
