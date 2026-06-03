@@ -3,6 +3,15 @@ import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [
   {
+    image: "./post_images/empty-room-studio.png",
+    title: "Empty Room Studio",
+    category: "AI image tool",
+    filters: ["AI"],
+    badges: ["OpenAI", "Images", "Cloudflare"],
+    description: "A browser demo for uploading furnished room photos and using OpenAI image models to clear them down to walls, floors, and windows.",
+    link: "https://louispaulet.github.io/empty-room-demo/"
+  },
+  {
     image: "./post_images/michelin-restaurants.webp",
     title: "Michelin Restaurants",
     category: "Data map",
