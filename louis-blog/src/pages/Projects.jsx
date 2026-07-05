@@ -8,7 +8,7 @@ const projects = [
     category: "Algorithm demo",
     filters: ["AI", "Benchmark"],
     badges: ["Pathfinding", "Canvas", "DeepSeek"],
-    description: "A realtime maze generator and solver for comparing BFS, DFS, Dijkstra, and A* on the same seeded grid.",
+    description: "A realtime maze generator and solver built to benchmark the new DeepSeek V4 Pro model while comparing BFS, DFS, Dijkstra, and A*.",
     link: "https://maze-solver.thefrenchartist.dev/#/maze-solver"
   },
   {
