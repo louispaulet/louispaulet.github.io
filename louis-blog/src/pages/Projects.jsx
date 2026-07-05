@@ -3,6 +3,24 @@ import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [
   {
+    image: "./post_images/deepseek-maze-solver.png",
+    title: "DeepSeek Maze Solver",
+    category: "Algorithm demo",
+    filters: ["AI", "Benchmark"],
+    badges: ["Pathfinding", "Canvas", "DeepSeek"],
+    description: "A realtime maze generator and solver built to benchmark the new DeepSeek V4 Pro model while comparing BFS, DFS, Dijkstra, and A*.",
+    link: "https://maze-solver.thefrenchartist.dev/#/"
+  },
+  {
+    image: "./post_images/jetlag-billionaire.png",
+    title: "Jetlag Billionaire",
+    category: "Idle game",
+    filters: ["Game"],
+    badges: ["Satire", "Phaser", "Clicker"],
+    description: "A satirical idle clicker that turns private-jet excess into a playable carbon-cookie loop with emitters, upgrades, and fictional benchmarks.",
+    link: "https://cookie-clicker.thefrenchartist.dev/"
+  },
+  {
     image: "./post_images/empty-room-studio.png",
     title: "Empty Room Studio",
     category: "AI image tool",
