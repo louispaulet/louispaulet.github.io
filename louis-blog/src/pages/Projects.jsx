@@ -3,6 +3,15 @@ import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [
   {
+    image: "./post_images/deepseek-maze-solver.png",
+    title: "DeepSeek Maze Solver",
+    category: "Algorithm demo",
+    filters: ["AI", "Benchmark"],
+    badges: ["Pathfinding", "Canvas", "DeepSeek"],
+    description: "A realtime maze generator and solver for comparing BFS, DFS, Dijkstra, and A* on the same seeded grid.",
+    link: "https://maze-solver.thefrenchartist.dev/#/maze-solver"
+  },
+  {
     image: "./post_images/jetlag-billionaire.png",
     title: "Jetlag Billionaire",
     category: "Idle game",
