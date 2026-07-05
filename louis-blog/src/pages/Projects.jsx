@@ -9,7 +9,7 @@ const projects = [
     filters: ["AI", "Benchmark"],
     badges: ["Pathfinding", "Canvas", "DeepSeek"],
     description: "A realtime maze generator and solver built to benchmark the new DeepSeek V4 Pro model while comparing BFS, DFS, Dijkstra, and A*.",
-    link: "https://maze-solver.thefrenchartist.dev/#/maze-solver"
+    link: "https://maze-solver.thefrenchartist.dev/#/"
   },
   {
     image: "./post_images/jetlag-billionaire.png",
