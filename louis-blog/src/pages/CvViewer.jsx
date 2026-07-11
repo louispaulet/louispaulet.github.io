@@ -2,19 +2,15 @@ import { Link as RouterLink } from 'react-router-dom';
 
 const CvViewer = () => {
   return (
-    <div className="flex flex-col items-center gap-6 text-secondary">
+    <div className="flex min-w-0 flex-col items-center gap-6 text-center text-secondary">
       <h1 className="text-4xl font-semibold text-primary">CV</h1>
-      <p className="text-lg">I am not currently looking for a job, but the route stays here for context.</p>
-      <div className="flex gap-4">
-        <RouterLink to="/">
-          <button className="cta cta-secondary">
-            Back home
-          </button>
+      <p className="max-w-2xl text-base leading-7 sm:text-lg">I am not currently looking for a job, but the route stays here for context.</p>
+      <div className="grid w-full max-w-md gap-3 sm:flex sm:w-auto sm:flex-wrap sm:justify-center sm:gap-4">
+        <RouterLink to="/" className="cta cta-secondary w-full sm:w-auto">
+          Back home
         </RouterLink>
-        <RouterLink to="/projects">
-          <button className="cta cta-primary">
-            View projects
-          </button>
+        <RouterLink to="/projects" className="cta cta-primary w-full sm:w-auto">
+          View projects
         </RouterLink>
       </div>
 

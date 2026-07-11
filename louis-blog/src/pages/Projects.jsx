@@ -177,9 +177,9 @@ const Projects = () => {
   }, [activeFilter]);
 
   return (
-    <div className="space-y-10 text-secondary">
-      <header className="grid gap-6 border-b border-soft pb-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-        <div>
+    <div className="min-w-0 space-y-9 text-secondary sm:space-y-10">
+      <header className="grid min-w-0 gap-5 border-b border-soft pb-7 sm:gap-6 sm:pb-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+        <div className="min-w-0">
           <p className="section-kicker">Shipped projects</p>
           <h1 className="mt-3 text-4xl font-semibold text-primary sm:text-5xl">Projects you can open</h1>
         </div>
@@ -188,14 +188,15 @@ const Projects = () => {
         </p>
       </header>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="flex min-w-0 flex-wrap gap-2" aria-label="Project filters">
         {filters.map((filter) => (
           <button
             key={filter}
             type="button"
             onClick={() => setActiveFilter(filter)}
+            aria-pressed={activeFilter === filter}
             className={[
-              'border px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] transition',
+              'min-h-11 border px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] transition-colors',
               activeFilter === filter
                 ? 'border-[var(--color-primary)] bg-[var(--color-primary)] text-white'
                 : 'border-soft bg-white/70 text-secondary hover:border-[var(--color-accent)] hover:text-primary',
@@ -206,7 +207,7 @@ const Projects = () => {
         ))}
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="grid min-w-0 gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3" aria-live="polite">
         {visibleProjects.map((project) => (
           <ProjectPreview
             key={project.title}

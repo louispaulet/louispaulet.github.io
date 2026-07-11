@@ -37,39 +37,39 @@ const Home = () => {
   ];
 
   return (
-    <div className="space-y-14 text-secondary sm:space-y-20">
+    <div className="min-w-0 space-y-12 text-secondary sm:space-y-16 lg:space-y-20">
       <section className="neumorphic-surface relative overflow-hidden">
         <div className="grid gap-0 lg:grid-cols-[1.25fr_0.75fr]">
-          <div className="relative px-6 py-12 sm:px-10 sm:py-16">
+          <div className="relative min-w-0 px-5 py-9 sm:px-10 sm:py-14 lg:py-16">
             <div className="absolute left-0 top-0 h-full w-[3px] bg-[var(--color-accent)]" />
-            <div className="relative max-w-4xl space-y-8">
+            <div className="relative min-w-0 max-w-4xl space-y-7 sm:space-y-8">
               <p className="section-kicker">AI tools · data interfaces · build logs</p>
-              <div className="space-y-6">
-                <h1 className="max-w-4xl text-4xl font-semibold leading-tight text-primary sm:text-5xl md:text-6xl">
+              <div className="min-w-0 space-y-5 sm:space-y-6">
+                <h1 className="max-w-4xl text-[clamp(2.25rem,9vw,3.75rem)] font-semibold leading-[1.08] text-primary">
                   I turn data and AI ideas into working tools people can try.
                 </h1>
-                <p className="max-w-2xl text-lg leading-8 text-secondary">
+                <p className="max-w-2xl text-base leading-7 text-secondary sm:text-lg sm:leading-8">
                   I prototype, test, and ship web experiences where the model, data, and interface all have to earn their place.
                 </p>
               </div>
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="grid min-w-0 gap-3 sm:flex sm:flex-wrap sm:items-center">
                 <Link
                   to="/projects"
-                  className="cta cta-primary"
+                  className="cta cta-primary w-full sm:w-auto"
                 >
                   Explore projects
                   <FaArrowRight />
                 </Link>
                 <Link
                   to="/about"
-                  className="cta cta-secondary"
+                  className="cta cta-secondary w-full sm:w-auto"
                 >
                   About me
                   <FaArrowRight />
                 </Link>
                 <Link
                   to="/cv"
-                  className="cta cta-tertiary"
+                  className="cta cta-tertiary w-full sm:w-auto"
                 >
                   CV
                   <FaArrowRight />
@@ -78,24 +78,30 @@ const Home = () => {
             </div>
           </div>
 
-          <aside className="grid border-t border-soft bg-surface/70 lg:border-l lg:border-t-0">
+          <aside className="grid min-w-0 divide-y divide-[var(--color-border)] border-t border-soft bg-surface/70 sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:grid-cols-1 lg:divide-x-0 lg:divide-y lg:border-l lg:border-t-0">
             {metrics.map(([value, label]) => (
-              <div key={value} className="border-b border-soft px-6 py-6 last:border-b-0">
-                <p className="text-3xl font-semibold text-primary">{value}</p>
-                <p className="mt-3 text-sm leading-6 text-secondary">{label}</p>
+              <div key={value} className="min-w-0 px-5 py-5 sm:px-4 sm:py-6 lg:px-6">
+                <p className="text-2xl font-semibold text-primary sm:text-3xl">{value}</p>
+                <p className="mt-2 text-sm leading-6 text-secondary sm:mt-3">{label}</p>
               </div>
             ))}
           </aside>
         </div>
-        <div className="grid border-t border-soft bg-white/45 sm:grid-cols-4">
-          {projectSnapshots.map(([src, alt]) => (
+        <div className="project-snapshot-grid border-t border-soft bg-white/45">
+          {projectSnapshots.map(([src, alt], index) => (
             <Link
               key={alt}
               to="/projects"
-              className="group relative h-28 overflow-hidden border-b border-soft sm:border-b-0 sm:border-r sm:last:border-r-0"
+              className="project-snapshot-tile group"
             >
-              <img src={src} alt={alt} className="h-full w-full object-cover object-center opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-100" />
-              <span className="absolute inset-x-0 bottom-0 bg-[rgba(19,42,85,0.82)] px-3 py-2 text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-white">
+              <img
+                src={src}
+                alt={alt}
+                loading={index === 0 ? 'eager' : 'lazy'}
+                decoding="async"
+                className="h-full w-full object-cover object-center opacity-85 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
+              />
+              <span className="absolute inset-x-0 bottom-0 line-clamp-2 bg-[rgba(19,42,85,0.84)] px-2 py-2 text-[0.56rem] font-semibold uppercase leading-4 tracking-[0.1em] text-white sm:px-3 sm:text-[0.62rem] sm:tracking-[0.12em]">
                 {alt}
               </span>
             </Link>
@@ -105,9 +111,9 @@ const Home = () => {
 
       <FeaturedProjectSpotlight />
 
-      <section className="grid gap-5 lg:grid-cols-3">
+      <section className="grid min-w-0 gap-5 md:grid-cols-2 lg:grid-cols-3">
         {focusAreas.map((area) => (
-          <div key={area.title} className="tile-static p-6 sm:p-7">
+          <div key={area.title} className="tile-static min-w-0 p-5 sm:p-7">
             <div className="flex h-11 w-11 items-center justify-center border border-soft bg-surface text-lg text-accent shadow-[inset_3px_3px_8px_rgba(89,108,135,0.1),inset_-3px_-3px_8px_rgba(255,255,255,0.82)]">
               {area.icon}
             </div>
@@ -117,8 +123,8 @@ const Home = () => {
         ))}
       </section>
 
-      <section className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-        <div className="space-y-4">
+      <section className="grid min-w-0 gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+        <div className="min-w-0 space-y-4">
           <p className="section-kicker">Writing</p>
           <h2 className="text-3xl font-semibold text-primary sm:text-4xl">Build notes, benchmark writeups, and project logs.</h2>
           <p className="text-sm leading-7 text-secondary">
@@ -132,12 +138,12 @@ const Home = () => {
             <FaArrowRight />
           </Link>
         </div>
-        <div className="neumorphic-surface p-5 sm:p-6">
+        <div className="neumorphic-surface min-w-0 p-4 sm:p-6">
           <LatestPosts compact />
         </div>
       </section>
 
-      <section className="neumorphic-surface p-6 sm:p-8">
+      <section className="neumorphic-surface min-w-0 p-5 sm:p-8">
         <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <p className="section-kicker">Collaboration</p>
@@ -146,17 +152,17 @@ const Home = () => {
               I am interested in practical, testable products: prototypes that teach us something, systems that can ship, and interfaces people can actually use.
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-3 lg:justify-end">
+          <div className="grid gap-3 sm:flex sm:flex-wrap sm:items-center lg:justify-end">
             <Link
               to="/projects"
-              className="cta cta-primary"
+              className="cta cta-primary w-full sm:w-auto"
             >
               See projects
               <FaArrowRight />
             </Link>
             <Link
               to="/about"
-              className="cta cta-secondary"
+              className="cta cta-secondary w-full sm:w-auto"
             >
               About me
               <FaArrowRight />

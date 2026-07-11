@@ -7,7 +7,7 @@ const LatestPosts = ({ compact = false }) => {
   const featuredPosts = postData.slice(0, 6);
 
   return (
-    <div className="space-y-6 text-secondary">
+    <div className="min-w-0 space-y-6 text-secondary">
       {!compact && (
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div className="space-y-3">
@@ -29,9 +29,9 @@ const LatestPosts = ({ compact = false }) => {
       </div>
       )}
 
-      <div className={compact ? 'grid gap-4' : 'grid gap-5 sm:grid-cols-2 lg:grid-cols-3'}>
+      <div className={compact ? 'grid min-w-0 gap-4' : 'grid min-w-0 gap-5 sm:grid-cols-2 lg:grid-cols-3'}>
         {featuredPosts.map((post) => (
-          <div key={post.id}>
+          <div key={post.id} className="min-w-0">
             <PostTile
               id={post.id}
               title={post.title}

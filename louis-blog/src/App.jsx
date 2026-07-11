@@ -40,9 +40,9 @@ const App = () => {
 
   return (
     <>
-      <div className="flex min-h-screen flex-col bg-[linear-gradient(135deg,#f9fbfe_0%,#eef2f7_48%,#e3e9f2_100%)] text-primary">
+      <div className="flex min-h-screen min-w-0 flex-col overflow-x-clip bg-[linear-gradient(135deg,#f9fbfe_0%,#eef2f7_48%,#e3e9f2_100%)] text-primary">
         <Navbar />
-        <main className="mx-auto flex w-full flex-grow flex-col px-4 pb-24 pt-10 sm:px-6 lg:max-w-6xl lg:px-8">
+        <main className="mx-auto flex w-full min-w-0 flex-grow flex-col px-4 pb-16 pt-8 sm:px-6 sm:pb-20 sm:pt-10 lg:max-w-6xl lg:px-8 lg:pb-24">
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
               <Route path="/" element={<Home />} />

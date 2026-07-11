@@ -6,6 +6,7 @@
 
 :where(*, *::before, *::after) {
   border-radius: 0 !important;
+  box-sizing: border-box;
 }
 
 :root {
@@ -22,12 +23,41 @@
   --color-shadow-highlight: rgba(255, 255, 255, 0.86);
 }
 
+html {
+  min-width: 320px;
+  background: var(--color-canvas);
+  scroll-behavior: smooth;
+}
+
 body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: clip;
   font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
   background: var(--color-canvas);
   color: var(--color-primary);
   -webkit-font-smoothing: antialiased;
   line-height: 1.55;
+}
+
+#root {
+  min-width: 0;
+  min-height: 100vh;
+}
+
+:where(img, picture, video, canvas, svg) {
+  display: block;
+  max-width: 100%;
+}
+
+:where(h1, h2, h3, h4, p, li, a, button, span) {
+  overflow-wrap: break-word;
+}
+
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid rgba(239, 103, 72, 0.72);
+  outline-offset: 3px;
 }
 
 a {
@@ -50,6 +80,7 @@ a {
 }
 
 .neumorphic-button {
+  min-height: 2.75rem;
   background: #ffffff;
   border: 1px solid var(--color-border);
   color: var(--color-primary);
@@ -68,6 +99,8 @@ a {
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
+  min-height: 2.75rem;
+  max-width: 100%;
   border: 1px solid var(--color-border);
   padding: 0.75rem 1.25rem;
   font-size: 0.72rem;
@@ -177,6 +210,29 @@ a {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-secondary);
+  overflow-wrap: anywhere;
+}
+
+.project-snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-snapshot-tile {
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.project-snapshot-tile:nth-child(even) {
+  border-right: 0;
+}
+
+.project-snapshot-tile:nth-child(n + 3) {
+  border-bottom: 0;
 }
 
 .tile-indicator {
@@ -260,10 +316,65 @@ a {
   overflow-wrap: anywhere;
 }
 
+.prose-light :where(pre, table):not(:where([class~="not-prose"] *)) {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.prose-light :where(code):not(:where([class~="not-prose"] *)) {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.prose-light :where(img, iframe, video):not(:where([class~="not-prose"] *)) {
+  height: auto;
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .project-snapshot-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .project-snapshot-tile,
+  .project-snapshot-tile:nth-child(even),
+  .project-snapshot-tile:nth-child(n + 3) {
+    border-right: 1px solid var(--color-border);
+    border-bottom: 0;
+  }
+
+  .project-snapshot-tile:last-child {
+    border-right: 0;
+  }
+}
+
 @media (max-width: 640px) {
   .prose-light :where(h1):not(:where([class~="not-prose"] *)) {
     font-size: 2rem;
     line-height: 1.25;
+  }
+}
+
+@media (hover: none) {
+  .neumorphic-button:hover,
+  .cta:hover,
+  .tile-interactive:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  :where(*, *::before, *::after) {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

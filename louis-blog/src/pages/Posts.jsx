@@ -25,9 +25,9 @@ const Posts = () => {
   }, []);
 
   return (
-    <div className="space-y-10 text-secondary">
-      <header className="grid gap-6 border-b border-soft pb-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-        <div>
+    <div className="min-w-0 space-y-9 text-secondary sm:space-y-10">
+      <header className="grid min-w-0 gap-5 border-b border-soft pb-7 sm:gap-6 sm:pb-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+        <div className="min-w-0">
           <p className="section-kicker">Writing</p>
           <h1 className="mt-3 text-4xl font-semibold leading-tight text-primary sm:text-5xl">
             Writing from the builds.
@@ -38,7 +38,7 @@ const Posts = () => {
         </p>
       </header>
 
-      <section className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="grid min-w-0 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {postData.map((post) => (
           <div key={post.id}>
             <PostTile

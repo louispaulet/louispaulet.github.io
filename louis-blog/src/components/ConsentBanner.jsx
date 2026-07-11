@@ -52,27 +52,34 @@ const ConsentBanner = () => {
   if (consentGiven) return null;
 
   return (
-    <div className="fixed inset-x-0 bottom-6 z-50 flex justify-center px-4">
-      <div className="neumorphic-surface flex w-full max-w-5xl flex-col gap-4 bg-surface p-6 text-sm text-secondary backdrop-blur">
-        <div>
+    <div className="fixed inset-x-0 bottom-0 z-50 flex justify-center px-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] sm:px-4 sm:pb-4">
+      <div
+        role="region"
+        aria-label="Analytics preferences"
+        className="neumorphic-surface flex max-h-[calc(100dvh-1rem)] w-full max-w-5xl flex-col gap-4 overflow-y-auto bg-[rgba(249,251,254,0.98)] p-4 text-sm text-secondary backdrop-blur sm:max-h-[calc(100dvh-2rem)] sm:p-5 md:flex-row md:items-center md:justify-between md:gap-6"
+      >
+        <div className="min-w-0 flex-1">
           <p className="text-base font-semibold text-primary">Analytics preferences</p>
-          <p className="mt-1 text-sm text-secondary">I use analytics to learn what is useful and improve the site. Pick the level you are comfortable sharing.</p>
+          <p className="mt-1 max-w-2xl text-sm leading-6 text-secondary">I use analytics to learn what is useful and improve the site. Pick the level you are comfortable sharing.</p>
         </div>
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="grid w-full grid-cols-3 gap-1.5 md:w-auto md:flex md:flex-wrap md:items-center md:justify-end md:gap-2">
           <button
-            className="neumorphic-button inline-flex items-center px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary hover:text-accent"
+            type="button"
+            className="neumorphic-button inline-flex min-h-11 items-center justify-center px-1.5 py-2 text-[0.58rem] font-semibold uppercase leading-4 tracking-[0.08em] text-primary hover:text-accent min-[360px]:text-[0.64rem] sm:px-3 sm:text-xs sm:tracking-[0.12em] md:px-5 md:tracking-[0.16em]"
             onClick={acceptAll}
           >
             Allow analytics
           </button>
           <button
-            className="neumorphic-button inline-flex items-center px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary hover:text-accent"
+            type="button"
+            className="neumorphic-button inline-flex min-h-11 items-center justify-center px-1.5 py-2 text-[0.58rem] font-semibold uppercase leading-4 tracking-[0.08em] text-primary hover:text-accent min-[360px]:text-[0.64rem] sm:px-3 sm:text-xs sm:tracking-[0.12em] md:px-5 md:tracking-[0.16em]"
             onClick={acceptMinimum}
           >
             Minimal analytics
           </button>
           <button
-            className="neumorphic-button inline-flex items-center px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary hover:text-accent"
+            type="button"
+            className="neumorphic-button inline-flex min-h-11 items-center justify-center px-1.5 py-2 text-[0.58rem] font-semibold uppercase leading-4 tracking-[0.08em] text-primary hover:text-accent min-[360px]:text-[0.64rem] sm:px-3 sm:text-xs sm:tracking-[0.12em] md:px-5 md:tracking-[0.16em]"
             onClick={rejectAll}
           >
             No analytics
