@@ -31,6 +31,6 @@ test('Empty Room Studio remains referenced from the portfolio projects grid', as
   const projectsPage = await readProjectFile('../src/pages/Projects.jsx');
 
   assert.match(projectsPage, /title: "Empty Room Studio"/);
-  assert.match(projectsPage, /image: "\.\/post_images\/empty-room-studio\.png"/);
-  assert.match(projectsPage, /link: "https:\/\/louispaulet\.github\.io\/empty-room-demo\/"/);
+  assert.match(projectsPage, /image: "\.\/post_images\/project-empty-room-before-after\.webp"/);
+  assert.match(projectsPage, /link: "https:\/\/louispaulet\.github\.io\/empty-room-demo\/#\/"/);
 });

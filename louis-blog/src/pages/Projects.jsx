@@ -3,49 +3,49 @@ import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [
   {
-    image: "./post_images/deepseek-maze-solver.png",
+    image: "./post_images/project-deepseek-solver-live.webp",
     title: "DeepSeek Maze Solver",
-    category: "Algorithm demo",
+    category: "Pathfinding lab",
     filters: ["AI", "Benchmark"],
-    badges: ["Pathfinding", "Canvas", "DeepSeek"],
-    description: "A realtime maze generator and solver built to benchmark the new DeepSeek V4 Pro model while comparing BFS, DFS, Dijkstra, and A*.",
-    link: "https://maze-solver.thefrenchartist.dev/#/"
+    badges: ["3 generators", "4 solvers", "Seeded replay"],
+    description: "Generate reproducible mazes, compare BFS, DFS, Dijkstra, and A* side by side, and scrub through each solver’s exploration step by step.",
+    link: "https://maze-solver.thefrenchartist.dev/#/maze-solver"
   },
   {
     image: "./post_images/jetlag-billionaire.png",
     title: "Jetlag Billionaire",
-    category: "Idle game",
+    category: "Climate satire",
     filters: ["Game"],
-    badges: ["Satire", "Phaser", "Clicker"],
-    description: "A satirical idle clicker that turns private-jet excess into a playable carbon-cookie loop with emitters, upgrades, and fictional benchmarks.",
-    link: "https://cookie-clicker.thefrenchartist.dev/"
+    badges: ["Idle game", "Phaser", "Fictional benchmarks"],
+    description: "A private-jet climate-satire clicker where tiny taps scale into absurd emissions, upgrades, achievements, and a static public-estimate-style leaderboard.",
+    link: "https://cookie-clicker.thefrenchartist.dev/#/"
   },
   {
-    image: "./post_images/empty-room-studio.png",
+    image: "./post_images/project-empty-room-before-after.webp",
     title: "Empty Room Studio",
-    category: "AI image tool",
+    category: "AI image editor",
     filters: ["AI"],
-    badges: ["OpenAI", "Images", "Cloudflare"],
-    description: "A browser demo for uploading furnished room photos and using OpenAI image models to clear them down to walls, floors, and windows.",
-    link: "https://louispaulet.github.io/empty-room-demo/"
+    badges: ["OpenAI Images", "Before/after", "Cloudflare Worker"],
+    description: "Upload a furnished room photo, tune the image-edit request, and generate an empty-room before/after while the API key stays behind a Cloudflare Worker.",
+    link: "https://louispaulet.github.io/empty-room-demo/#/"
   },
   {
-    image: "./post_images/michelin-restaurants.webp",
+    image: "./post_images/project-michelin-paris-map.webp",
     title: "Michelin Restaurants",
-    category: "Data map",
+    category: "Open data map",
     filters: ["Data"],
-    badges: ["Wikidata", "Map", "Dining"],
-    description: "A searchable list and map for exploring Michelin-starred restaurants from Wikidata with cuisines, star tiers, and addresses.",
-    link: "https://michelin.thefrenchartist.dev/#/"
+    badges: ["Wikidata", "OpenStreetMap", "No inferred data"],
+    description: "Explore Michelin-star award records from a fail-closed Wikidata snapshot, with explicit missing fields, country/city filters, and a mapped accessible list.",
+    link: "https://michelin.thefrenchartist.dev/#/map?country=france&city=paris"
   },
   {
-    image: "./post_images/self-investigation.webp",
+    image: "./post_images/project-self-investigation-average-hour.webp",
     title: "Self Investigation",
-    category: "Activity dashboard",
+    category: "Activity study",
     filters: ["Data"],
-    badges: ["GitHub", "Analytics", "Data"],
-    description: "A personal dashboard for exploring five years of GitHub commit rhythms, repository focus, message themes, and work cadence.",
-    link: "https://selfinvest.thefrenchartist.dev/#/"
+    badges: ["GitHub", "Deployments", "Work cadence"],
+    description: "A five-year study of GitHub commits and Pages deployments across repositories, message themes, daily rhythms, shipping streaks, and an “average hour.”",
+    link: "https://selfinvest.thefrenchartist.dev/#/average-hour"
   },
   {
     image: "./post_images/repetitive-sums-hero-wide.png",
@@ -57,94 +57,94 @@ const projects = [
     link: "https://repsums.thefrenchartist.dev/#/"
   },
   {
-    image: "./post_images/facial-expression-detection.webp",
+    image: "./post_images/project-face-classifier-about.webp",
     title: "Facial Expression Detection",
-    category: "Browser ML",
+    category: "On-device vision",
     filters: ["AI", "Browser ML"],
-    badges: ["Browser-only", "AI", "Privacy"],
-    description: "A local-only webcam demo that compares FaceAPI and Human for browser-based facial expression detection while keeping frames on device.",
-    link: "https://face-classifier.thefrenchartist.dev/#/"
+    badges: ["FaceAPI", "Human", "Browser-only"],
+    description: "Compare FaceAPI and Human for visible facial-expression labels using webcam frames processed entirely in the browser, with no backend or cloud expression API.",
+    link: "https://face-classifier.thefrenchartist.dev/#/about"
   },
   {
-    image: "./post_images/strange-wikipedia-atlas-preview.webp",
+    image: "./post_images/project-wunderwiki-graph.webp",
     title: "Strange Wikipedia Atlas",
-    category: "Knowledge graph",
+    category: "Editorial atlas",
     filters: ["AI", "Data"],
-    badges: ["Knowledge", "Data", "Graph"],
-    description: "A curated atlas of unusual Wikipedia pages with editorial collections, semantic graph exploration, and generated rabbit-hole trails.",
-    link: "https://wunderwiki.thefrenchartist.dev/"
+    badges: ["Wikipedia", "Semantic graph", "Curated trails"],
+    description: "A curated cabinet of strange Wikipedia records, themed editorial shelves, source-backed summaries, and graph-linked rabbit-hole trails.",
+    link: "https://wunderwiki.thefrenchartist.dev/#/graph"
   },
   {
-    image: "./post_images/ponzi-simulator.jpg",
+    image: "./post_images/project-ponzi-madoff-collapse.webp",
     title: "Ponzi Simulator",
-    category: "Simulation",
+    category: "Educational simulation",
     filters: ["Data"],
-    badges: ["Simulation", "Education", "Data"],
-    description: "An educational simulator for tuning recruitment-driven fraud scenarios and watching reserves, liabilities, payouts, and collapse risk evolve month by month.",
-    link: "https://ponzi.thefrenchartist.dev/"
+    badges: ["Sourced cases", "Ponzi", "Pyramid / MLM"],
+    description: "Model investment Ponzis and recruitment pyramids, replay sourced cases, and watch cash, claims, payouts, participant loss, and collapse risk diverge.",
+    link: "https://ponzi.thefrenchartist.dev/simulator?scenario=madoff"
   },
   {
     image: "./post_images/simple-city-builder.webp",
     title: "Simple City Builder",
-    category: "Browser game",
+    category: "3D city builder",
     filters: ["Game"],
-    badges: ["3D", "Game", "Simulation"],
-    description: "A 3D city builder for placing homes, roads, bridges, and services while managing citizens, funds, happiness, fitness, and the city economy.",
+    badges: ["Babylon.js", "Economy", "Pathfinding"],
+    description: "Build a connected 3D city with roads, bridges, homes, jobs, services, and parks while citizens commute and the economy tracks upkeep, debt, capacity, and wellbeing.",
     link: "https://city-builder.thefrenchartist.dev/"
   },
   {
-    image: "./post_images/groqallin_landing_page.webp",
+    image: "./post_images/project-groq-dalle-flux.webp",
     title: "Groq AllIn Studio",
-    category: "AI workspace",
+    category: "AI lab collection",
     filters: ["AI"],
-    badges: ["AI", "Cloudflare", "Workspace"],
-    description: "A unified React + Vite workspace that bundles twelve Groq-powered assistants, Flux image labs, and structured `/obj` flows behind a single polished shell.",
-    link: "https://groq-allin.thefrenchartist.dev/"
+    badges: ["Groq", "Model comparison", "15 workspaces"],
+    description: "A Groq-powered collection of 15 assistants and labs spanning structured outputs, diagrams, image generation, model comparisons, research, and playful experiments.",
+    link: "https://groq-allin.thefrenchartist.dev/dalle-vs-flux"
   },
   
   {
-    image: "./post_images/dataviz_homepage.webp", 
+    image: "./post_images/project-hatvp-gender-equality.webp",
     title: "HATVP Dataviz",
-    category: "Data visualization",
+    category: "Civic dashboards",
     filters: ["Data"],
-    badges: ["Civic data", "Charts", "Open data"],
-    description: "Interactive charts for exploring French public representative data and the possibilities of open civic datasets.",
-    link: "https://hatvp-dataviz.thefrenchartist.dev/"
+    badges: ["HATVP", "Gender equality", "Open data"],
+    description: "Interactive dashboards for exploring HATVP declarations through gender balance, publication rates, reported revenue, and individual declaration records.",
+    link: "https://hatvp-dataviz.thefrenchartist.dev/#/gender_equality"
   },
   {
-    image: "./post_images/exquisite_menus.webp", 
+    image: "./post_images/project-exquisite-menu-studio.webp",
     title: "Exquisite Menus",
-    category: "Generative media",
+    category: "AI dining studio",
     filters: ["AI"],
-    badges: ["Generative", "Images", "AI"],
-    description: "An AI dining atlas where OpenAI Image Generator v2.0 visualizes fictional cuisine, restaurants, hot sauces, and menu worlds.",
-    link: "https://exquisite-menus.thefrenchartist.dev/"
+    badges: ["Menu extraction", "Structured JSON", "Dining atlas"],
+    description: "An AI dining atlas and menu studio that turns photographed menus into polished text and structured JSON alongside imagined tasting menus, wines, and hot sauces.",
+    link: "https://exquisite-menus.thefrenchartist.dev/#/menu-studio"
   },
     {
     image: "./post_images/mnist-website.webp", 
     title: "MNIST in the browser",
     category: "Browser ML",
     filters: ["AI", "Browser ML"],
-    badges: ["TensorFlow.js", "Browser ML", "Demo"],
-    description: "Handwritten digit recognition running directly in the browser with TensorFlow.js.",
-    link: "https://mnist.thefrenchartist.dev/"
+    badges: ["TensorFlow.js", "Canvas", "No backend"],
+    description: "Draw a digit on the canvas and watch a TensorFlow.js model recognize it in real time, entirely in the browser.",
+    link: "https://mnist.thefrenchartist.dev/#/"
   },
     {
     image: "./post_images/maze_benchmark.png", 
     title: "Maze Benchmark",
-    category: "LLM benchmark",
+    category: "LLM code benchmark",
     filters: ["AI", "Benchmark"],
-    badges: ["Benchmark", "Three.js", "LLM"],
-    description: "A benchmark that asks LLMs to generate interactive 3D mazes in JavaScript and Three.js.",
-    link: "https://louispaulet.github.io/maze_benchmark/"
+    badges: ["Same prompt", "Three.js", "Interactive ranking"],
+    description: "A ranked comparison of LLM-generated Three.js mazes produced from the same prompt, with each interactive output available to rotate, pan, and inspect.",
+    link: "https://louispaulet.github.io/maze_benchmark/index.html"
   },
   {
     image: "./post_images/timeline_generator.webp", 
     title: "Timeline Generator",
-    category: "AI interface",
+    category: "AI timeline tool",
     filters: ["AI"],
-    badges: ["AI", "Interface", "Timeline"],
-    description: "Turn a prompt into a clean visual timeline for an event, topic, or story.",
+    badges: ["Groq", "Structured JSON", "Interactive timeline"],
+    description: "Turn a topic—history, recipes, biographies, or anything else—into a structured JSON chronology rendered as an interactive visual timeline.",
     link: "https://timeline.thefrenchartist.dev/#/timeline"
   },
   // {
