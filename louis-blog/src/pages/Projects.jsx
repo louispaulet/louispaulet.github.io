@@ -3,6 +3,15 @@ import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [
   {
+    image: "./post_images/quick-ocr-document-extraction.png",
+    title: "Quick OCR",
+    category: "Document OCR",
+    filters: ["AI"],
+    badges: ["OCR", "Translation", "Multi-page"],
+    description: "Upload up to five document images, arrange them in reading order, and extract or translate a clean editable transcript while preserving the document structure.",
+    link: "https://quick-ocr.thefrenchartist.dev/#/"
+  },
+  {
     image: "./post_images/project-deepseek-solver-live.webp",
     title: "DeepSeek Maze Solver",
     category: "Pathfinding lab",
