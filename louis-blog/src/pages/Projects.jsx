@@ -3,6 +3,15 @@ import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [
   {
+    image: "./post_images/truthcheck-ai-claim-assessment.jpg",
+    title: "TruthCheck",
+    category: "AI fact-checking",
+    filters: ["AI"],
+    badges: ["Claim assessment", "Evidence reasoning", "Public links"],
+    description: "Paste a claim, article, or public link to get a quick AI-assisted assessment with transparent reasoning and prompts for deeper verification.",
+    link: "https://louispaulet.github.io/debunk-fake-news/"
+  },
+  {
     image: "./post_images/quick-ocr-document-extraction.png",
     title: "Quick OCR",
     category: "Document OCR",
