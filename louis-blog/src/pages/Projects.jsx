@@ -3,6 +3,15 @@ import ProjectPreview from './../components/ProjectPreview';
 
 const projects = [
   {
+    image: "./post_images/project-yahatvp-dashboard.png",
+    title: "YAHATVP",
+    category: "Civic data pipeline",
+    filters: ["Data"],
+    badges: ["HATVP", "Open data", "Auditable pipeline"],
+    description: "Browse current HATVP declarations, snapshot counts, and standout records through a source-linked dashboard backed by an auditable weekly ingestion pipeline.",
+    link: "https://yahatvp.thefrenchartist.dev/"
+  },
+  {
     image: "./post_images/truthcheck-ai-claim-assessment.jpg",
     title: "TruthCheck",
     category: "AI fact-checking",

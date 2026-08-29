@@ -1,6 +1,14 @@
 // PostData.js
 const postData = [
   {
+    "id": "post14",
+    "title": "Yet Another HATVP Project: A Live, Auditable HATVP Snapshot",
+    "summary": "A build note on YAHATVP, a weekly HATVP ingestion pipeline and source-linked dashboard that keeps official snapshots, quality checks, and historical Wayback and Hugging Face archives inspectable.",
+    "postDate": "30 Aug 2026",
+    "heroImage": "/post_images/project-yahatvp-dashboard.png",
+    "heroAlt": "YAHATVP transparency dashboard showing the latest HATVP snapshot and search interface"
+  },
+  {
     "id": "post13",
     "title": "Empty Room Studio: Clearing Furniture with OpenAI Image Edits",
     "summary": "A build note on Empty Room Studio, a React + Cloudflare Worker demo that uploads room photos and uses OpenAI image edit models to remove furniture while keeping the API key server-side.",
