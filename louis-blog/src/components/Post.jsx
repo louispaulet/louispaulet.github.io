@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm'
 import postData from './../PostData';
 import SocialLinks from './../components/SocialLinks'
 import NotFound from '../pages/NotFound'
+import { loadPostContent } from './postContent';
 
 const stripLeadingHeading = (markdown) =>
   markdown.replace(/^\s{0,3}#{1,6}\s+.*(?:\r?\n)+/, '');
@@ -13,24 +14,47 @@ const Post = () => {
   const { postId } = useParams();
   const [content, setContent] = useState('');
   const [loadError, setLoadError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const postMeta = postData.find((post) => post.id === postId);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}posts/${postId}.md`)
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error('Failed to fetch');
-        }
-        return res.text();
-      })
+    const controller = new AbortController();
+    let isCurrentRequest = true;
+
+    setContent('');
+    setLoadError(false);
+    setIsLoading(true);
+
+    loadPostContent({
+      baseUrl: import.meta.env.BASE_URL,
+      postId,
+      signal: controller.signal,
+    })
       .then((text) => {
+        if (!isCurrentRequest) {
+          return;
+        }
+
         setContent(text);
-        setLoadError(false);
       })
       .catch((err) => {
+        if (!isCurrentRequest || err.name === 'AbortError') {
+          return;
+        }
+
         console.error(err);
         setLoadError(true);
+      })
+      .finally(() => {
+        if (isCurrentRequest) {
+          setIsLoading(false);
+        }
       });
+
+    return () => {
+      isCurrentRequest = false;
+      controller.abort();
+    };
   }, [postId]);
 
   if (loadError) {
@@ -68,12 +92,16 @@ const Post = () => {
           </div>
         )}
         <div className="min-w-0 p-5 sm:p-10">
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            className="prose prose-base prose-light min-w-0 max-w-none leading-relaxed prose-img:mx-auto prose-img:w-full prose-pre:max-w-full prose-pre:overflow-x-auto sm:prose-lg sm:leading-relaxed sm:prose-h1:text-4xl sm:prose-h2:text-3xl sm:prose-h3:text-2xl prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl"
-          >
-            {renderedContent}
-          </ReactMarkdown>
+          {isLoading ? (
+            <p className="text-sm text-secondary" role="status">Loading post…</p>
+          ) : (
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              className="prose prose-base prose-light min-w-0 max-w-none leading-relaxed prose-img:mx-auto prose-img:w-full prose-pre:max-w-full prose-pre:overflow-x-auto sm:prose-lg sm:leading-relaxed sm:prose-h1:text-4xl sm:prose-h2:text-3xl sm:prose-h3:text-2xl prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl"
+            >
+              {renderedContent}
+            </ReactMarkdown>
+          )}
         </div>
       </div>
       <div className="min-w-0 border border-soft bg-surface p-5 shadow-[12px_12px_24px_rgba(185,194,212,0.45),-12px_-12px_24px_rgba(255,255,255,0.95)] sm:p-8">
