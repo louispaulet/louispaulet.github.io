@@ -1,24 +1,41 @@
 import { useState, useEffect } from 'react';
 import ReactGA from 'react-ga4';
+import { CONSENT_UPDATED_EVENT } from './analyticsConsent';
 
 const ConsentBanner = () => {
   const [consentGiven, setConsentGiven] = useState(true);
 
   useEffect(() => {
-    const storedConsent = localStorage.getItem('ga_consent');
-    if (!storedConsent) {
+    try {
+      const storedConsent = window.localStorage?.getItem('ga_consent');
+      if (!storedConsent) {
+        setConsentGiven(false);
+      }
+    } catch (error) {
+      console.warn('Unable to read analytics consent from storage.', error);
       setConsentGiven(false);
     }
   }, []);
 
   const handleConsent = (consent) => {
-    ReactGA.gtag("consent", "update", {
-      ad_storage: consent.ad_storage,
-      ad_user_data: consent.ad_user_data,
-      ad_personalization: consent.ad_personalization,
-      analytics_storage: consent.analytics_storage,
-    });
-    localStorage.setItem('ga_consent', JSON.stringify(consent));
+    try {
+      ReactGA.gtag("consent", "update", {
+        ad_storage: consent.ad_storage,
+        ad_user_data: consent.ad_user_data,
+        ad_personalization: consent.ad_personalization,
+        analytics_storage: consent.analytics_storage,
+      });
+    } catch (error) {
+      console.warn('Failed to update analytics consent.', error);
+    }
+
+    try {
+      window.localStorage?.setItem('ga_consent', JSON.stringify(consent));
+    } catch (error) {
+      console.warn('Unable to save analytics consent to storage.', error);
+    }
+
+    window.dispatchEvent(new Event(CONSENT_UPDATED_EVENT));
     setConsentGiven(true);
   };
 
@@ -34,7 +51,7 @@ const ConsentBanner = () => {
   const acceptMinimum = () => {
     handleConsent({
       ad_storage: "denied",
-      ad_user_data: "granted",
+      ad_user_data: "denied",
       ad_personalization: "denied",
       analytics_storage: "granted",
     });

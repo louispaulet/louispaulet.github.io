@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import ReactGA from "react-ga4";
+import { CONSENT_UPDATED_EVENT, hasAnalyticsConsent } from "./analyticsConsent";
 
 const TRACKING_ID = "G-1XEGFVZDME";
 
@@ -66,29 +67,34 @@ const sendPageview = (location) => {
 const usePageAnalytics = () => {
   const location = useLocation();
   const [isGAInitialized, setIsGAInitialized] = useState(false);
+  const [consent, setConsent] = useState(getStoredConsent);
 
   useEffect(() => {
     setIsGAInitialized(initializeAnalytics());
   }, []);
 
   useEffect(() => {
-    if (!isGAInitialized) {
+    const handleConsentUpdate = () => setConsent(getStoredConsent());
+
+    window.addEventListener(CONSENT_UPDATED_EVENT, handleConsentUpdate);
+    return () => window.removeEventListener(CONSENT_UPDATED_EVENT, handleConsentUpdate);
+  }, []);
+
+  useEffect(() => {
+    if (!isGAInitialized || !consent) {
       return;
     }
 
-    const storedConsent = getStoredConsent();
-    if (storedConsent) {
-      updateConsent(storedConsent);
-    }
-  }, [isGAInitialized]);
+    updateConsent(consent);
+  }, [consent, isGAInitialized]);
 
   useEffect(() => {
-    if (!isGAInitialized) {
+    if (!isGAInitialized || !hasAnalyticsConsent(consent)) {
       return;
     }
 
     sendPageview(location);
-  }, [location, isGAInitialized]);
+  }, [consent, isGAInitialized, location]);
 };
 
 export default usePageAnalytics;
