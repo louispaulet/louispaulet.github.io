@@ -61,6 +61,8 @@ const Navbar = () => {
   }, []);
 
   const handleLogoClick = (event) => {
+    setIsMobileMenuOpen(false);
+
     if (!isHomePage || typeof window === 'undefined') {
       return;
     }
@@ -129,7 +131,13 @@ const Navbar = () => {
           <div id="mobile-primary-navigation" className="grid pb-4 md:hidden">
             <div className="grid gap-2 border-t border-soft pt-3">
               {navItems.map(([to, label]) => (
-                <NavLink key={to} to={to} end={to === '/'} className={mobileLinkClasses}>
+                <NavLink
+                  key={to}
+                  to={to}
+                  end={to === '/'}
+                  className={mobileLinkClasses}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
                   <span className="min-w-0">{label}</span>
                   <FaArrowRight aria-hidden="true" className="flex-shrink-0 text-accent" />
                 </NavLink>
