@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm'
+import remarkGfm from 'remark-gfm';
 import postData from './../PostData';
-import SocialLinks from './../components/SocialLinks'
-import NotFound from '../pages/NotFound'
-import { loadPostContent } from './postContent';
-
-const stripLeadingHeading = (markdown) =>
-  markdown.replace(/^\s{0,3}#{1,6}\s+.*(?:\r?\n)+/, '');
+import { FaArrowLeft } from 'react-icons/fa6';
+import SocialLinks from './../components/SocialLinks';
+import NotFound from '../pages/NotFound';
+import { loadPostContent, preparePostContent } from './postContent';
 
 const Post = () => {
   const { postId } = useParams();
@@ -18,6 +16,10 @@ const Post = () => {
   const postMeta = postData.find((post) => post.id === postId);
 
   useEffect(() => {
+    if (!postMeta) {
+      setIsLoading(false);
+      return undefined;
+    }
     const controller = new AbortController();
     let isCurrentRequest = true;
 
@@ -55,64 +57,57 @@ const Post = () => {
       isCurrentRequest = false;
       controller.abort();
     };
-  }, [postId]);
+  }, [postId, postMeta]);
 
-  if (loadError) {
+  if (!postMeta || loadError) {
     return <NotFound />;
   }
 
-  const renderedContent = stripLeadingHeading(content);
+  const renderedContent = preparePostContent(content, postMeta?.heroImage);
 
   return (
-    <div className="mx-auto w-full min-w-0 max-w-4xl space-y-8 text-secondary sm:space-y-10">
-      <div className="min-w-0 overflow-hidden border border-soft bg-surface shadow-[16px_16px_32px_rgba(185,194,212,0.45),-16px_-16px_32px_rgba(255,255,255,0.95)]">
-        {postMeta?.heroImage ? (
-          <div className="relative isolate aspect-[16/8] border-b border-soft bg-[linear-gradient(135deg,rgba(232,237,244,0.96)_0%,rgba(248,250,253,0.9)_55%,rgba(255,255,255,0.98)_100%)]">
-            <img
-              src={postMeta.heroImage}
-              alt={postMeta.heroAlt || postMeta.title || ''}
-              loading="eager"
-              decoding="async"
-              className="absolute inset-0 h-full w-full object-cover object-center opacity-[0.88]"
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(239,243,248,0.08)_0%,rgba(249,251,254,0.12)_38%,rgba(249,251,254,0.78)_78%,rgba(249,251,254,0.98)_100%)]" />
-            <div className="absolute inset-x-0 bottom-0 min-w-0 px-5 pb-5 pt-20 sm:px-10 sm:pb-8 sm:pt-24">
-              <p className="section-kicker mb-3">Blog post</p>
-              <h1 className="max-w-3xl text-2xl font-semibold leading-tight text-primary min-[360px]:text-3xl sm:text-5xl">
-                {postMeta.title}
-              </h1>
-            </div>
-          </div>
-        ) : (
-          <div className="border-b border-soft bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] px-6 py-8 sm:px-10">
-            <p className="section-kicker">Blog post</p>
-            <h1 className="mt-3 max-w-3xl text-3xl font-semibold leading-tight text-primary sm:text-5xl">
-              {postMeta?.title || postId}
-            </h1>
-          </div>
+    <div className="article-layout page-stack min-w-0 w-full text-secondary">
+      <Link to="/posts" className="cta cta-tertiary">
+        <FaArrowLeft aria-hidden="true" /> Back to writing
+      </Link>
+      <article className="surface min-w-0">
+        <header className="panel-padding border-b border-soft">
+          <p className="section-kicker">Build note</p>
+          <h1 className="page-title mt-3">{postMeta?.title || postId}</h1>
+          {postMeta?.postDate && (
+            <time className="metadata mt-4 block">{postMeta.postDate}</time>
+          )}
+        </header>
+        {postMeta?.heroImage && (
+          <img
+            src={postMeta.heroImage}
+            alt={postMeta.heroAlt || postMeta.title}
+            decoding="async"
+            className="h-auto w-full border-b border-soft"
+          />
         )}
-        <div className="min-w-0 p-5 sm:p-10">
+        <div className="panel-padding min-w-0">
           {isLoading ? (
-            <p className="text-sm text-secondary" role="status">Loading post…</p>
+            <p role="status">Loading post…</p>
           ) : (
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
-              className="prose prose-base prose-light min-w-0 max-w-none leading-relaxed prose-img:mx-auto prose-img:w-full prose-pre:max-w-full prose-pre:overflow-x-auto sm:prose-lg sm:leading-relaxed sm:prose-h1:text-4xl sm:prose-h2:text-3xl sm:prose-h3:text-2xl prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl"
+              className="prose prose-light article-prose min-w-0 prose-img:mx-auto"
             >
               {renderedContent}
             </ReactMarkdown>
           )}
         </div>
-      </div>
-      <div className="min-w-0 border border-soft bg-surface p-5 shadow-[12px_12px_24px_rgba(185,194,212,0.45),-12px_-12px_24px_rgba(255,255,255,0.95)] sm:p-8">
-        <h2 className="text-xl font-semibold text-primary">Continue the thread</h2>
-        <p className="mt-2 text-sm text-secondary">
-          Reach out to compare notes, challenge the article, or share what you are building.
+      </article>
+      <section className="surface panel-padding">
+        <h2 className="section-title text-primary">Continue the thread</h2>
+        <p className="mt-3">
+          Reach out to compare notes, challenge the article, or share what you
+          are building.
         </p>
         <SocialLinks />
-      </div>
+      </section>
     </div>
   );
 };
-
 export default Post;

@@ -34,3 +34,12 @@ test('post content requests surface failed responses', async () => {
     { message: 'Failed to fetch' },
   );
 });
+
+test('article headers do not repeat an identical leading hero image', async () => {
+  const { preparePostContent } = await import('../src/components/postContent.js');
+  const body = '# Title\n\n![Hero](./post_images/hero.png)\n\n## Overview\n\nUseful content.';
+  assert.equal(preparePostContent(body, '/post_images/hero.png'), '## Overview\n\nUseful content.');
+  assert.ok(preparePostContent(body, '/post_images/other.png').includes('![Hero]'));
+  assert.ok(preparePostContent(body).includes('![Hero]'));
+  assert.equal(preparePostContent('# Title\n\nPlain article.'), 'Plain article.');
+});

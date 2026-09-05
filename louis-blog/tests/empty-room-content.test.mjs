@@ -28,7 +28,7 @@ test('Empty Room Studio article starts with the captured screenshot and links to
 });
 
 test('Empty Room Studio remains referenced from the portfolio projects grid', async () => {
-  const projectsPage = await readProjectFile('../src/pages/Projects.jsx');
+  const projectsPage = await readProjectFile('../src/ProjectData.js');
 
   assert.match(projectsPage, /title: "Empty Room Studio"/);
   assert.match(projectsPage, /image: "\.\/post_images\/project-empty-room-before-after\.webp"/);

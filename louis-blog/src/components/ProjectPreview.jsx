@@ -1,42 +1,41 @@
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
-
-const ProjectPreview = ({ image, title, description, link, category, badges = [] }) => {
-  return (
-    <a
-      href={link || '/'}
-      className="group tile-interactive flex h-full min-w-0 flex-col text-secondary"
-      target={link ? '_blank' : undefined}
-      rel={link ? 'noopener noreferrer' : undefined}
-    >
-      <div className="relative aspect-[16/10] w-full min-w-0 overflow-hidden border-b border-soft bg-surface">
-        <img
-          src={image}
-          alt={title}
-          loading="lazy"
-          decoding="async"
-          className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-105"
-        />
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0)_45%,rgba(249,251,254,0.82)_100%)]" />
+const ProjectPreview = ({
+  image,
+  title,
+  description,
+  link,
+  category,
+  badges = [],
+}) => (
+  <a
+    href={link}
+    className="tile-interactive"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src={image}
+      alt={title}
+      loading="lazy"
+      decoding="async"
+      className="card-media"
+    />
+    <div className="card-body">
+      <p className="section-kicker">{category}</p>
+      <h2 className="card-title">{title}</h2>
+      <p>{description}</p>
+      <div className="flex flex-wrap gap-2">
+        {badges.map((badge) => (
+          <span key={badge} className="meta-chip">
+            {badge}
+          </span>
+        ))}
       </div>
-      <div className="flex min-w-0 flex-1 flex-col p-5 sm:p-6">
-        <div className="flex min-w-0 items-start justify-between gap-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">{category}</p>
-          <FaArrowUpRightFromSquare className="mt-1 flex-shrink-0 text-sm text-accent transition group-hover:translate-x-1 group-hover:-translate-y-1" />
-        </div>
-        <h2 className="mt-4 min-w-0 text-2xl font-semibold leading-tight text-primary transition group-hover:text-accent">{title}</h2>
-        <p className="mt-3 flex-1 text-sm leading-7 text-secondary">{description}</p>
-        <div className="mt-5 flex flex-wrap gap-2">
-          {['Live', ...badges].slice(0, 4).map((badge) => (
-            <span key={badge} className="meta-chip">{badge}</span>
-          ))}
-        </div>
-        <span className="mt-5 inline-flex min-w-0 items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary transition group-hover:text-accent">
-          Open live build
-          <FaArrowUpRightFromSquare className="text-[0.7rem]" />
-        </span>
-      </div>
-    </a>
-  );
-};
-
+      <span className="card-action">
+        Open live build <FaArrowUpRightFromSquare aria-hidden="true" />
+        <span className="sr-only"> (opens in a new tab)</span>
+      </span>
+    </div>
+  </a>
+);
 export default ProjectPreview;

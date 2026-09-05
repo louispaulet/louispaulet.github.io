@@ -6,7 +6,7 @@ const PostPreview = ({ id, title, summary, postDate }) => {
     <li>
       <Link
         to={`/posts/${id}`}
-        className="group relative block min-w-0 border border-soft bg-surface p-5 text-secondary shadow-[12px_12px_24px_rgba(185,194,212,0.4),-12px_-12px_24px_rgba(255,255,255,0.9)] transition hover:-translate-y-1 hover:shadow-[16px_16px_32px_rgba(185,194,212,0.5),-16px_-16px_32px_rgba(255,255,255,0.95)] sm:p-6"
+        className="group relative block min-w-0 border border-soft bg-surface p-5 text-secondary transition hover:border-[var(--color-accent-text)] sm:p-6"
       >
         <div className="flex min-w-0 items-start gap-4">
           <div className="flex h-14 w-14 items-center justify-center border border-soft bg-surface text-accent transition group-hover:text-primary">

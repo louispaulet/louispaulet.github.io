@@ -1,49 +1,33 @@
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa6';
-import postData from './../PostData';
+import postData from '../PostData';
 import PostTile from './PostTile';
-
-const LatestPosts = ({ compact = false }) => {
-  const featuredPosts = postData.slice(0, 6);
-
-  return (
-    <div className="min-w-0 space-y-6 text-secondary">
-      {!compact && (
-      <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-        <div className="space-y-3">
-          <p className="section-kicker">Latest notes</p>
-          <h2 className="text-3xl font-semibold text-primary sm:text-4xl">
-            Recent build notes
-          </h2>
-          <p className="max-w-2xl text-sm leading-7 text-secondary sm:text-base">
-            Recent notes from experiments, benchmarks, and shipped tools.
-          </p>
-        </div>
-        <Link
-          to="/posts"
-          className="cta cta-secondary"
-        >
-          Archive
-          <FaArrowRight />
+const LatestPosts = ({ compact = false }) => (
+  <div className="min-w-0">
+    {compact ? (
+      postData.slice(0, 3).map((post) => (
+        <Link key={post.id} to={`/posts/${post.id}`} className="compact-post">
+          <time className="metadata col-span-2">{post.postDate}</time>
+          <h3 className="card-title">{post.title}</h3>
+          <FaArrowRight aria-hidden="true" className="mt-2" />
+          <p className="col-span-2 text-secondary">{post.summary}</p>
         </Link>
-      </div>
-      )}
-
-      <div className={compact ? 'grid min-w-0 gap-4' : 'grid min-w-0 gap-5 sm:grid-cols-2 lg:grid-cols-3'}>
-        {featuredPosts.map((post) => (
-          <div key={post.id} className="min-w-0">
-            <PostTile
-              id={post.id}
-              title={post.title}
-              summary={post.summary}
-              postDate={post.postDate}
-              tags={['Latest', 'Build note']}
-            />
-          </div>
+      ))
+    ) : (
+      <div className="content-grid">
+        {postData.slice(0, 6).map((post) => (
+          <PostTile
+            key={post.id}
+            {...post}
+            image={post.heroImage}
+            imageAlt={post.heroAlt}
+          />
         ))}
       </div>
-    </div>
-  );
-};
-
+    )}
+    <Link to="/posts" className="cta cta-tertiary mt-4">
+      Read the archive <FaArrowRight aria-hidden="true" />
+    </Link>
+  </div>
+);
 export default LatestPosts;

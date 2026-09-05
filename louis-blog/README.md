@@ -46,6 +46,7 @@ louis-blog/
 │   ├── styles/        # Global Tailwind and design-system CSS
 │   ├── App.jsx        # Route shell, layout, analytics, and consent banner
 │   ├── PostData.js    # Blog post metadata used by listings
+│   ├── ProjectData.js # Shared project metadata and homepage selections
 │   └── main.jsx       # React entrypoint and HashRouter setup
 ├── package.json
 ├── tailwind.config.js
@@ -72,8 +73,21 @@ To add a blog post:
 3. Put any post images in `public/post_images/`.
 4. Reference images from Markdown with paths that work from the served post context, such as `./post_images/example.webp`.
 
-To add or update a project card, edit the `projects` array in `src/pages/Projects.jsx`. Project images should usually live in `public/post_images/` or another public asset path.
+To add or update a project card, edit the `projects` array in `src/ProjectData.js`. Project images should usually live in `public/post_images/` or another public asset path.
 
 ## Design Rule
 
 The entire site must keep sharp 90 degree corners. The global CSS rule in `src/styles/index.css` forces `border-radius: 0 !important` across elements and pseudo-elements; preserve that rule and override any library defaults that try to introduce rounded corners.
+
+## Shared visual patterns
+
+Use `PageIntro` for page introductions and the shared `site-container`, `page-stack`, `section-stack`, `surface`, `content-grid`, `card-media`, and `cta` classes rather than adding per-page substitutes. Colors, typography, gutters, section spacing, and elevation are defined in `src/styles/index.css`.
+
+- The shell is 1,152px wide with 16/24/32px responsive gutters. Grids use 24px gaps and one, two, or three columns.
+- White and pale surfaces use thin borders. Interactive cards and floating consent controls share one subtle shadow.
+- Coral decoration uses `--color-accent`; readable coral text uses the darker `--color-accent-text`.
+- Screenshots use uncropped 16:10 frames. Article titles and dates sit above hero images; an identical leading Markdown hero is suppressed only in rendering.
+- Main navigation prioritizes projects. CV remains accessible from the footer.
+- Preserve keyboard focus styles, 44px control targets, reduced-motion handling, and the consent banner's reserved scroll space.
+
+Run `npm test`, `npm run lint`, and `npm run build` before publishing. Check Home, Projects, Writing, articles, About, CV, and 404 at 320, 390, 768, 1,024, and 1,440px; include mobile navigation, filters, consent choices, and keyboard access.

@@ -22,7 +22,7 @@ const App = () => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: 'instant' });
     }
   }, [location.pathname, location.search]);
 
@@ -33,17 +33,42 @@ const App = () => {
         setShowConsentBanner(true);
       }
     } catch (error) {
-      console.warn('Consent banner fallback triggered; localStorage unavailable.', error);
+      console.warn(
+        'Consent banner fallback triggered; localStorage unavailable.',
+        error,
+      );
       setShowConsentBanner(true);
     }
   }, []);
 
   return (
     <>
-      <div className="flex min-h-screen min-w-0 flex-col overflow-x-clip bg-[linear-gradient(135deg,#f9fbfe_0%,#eef2f7_48%,#e3e9f2_100%)] text-primary">
+      <div className="flex min-h-screen min-w-0 flex-col bg-canvas text-primary">
+        <a
+          href="#main-content"
+          className="skip-link"
+          onClick={(event) => {
+            event.preventDefault();
+            const main = document.getElementById('main-content');
+            main?.focus();
+            main?.scrollIntoView({ behavior: 'instant', block: 'start' });
+          }}
+        >
+          Skip to content
+        </a>
         <Navbar />
-        <main className="mx-auto flex w-full min-w-0 flex-grow flex-col px-4 pb-16 pt-8 sm:px-6 sm:pb-20 sm:pt-10 lg:max-w-6xl lg:px-8 lg:pb-24">
-          <Suspense fallback={<div>Loading...</div>}>
+        <main
+          id="main-content"
+          tabIndex={-1}
+          className="site-container site-main"
+        >
+          <Suspense
+            fallback={
+              <div className="surface panel-padding" role="status">
+                Loading page…
+              </div>
+            }
+          >
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/cv" element={<CvViewer />} />

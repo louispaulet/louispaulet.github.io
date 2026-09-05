@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import PageIntro from '../components/PageIntro';
 import postData from './../PostData';
 import PostTile from '../components/PostTile';
 
@@ -19,27 +19,16 @@ const postTagsById = {
 };
 
 const Posts = () => {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  }, []);
-
   return (
-    <div className="min-w-0 space-y-9 text-secondary sm:space-y-10">
-      <header className="grid min-w-0 gap-5 border-b border-soft pb-7 sm:gap-6 sm:pb-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-        <div className="min-w-0">
-          <p className="section-kicker">Writing</p>
-          <h1 className="mt-3 text-4xl font-semibold leading-tight text-primary sm:text-5xl">
-            Writing from the builds.
-          </h1>
-        </div>
-        <p className="max-w-3xl text-sm leading-7 text-secondary lg:justify-self-end">
-          Notes on AI tools, benchmarks, datasets, and product experiments, written from the workbench rather than the sidelines.
+    <div className="page-stack text-secondary">
+      <PageIntro kicker="Writing" title="Writing from the builds.">
+        <p>
+          Notes on AI tools, benchmarks, datasets, and product experiments,
+          written from the workbench rather than the sidelines.
         </p>
-      </header>
+      </PageIntro>
 
-      <section className="grid min-w-0 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="content-grid">
         {postData.map((post) => (
           <div key={post.id}>
             <PostTile

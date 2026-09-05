@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { test } from 'node:test';
 import vm from 'node:vm';
 
-const projectsSource = await readFile(new URL('../src/pages/Projects.jsx', import.meta.url), 'utf8');
+const projectsSource = await readFile(new URL('../src/ProjectData.js', import.meta.url), 'utf8');
 const arrayStart = projectsSource.indexOf('const projects = ') + 'const projects = '.length;
 const arrayEnd = projectsSource.indexOf('\n];', arrayStart) + 2;
 const projects = JSON.parse(JSON.stringify(vm.runInNewContext(projectsSource.slice(arrayStart, arrayEnd))));
@@ -145,7 +145,7 @@ const protectedAssetHashes = {
 
 const getProjectBlock = (title) => {
   const titleIndex = projectsSource.indexOf(`    title: "${title}",`);
-  assert.notEqual(titleIndex, -1, `${title} should be present in Projects.jsx`);
+  assert.notEqual(titleIndex, -1, `${title} should be present in ProjectData.js`);
   const blockStart = projectsSource.lastIndexOf('  {', titleIndex);
   const blockEnd = projectsSource.indexOf('\n  }', titleIndex) + 4;
   return projectsSource.slice(blockStart, blockEnd);

@@ -1,18 +1,18 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { FaArrowRight, FaBars, FaXmark } from 'react-icons/fa6';
 import website_logo from './../cached_images/logo_favicon_white_blue.webp';
 
 const Navbar = () => {
   const location = useLocation();
+  const menuButton = useRef(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isHomePage = location.pathname === '/';
   const navItems = [
     ['/', 'Home'],
-    ['/posts', 'Writing'],
     ['/projects', 'Projects'],
+    ['/posts', 'Writing'],
     ['/about', 'About'],
-    ['/cv', 'CV'],
   ];
   const navLinkClasses = ({ isActive }) =>
     [
@@ -40,6 +40,7 @@ const Navbar = () => {
 
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
+        menuButton.current?.focus();
         setIsMobileMenuOpen(false);
       }
     };
@@ -57,7 +58,8 @@ const Navbar = () => {
     };
 
     desktopQuery.addEventListener('change', handleDesktopChange);
-    return () => desktopQuery.removeEventListener('change', handleDesktopChange);
+    return () =>
+      desktopQuery.removeEventListener('change', handleDesktopChange);
   }, []);
 
   const handleLogoClick = (event) => {
@@ -72,8 +74,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav aria-label="Primary navigation" className="sticky top-0 z-50 border-b border-soft bg-[rgba(249,251,254,0.94)] shadow-[0_8px_22px_rgba(89,108,135,0.08)] backdrop-blur-md">
-      <div className="mx-auto w-full max-w-6xl px-4 sm:px-8">
+    <nav
+      aria-label="Primary navigation"
+      className="sticky top-0 z-50 border-b border-soft bg-[rgba(249,251,254,0.94)] backdrop-blur-md"
+    >
+      <div className="site-container">
         <div className="flex min-h-[4.5rem] items-center justify-between gap-3 md:min-h-0 md:gap-6 md:py-3">
           <Link
             to="/"
@@ -88,43 +93,47 @@ const Navbar = () => {
               className="h-11 w-11 flex-shrink-0 object-contain sm:h-12 sm:w-12 md:h-14 md:w-14"
             />
             <div className="flex min-w-0 flex-col">
-              <span className="truncate text-[0.62rem] uppercase tracking-[0.2em] text-muted sm:text-[0.68rem] sm:tracking-[0.22em]">Louis Paulet</span>
-              <span className="truncate text-sm font-semibold leading-tight text-primary sm:text-base md:text-lg">AI, data, shipped tools</span>
+              <span className="truncate text-xs uppercase tracking-[0.12em] text-muted">
+                Louis Paulet
+              </span>
+              <span className="truncate text-sm font-semibold leading-tight text-primary sm:text-base md:text-lg">
+                AI, data, shipped tools
+              </span>
             </div>
           </Link>
 
           <div className="hidden items-center gap-7 md:flex">
-            {navItems.slice(0, -1).map(([to, label]) => (
-              <NavLink key={to} to={to} end={to === '/'} className={navLinkClasses}>
+            {navItems.map(([to, label]) => (
+              <NavLink
+                key={to}
+                to={to}
+                end={to === '/'}
+                className={navLinkClasses}
+              >
                 {label}
               </NavLink>
             ))}
           </div>
 
           <button
+            ref={menuButton}
             type="button"
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-primary-navigation"
-            aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-label={
+              isMobileMenuOpen
+                ? 'Close navigation menu'
+                : 'Open navigation menu'
+            }
             onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
             className="neumorphic-button flex h-11 w-11 flex-shrink-0 items-center justify-center text-lg text-primary md:hidden"
           >
-            {isMobileMenuOpen ? <FaXmark aria-hidden="true" /> : <FaBars aria-hidden="true" />}
+            {isMobileMenuOpen ? (
+              <FaXmark aria-hidden="true" />
+            ) : (
+              <FaBars aria-hidden="true" />
+            )}
           </button>
-
-          <div className="hidden md:block">
-            <NavLink
-              to="/cv"
-              className={({ isActive }) =>
-                [
-                  'cta px-5 py-2 text-xs',
-                  isActive ? 'cta-primary' : 'cta-secondary',
-                ].join(' ')
-              }
-            >
-              CV
-            </NavLink>
-          </div>
         </div>
 
         {isMobileMenuOpen && (
@@ -139,7 +148,10 @@ const Navbar = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <span className="min-w-0">{label}</span>
-                  <FaArrowRight aria-hidden="true" className="flex-shrink-0 text-accent" />
+                  <FaArrowRight
+                    aria-hidden="true"
+                    className="flex-shrink-0 text-accent"
+                  />
                 </NavLink>
               ))}
             </div>
