@@ -1,5 +1,14 @@
 const projects = [
   {
+    image: "./post_images/my-nitter-instance.svg",
+    title: "My Nitter Instance",
+    category: "Privacy frontend",
+    filters: ["Data"],
+    badges: ["Nitter", "Cloud Run", "Open web"],
+    description: "Read public X/Twitter posts through a small, self-hosted Nitter deployment built around upstream Nitter and running on Google Cloud.",
+    link: "https://x.thefrenchartist.dev/"
+  },
+  {
     image: "./post_images/project-yahatvp-dashboard.png",
     title: "YAHATVP",
     category: "Civic data pipeline",

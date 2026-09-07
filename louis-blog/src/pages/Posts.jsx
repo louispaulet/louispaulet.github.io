@@ -3,6 +3,7 @@ import postData from './../PostData';
 import PostTile from '../components/PostTile';
 
 const postTagsById = {
+  post15: ['Nitter', 'Open web', 'Self-hosting'],
   post14: ['Open data', 'Civic tech', 'Data pipeline'],
   post13: ['AI images', 'OpenAI', 'Cloudflare'],
   post12: ['AI workspace', 'Groq', 'Cloudflare'],

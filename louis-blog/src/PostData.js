@@ -1,6 +1,14 @@
 // PostData.js
 const postData = [
   {
+    "id": "post15",
+    "title": "Nitter, XCancel, and the Case for Small Off-Ramps",
+    "summary": "After a legal disruption hit Nitter and XCancel, I deployed a small upstream-Nitter instance on Google Cloud to keep a privacy-respecting route to public X/Twitter posts available.",
+    "postDate": "07 Sep 2026",
+    "heroImage": "/post_images/my-nitter-instance.svg",
+    "heroAlt": "Dark Nitter interface illustration with a search field and a Google Cloud deployment note"
+  },
+  {
     "id": "post14",
     "title": "Yet Another HATVP Project: A Live, Auditable HATVP Snapshot",
     "summary": "A build note on YAHATVP, a weekly HATVP ingestion pipeline and source-linked dashboard that keeps official snapshots, quality checks, and historical Wayback and Hugging Face archives inspectable.",
