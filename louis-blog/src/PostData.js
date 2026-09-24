@@ -1,6 +1,14 @@
 // PostData.js
 const postData = [
   {
+    "id": "post16",
+    "title": "JEV Playground: Trying Out TypeSafe’s System One Model",
+    "summary": "A hands-on look at Jev, TypeSafe’s structured decision model, and the playground experiments I built around Choice, Noul, Score, and a Wikipedia beam search.",
+    "postDate": "24 Sep 2026",
+    "heroImage": "/post_images/jev-system-one-hero.svg",
+    "heroAlt": "Diagram showing state entering Jev and a typed decision leaving it"
+  },
+  {
     "id": "post15",
     "title": "Nitter, XCancel, and the Case for Small Off-Ramps",
     "summary": "After a legal disruption hit Nitter and XCancel, I deployed a small upstream-Nitter instance on Google Cloud to keep a privacy-respecting route to public X/Twitter posts available.",

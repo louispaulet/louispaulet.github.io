@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Jev turns application state into typed decisions</title>
+  <desc id="desc">A sharp-corner diagram showing state entering Jev and structured decisions leaving it.</desc>
+  <rect width="1600" height="900" fill="#101820"/>
+  <rect x="72" y="72" width="1456" height="756" fill="#17232d" stroke="#6d7e89" stroke-width="3"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="128" y="170" fill="#f3f6f7" font-size="54" font-weight="700">STATE IN</text>
+    <text x="128" y="222" fill="#aebcc4" font-size="28">unstructured context</text>
+    <rect x="128" y="300" width="360" height="280" fill="#22333e" stroke="#6d7e89" stroke-width="3"/>
+    <text x="168" y="374" fill="#f3f6f7" font-size="28" font-weight="700">customer message</text>
+    <text x="168" y="430" fill="#ff8d73" font-size="25">“my order is late”</text>
+    <text x="168" y="488" fill="#aebcc4" font-size="24">text + program state</text>
+    <path d="M540 440 H712" fill="none" stroke="#ff8d73" stroke-width="8"/>
+    <path d="M712 440 l-34 -25 v50 z" fill="#ff8d73"/>
+    <rect x="760" y="246" width="360" height="388" fill="#ff8d73" stroke="#f3f6f7" stroke-width="4"/>
+    <text x="836" y="356" fill="#101820" font-size="64" font-weight="800">JEV</text>
+    <text x="816" y="420" fill="#101820" font-size="28" font-weight="700">SYSTEM ONE</text>
+    <text x="814" y="476" fill="#101820" font-size="23">Choice · Score · Noul</text>
+    <text x="814" y="530" fill="#101820" font-size="23">parallel decisions</text>
+    <text x="814" y="584" fill="#101820" font-size="23">probability + confidence</text>
+    <path d="M1176 440 H1348" fill="none" stroke="#ff8d73" stroke-width="8"/>
+    <path d="M1348 440 l-34 -25 v50 z" fill="#ff8d73"/>
+    <text x="1176" y="170" fill="#f3f6f7" font-size="54" font-weight="700">DECISION OUT</text>
+    <text x="1176" y="222" fill="#aebcc4" font-size="28">typed workflow branch</text>
+    <rect x="1176" y="300" width="280" height="280" fill="#22333e" stroke="#6d7e89" stroke-width="3"/>
+    <text x="1216" y="374" fill="#f3f6f7" font-size="28" font-weight="700">route</text>
+    <text x="1216" y="430" fill="#ff8d73" font-size="25">logistics</text>
+    <text x="1216" y="488" fill="#aebcc4" font-size="24">0.91 confidence</text>
+    <text x="128" y="746" fill="#aebcc4" font-size="26">DECISIONS, NOT STRINGS</text>
+    <text x="128" y="786" fill="#f3f6f7" font-size="22">A playground for testing where a specialized decision model fits.</text>
+  </g>
+</svg>
